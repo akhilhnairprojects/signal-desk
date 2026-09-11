@@ -18,6 +18,10 @@ UMAP is optional at runtime - if the library is unavailable the app falls
 back to PCA coordinates rather than failing.
 """
 
+import hashlib
+import json
+from datetime import datetime, timezone
+
 import numpy as np
 import pandas as pd
 from sklearn.cluster import HDBSCAN, KMeans
@@ -28,6 +32,11 @@ from sklearn.preprocessing import StandardScaler
 from src import config
 
 SIGNALS = list(config.SIGNAL_WEIGHTS)
+
+# Columns add_segments() produces, and therefore what a cache must carry.
+CACHE_COLUMNS = ["cluster_id", "segment", "hdbscan_label", "density_cluster",
+                 "pca_x", "pca_y", "umap_x", "umap_y"]
+CACHE_SCHEMA = 1
 
 
 def _choose_k(X: np.ndarray) -> tuple[int, float]:
@@ -95,6 +104,85 @@ def add_segments(df: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
         "hdbscan_outliers": int((hdb == -1).sum()),
         "umap_available": umap_available,
     }
+    return df, meta
+
+
+# ---------------------------------------------------------------------------
+# Published segmentation cache
+#
+# add_segments() is ~99% of pipeline runtime (the K-Means sweep, HDBSCAN and
+# especially UMAP), and its output depends on nothing except the signal matrix
+# and the weights that order the segment names. So it is content-addressed:
+# fingerprint those inputs, and reuse a published result whenever they match.
+#
+# The fingerprint is what keeps this honest. Add a company, change a weight, or
+# let a measured signal land, and the hash changes and the app recomputes. No
+# staleness is possible — only a hit or a miss.
+# ---------------------------------------------------------------------------
+
+def fingerprint(df: pd.DataFrame) -> str:
+    """Hash of everything add_segments() actually depends on."""
+    from src import scoring          # local: avoids an import cycle
+    weights, _ = scoring.active_weights()
+    payload = {
+        "schema": CACHE_SCHEMA,
+        "accounts": [str(a) for a in df["account"]],
+        "signals": [[round(float(v), 6) for v in row]
+                    for row in df[SIGNALS].to_numpy()],
+        "weights": {k: round(float(v), 6) for k, v in sorted(weights.items())},
+    }
+    blob = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(blob.encode("utf-8")).hexdigest()
+
+
+def build_cache(df: pd.DataFrame, meta: dict) -> dict:
+    return {
+        "schema_version": CACHE_SCHEMA,
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "fingerprint": fingerprint(df),
+        "accounts": [str(a) for a in df["account"]],
+        "meta": {k: v for k, v in meta.items() if k != "segmentation_source"},
+        "columns": {c: df[c].tolist() for c in CACHE_COLUMNS},
+    }
+
+
+def load_cache() -> dict | None:
+    path = config.SEGMENTATION_CACHE_PATH
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return None
+
+
+def apply_cache(df: pd.DataFrame, cache) -> tuple[pd.DataFrame, dict] | None:
+    """Attach cached segmentation, or None when it does not match this frame."""
+    if not cache or cache.get("schema_version") != CACHE_SCHEMA:
+        return None
+    if cache.get("accounts") != [str(a) for a in df["account"]]:
+        return None
+    if cache.get("fingerprint") != fingerprint(df):
+        return None
+    columns = cache.get("columns") or {}
+    if any(c not in columns or len(columns[c]) != len(df) for c in CACHE_COLUMNS):
+        return None
+
+    df = df.copy()
+    for col in CACHE_COLUMNS:
+        df[col] = columns[col]
+    return df, dict(cache.get("meta") or {})
+
+
+def segments(df: pd.DataFrame, use_cache: bool = True) -> tuple[pd.DataFrame, dict]:
+    """Segmentation via the published cache when it matches, else computed."""
+    if use_cache:
+        hit = apply_cache(df, load_cache())
+        if hit is not None:
+            df, meta = hit
+            meta["segmentation_source"] = "published"
+            return df, meta
+
+    df, meta = add_segments(df)
+    meta["segmentation_source"] = "computed"
     return df, meta
 
 

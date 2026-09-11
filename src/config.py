@@ -16,6 +16,10 @@ RAW_DATA_PATH = ROOT / "data" / "raw" / "accounts.xlsx"
 ENRICHMENT_PATH = ROOT / "data" / "enrichment" / "notes.csv"
 RESULTS_DIR = ROOT / "results"
 
+# Published segmentation, reused when its fingerprint matches the live signal
+# matrix. Written by scripts/publish_snapshot.py; see src/segment.py.
+SEGMENTATION_CACHE_PATH = ROOT / "docs" / "data" / "segmentation.json"
+
 # Optional remote source. If the local file above is missing, the pipeline
 # falls back to this URL (e.g. the raw link of the file in your GitHub repo:
 # https://raw.githubusercontent.com/<user>/<repo>/main/data/raw/accounts.xlsx).

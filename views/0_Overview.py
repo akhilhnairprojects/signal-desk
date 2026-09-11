@@ -43,6 +43,7 @@ custom_n = int((df["source"] == "custom").sum())
 st.caption(f"{len(notes)} field notes · {fresh_news} accounts with AI news "
            f"in the last 30d · Storage: {store.backend_label()}"
            + f" · Signal weights: {meta.get('weights_source', 'configured')}"
+           + f" · Segments: {meta.get('segmentation_source', 'computed')}"
            + (f" · {custom_n} user-added companies in the universe"
               if custom_n else ""))
 

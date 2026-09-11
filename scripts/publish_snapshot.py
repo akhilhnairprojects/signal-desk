@@ -35,7 +35,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import pandas as pd
 
-from src import build_dataset, config, scoring
+from src import build_dataset, config, scoring, segment
 
 SCHEMA_VERSION = 1
 DEFAULT_OUT = config.ROOT / "docs" / "data"
@@ -85,11 +85,15 @@ def account_records(df: pd.DataFrame) -> list[dict]:
     return records
 
 
-def build_snapshot(snapshot_id: str) -> dict:
-    df, notes, meta = build_dataset()
+def build_snapshot(snapshot_id: str) -> tuple[dict, dict]:
+    # use_segment_cache=False: publishing is what *produces* the cache, so it
+    # has to do the real K-Means / HDBSCAN / UMAP work rather than read back
+    # the answer it is about to write.
+    df, notes, meta = build_dataset(use_segment_cache=False)
     scores = df["adjusted_score"]
+    cache = segment.build_cache(df, meta)
 
-    return {
+    snapshot = {
         "schema_version": SCHEMA_VERSION,
         "snapshot_id": snapshot_id,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -142,6 +146,7 @@ def build_snapshot(snapshot_id: str) -> dict:
 
         "accounts": account_records(df),
     }
+    return snapshot, cache
 
 
 def write_json(path: Path, payload: dict) -> None:
@@ -191,10 +196,11 @@ def main() -> None:
     args = parser.parse_args()
 
     out_dir = Path(args.out)
-    snapshot = build_snapshot(args.id)
+    snapshot, cache = build_snapshot(args.id)
 
     write_json(out_dir / "snapshots" / f"{args.id}.json", snapshot)
     write_json(out_dir / "latest.json", snapshot)
+    write_json(out_dir / "segmentation.json", cache)
     index = rebuild_index(out_dir)
 
     s = snapshot["summary"]
@@ -202,6 +208,8 @@ def main() -> None:
           f"tiers {s['tier_counts']}")
     print(f"  {out_dir / 'snapshots' / (args.id + '.json')}")
     print(f"  {out_dir / 'latest.json'}")
+    print(f"  {out_dir / 'segmentation.json'}  (fingerprint "
+          f"{cache['fingerprint'][:12]}…)")
     print(f"  {out_dir / 'index.json'} ({index['count']} snapshots indexed)")
 
 

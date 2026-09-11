@@ -104,6 +104,27 @@ universe**, not an absolute readiness rating.
 `src/store.py` runs against Supabase when credentials exist and falls back to
 the committed CSVs when they do not, so the app runs with **zero configuration**.
 
+### Why the app starts fast
+
+Segmentation — the K-Means sweep, HDBSCAN, and especially UMAP — is **99% of
+pipeline runtime** (59.2s of 59.9s on a cold process). It also depends on
+nothing but the signal matrix and the weights that order the segment names, so
+it is content-addressed: `scripts/publish_snapshot.py` computes it once and
+publishes it to `docs/data/segmentation.json`, and the app reuses it whenever a
+SHA-256 fingerprint of those inputs matches. Cold load drops from ~60s to
+**0.7s**.
+
+Every other stage stays live, because together they cost under a second: save a
+field note and it moves the score on the next render. And the fingerprint is
+what makes this safe rather than merely fast — add a company, change a weight,
+or let a measured signal land, and the hash changes and segmentation recomputes.
+There is no stale state to go wrong, only a hit or a miss, and the Overview
+caption always says which one you are looking at.
+
+A side benefit: the segment map now stays put between visits instead of
+shifting slightly every time the container restarts, since UMAP is deterministic
+within a process but not across them.
+
 ## Quickstart
 
 ```bash

@@ -17,6 +17,17 @@ page_header(
     "cross-industry positioning plays possible.",
 )
 
+if meta.get("segmentation_source") == "published":
+    st.caption("Segments and both projections come from the published "
+               "snapshot, keyed to a fingerprint of the current signal "
+               "matrix. Change a signal, a weight, or the account universe "
+               "and they are recomputed on the spot. It also means the map "
+               "stays put between visits instead of shifting every time the "
+               "app restarts.")
+else:
+    st.caption("Segments were computed live for this universe - the "
+               "published snapshot does not match the current signals.")
+
 seg_order = (df.groupby("segment")["base_score"].mean()
                .sort_values(ascending=False).index.tolist())
 seg_colors = {s: SEGMENT_COLORS[i % len(SEGMENT_COLORS)]
