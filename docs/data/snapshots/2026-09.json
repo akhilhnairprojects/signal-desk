@@ -1,0 +1,4901 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "2026-09",
+  "generated_at": "2026-09-11T05:01:49+00:00",
+  "source_commit": "8f0273b522939fdb98ea28855db78826fc4e24b3",
+  "reproduce": "git checkout <source_commit> && python scripts/publish_snapshot.py",
+  "model": {
+    "signal_weights": {
+      "ai_hiring": 0.175,
+      "ai_announce": 0.175,
+      "cloud": 0.2,
+      "global_reach": 0.25,
+      "data_centre": 0.2
+    },
+    "signal_labels": {
+      "ai_hiring": "AI Hiring",
+      "ai_announce": "AI Announcements",
+      "cloud": "Cloud Presence",
+      "global_reach": "Global Footprint",
+      "data_centre": "Data Centre Expansion"
+    },
+    "weights_source": "configured",
+    "signals_percentile_ranked": true,
+    "tier_quantiles": [
+      [
+        "Tier 1",
+        0.85
+      ],
+      [
+        "Tier 2",
+        0.5
+      ],
+      [
+        "Tier 3",
+        0.0
+      ]
+    ],
+    "tier_descriptions": {
+      "Tier 1": "Engage now",
+      "Tier 2": "Nurture",
+      "Tier 3": "Monitor"
+    },
+    "note_impact_points": {
+      "Positive": 2,
+      "Neutral": 0,
+      "Negative": -2
+    },
+    "max_note_adjustment": 6,
+    "max_news_adjustment": 5,
+    "score_definition": "Percentile rank of each signal within this universe, weighted and summed, then adjusted by field notes and news momentum. A score is a position relative to the other accounts in this snapshot, not an absolute readiness rating.",
+    "documentation": "docs/scoring-model.md"
+  },
+  "summary": {
+    "accounts": 160,
+    "industries": 9,
+    "tier_counts": {
+      "Tier 3": 79,
+      "Tier 2": 56,
+      "Tier 1": 25
+    },
+    "tier_cutoffs": {
+      "Tier 1": 80.5,
+      "Tier 2": 52.5,
+      "Tier 3": 12.2
+    },
+    "score": {
+      "min": 12.2,
+      "max": 100.0,
+      "mean": 53.2,
+      "median": 52.5,
+      "sd": 22.6
+    },
+    "accounts_by_industry": {
+      "Technology": 30,
+      "Financial Services": 29,
+      "Manufacturing & Industrial": 25,
+      "Healthcare": 22,
+      "Retail & Consumer": 22,
+      "Energy & Utilities": 10,
+      "Media & Entertainment": 8,
+      "Logistics & Transportation": 8,
+      "Professional Services": 6
+    },
+    "field_notes": 3,
+    "accounts_with_news": 144,
+    "segmentation": {
+      "k": 6,
+      "silhouette": 0.435,
+      "explained_variance": [
+        0.681,
+        0.189
+      ],
+      "hdbscan_clusters": 3,
+      "hdbscan_outliers": 10,
+      "umap_available": true
+    },
+    "storage_backend": "csv"
+  },
+  "accounts": [
+    {
+      "account": "Microsoft",
+      "ticker": "MSFT",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 100,
+        "ai_announce": 100,
+        "cloud": 100,
+        "global_reach": 100,
+        "data_centre": 100
+      },
+      "measured_signals": "",
+      "base_score": 98.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 100.0,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "AI Front-Runners",
+      "lookalikes": [
+        "Amazon",
+        "Alphabet (Google)",
+        "Oracle",
+        "Meta Platforms",
+        "Palantir"
+      ]
+    },
+    {
+      "account": "Alphabet (Google)",
+      "ticker": "GOOGL",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 100,
+        "ai_announce": 100,
+        "cloud": 98,
+        "global_reach": 100,
+        "data_centre": 98
+      },
+      "measured_signals": "",
+      "base_score": 97.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 100.0,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "AI Front-Runners",
+      "lookalikes": [
+        "Microsoft",
+        "Amazon",
+        "Oracle",
+        "Meta Platforms",
+        "Palantir"
+      ]
+    },
+    {
+      "account": "Amazon",
+      "ticker": "AMZN",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 100,
+        "ai_announce": 100,
+        "cloud": 100,
+        "global_reach": 98,
+        "data_centre": 100
+      },
+      "measured_signals": "",
+      "base_score": 97.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 100.0,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "AI Front-Runners",
+      "lookalikes": [
+        "Microsoft",
+        "Alphabet (Google)",
+        "Oracle",
+        "Meta Platforms",
+        "Palantir"
+      ]
+    },
+    {
+      "account": "Meta Platforms",
+      "ticker": "META",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 98,
+        "ai_announce": 98,
+        "cloud": 88,
+        "global_reach": 92,
+        "data_centre": 100
+      },
+      "measured_signals": "",
+      "base_score": 87.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 92.0,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "AI Front-Runners",
+      "lookalikes": [
+        "NVIDIA",
+        "Oracle",
+        "Alphabet (Google)",
+        "Amazon",
+        "Microsoft"
+      ]
+    },
+    {
+      "account": "Apple",
+      "ticker": "AAPL",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 92,
+        "ai_announce": 96,
+        "cloud": 98,
+        "global_reach": 87,
+        "data_centre": 67
+      },
+      "measured_signals": "",
+      "base_score": 81.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 86.4,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Uber",
+        "Adobe",
+        "Salesforce",
+        "SAP",
+        "ServiceNow"
+      ]
+    },
+    {
+      "account": "Oracle",
+      "ticker": "ORCL",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 90,
+        "ai_announce": 96,
+        "cloud": 96,
+        "global_reach": 88,
+        "data_centre": 98
+      },
+      "measured_signals": "",
+      "base_score": 83.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 88.9,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "AI Front-Runners",
+      "lookalikes": [
+        "Alphabet (Google)",
+        "Amazon",
+        "Meta Platforms",
+        "Microsoft",
+        "Palantir"
+      ]
+    },
+    {
+      "account": "Salesforce",
+      "ticker": "CRM",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 92,
+        "ai_announce": 96,
+        "cloud": 98,
+        "global_reach": 87,
+        "data_centre": 67
+      },
+      "measured_signals": "",
+      "base_score": 81.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 86.4,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Uber",
+        "Adobe",
+        "SAP",
+        "Apple",
+        "ServiceNow"
+      ]
+    },
+    {
+      "account": "Adobe",
+      "ticker": "ADBE",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 92,
+        "ai_announce": 96,
+        "cloud": 98,
+        "global_reach": 87,
+        "data_centre": 67
+      },
+      "measured_signals": "",
+      "base_score": 81.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 86.4,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Uber",
+        "Salesforce",
+        "SAP",
+        "Apple",
+        "ServiceNow"
+      ]
+    },
+    {
+      "account": "ServiceNow",
+      "ticker": "NOW",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 92,
+        "ai_announce": 96,
+        "cloud": 98,
+        "global_reach": 75,
+        "data_centre": 67
+      },
+      "measured_signals": "",
+      "base_score": 75.1,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 80.1,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Snowflake",
+        "Uber",
+        "Adobe",
+        "SAP",
+        "Salesforce"
+      ]
+    },
+    {
+      "account": "SAP",
+      "ticker": "SAP",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 92,
+        "ai_announce": 96,
+        "cloud": 98,
+        "global_reach": 87,
+        "data_centre": 67
+      },
+      "measured_signals": "",
+      "base_score": 81.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 86.4,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Uber",
+        "Adobe",
+        "Salesforce",
+        "Apple",
+        "ServiceNow"
+      ]
+    },
+    {
+      "account": "Workday",
+      "ticker": "WDAY",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 86,
+        "ai_announce": 88,
+        "cloud": 94,
+        "global_reach": 75,
+        "data_centre": 59
+      },
+      "measured_signals": "",
+      "base_score": 69.1,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 74.1,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Intuit",
+        "Datadog",
+        "Shopify",
+        "Atlassian",
+        "Spotify"
+      ]
+    },
+    {
+      "account": "Snowflake",
+      "ticker": "SNOW",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 92,
+        "ai_announce": 96,
+        "cloud": 98,
+        "global_reach": 75,
+        "data_centre": 67
+      },
+      "measured_signals": "",
+      "base_score": 75.1,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 80.1,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "ServiceNow",
+        "Uber",
+        "Adobe",
+        "SAP",
+        "Salesforce"
+      ]
+    },
+    {
+      "account": "Datadog",
+      "ticker": "DDOG",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 86,
+        "ai_announce": 88,
+        "cloud": 94,
+        "global_reach": 75,
+        "data_centre": 59
+      },
+      "measured_signals": "",
+      "base_score": 69.1,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 74.1,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Intuit",
+        "Workday",
+        "Shopify",
+        "Atlassian",
+        "Spotify"
+      ]
+    },
+    {
+      "account": "Palantir",
+      "ticker": "PLTR",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 100,
+        "ai_announce": 100,
+        "cloud": 100,
+        "global_reach": 75,
+        "data_centre": 85
+      },
+      "measured_signals": "",
+      "base_score": 79.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 84.8,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "AI Front-Runners",
+      "lookalikes": [
+        "Snowflake",
+        "ServiceNow",
+        "Amazon",
+        "Alphabet (Google)",
+        "Oracle"
+      ]
+    },
+    {
+      "account": "Atlassian",
+      "ticker": "TEAM",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 86,
+        "ai_announce": 88,
+        "cloud": 94,
+        "global_reach": 87,
+        "data_centre": 59
+      },
+      "measured_signals": "",
+      "base_score": 75.5,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 80.5,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Shopify",
+        "Intuit",
+        "Datadog",
+        "Workday",
+        "Visa"
+      ]
+    },
+    {
+      "account": "Intuit",
+      "ticker": "INTU",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 86,
+        "ai_announce": 88,
+        "cloud": 94,
+        "global_reach": 75,
+        "data_centre": 59
+      },
+      "measured_signals": "",
+      "base_score": 69.1,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 74.1,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Workday",
+        "Datadog",
+        "Shopify",
+        "Atlassian",
+        "Spotify"
+      ]
+    },
+    {
+      "account": "Shopify",
+      "ticker": "SHOP",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 86,
+        "ai_announce": 88,
+        "cloud": 94,
+        "global_reach": 87,
+        "data_centre": 59
+      },
+      "measured_signals": "",
+      "base_score": 75.5,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 80.5,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Atlassian",
+        "Intuit",
+        "Datadog",
+        "Workday",
+        "Visa"
+      ]
+    },
+    {
+      "account": "Uber",
+      "ticker": "UBER",
+      "industry": "Technology",
+      "sub_industry": "Software & Internet",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 92,
+        "ai_announce": 96,
+        "cloud": 98,
+        "global_reach": 87,
+        "data_centre": 67
+      },
+      "measured_signals": "",
+      "base_score": 81.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 86.4,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Adobe",
+        "Salesforce",
+        "SAP",
+        "Apple",
+        "ServiceNow"
+      ]
+    },
+    {
+      "account": "NVIDIA",
+      "ticker": "NVDA",
+      "industry": "Technology",
+      "sub_industry": "Semiconductors & Hardware",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 96,
+        "ai_announce": 100,
+        "cloud": 82,
+        "global_reach": 86,
+        "data_centre": 95
+      },
+      "measured_signals": "",
+      "base_score": 80.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 85.2,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "AI Front-Runners",
+      "lookalikes": [
+        "Meta Platforms",
+        "Dell Technologies",
+        "Hewlett Packard Enterprise",
+        "Qualcomm",
+        "Marvell"
+      ]
+    },
+    {
+      "account": "AMD",
+      "ticker": "AMD",
+      "industry": "Technology",
+      "sub_industry": "Semiconductors & Hardware",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 90,
+        "ai_announce": 96,
+        "cloud": 76,
+        "global_reach": 94,
+        "data_centre": 84
+      },
+      "measured_signals": "",
+      "base_score": 79.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 84.0,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Steady Middle",
+      "lookalikes": [
+        "Dell Technologies",
+        "Broadcom",
+        "Hewlett Packard Enterprise",
+        "Qualcomm",
+        "Marvell"
+      ]
+    },
+    {
+      "account": "Intel",
+      "ticker": "INTC",
+      "industry": "Technology",
+      "sub_industry": "Semiconductors & Hardware",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 84,
+        "ai_announce": 88,
+        "cloud": 72,
+        "global_reach": 94,
+        "data_centre": 76
+      },
+      "measured_signals": "",
+      "base_score": 68.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 73.4,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Steady Middle",
+      "lookalikes": [
+        "Applied Materials",
+        "Micron",
+        "Broadcom",
+        "Hewlett Packard Enterprise",
+        "Marvell"
+      ]
+    },
+    {
+      "account": "Broadcom",
+      "ticker": "AVGO",
+      "industry": "Technology",
+      "sub_industry": "Semiconductors & Hardware",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 90,
+        "ai_announce": 96,
+        "cloud": 76,
+        "global_reach": 94,
+        "data_centre": 84
+      },
+      "measured_signals": "",
+      "base_score": 79.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 84.0,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Steady Middle",
+      "lookalikes": [
+        "Dell Technologies",
+        "AMD",
+        "Hewlett Packard Enterprise",
+        "Qualcomm",
+        "Marvell"
+      ]
+    },
+    {
+      "account": "Qualcomm",
+      "ticker": "QCOM",
+      "industry": "Technology",
+      "sub_industry": "Semiconductors & Hardware",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 90,
+        "ai_announce": 96,
+        "cloud": 76,
+        "global_reach": 94,
+        "data_centre": 84
+      },
+      "measured_signals": "",
+      "base_score": 79.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 84.0,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Steady Middle",
+      "lookalikes": [
+        "Dell Technologies",
+        "AMD",
+        "Broadcom",
+        "Hewlett Packard Enterprise",
+        "Marvell"
+      ]
+    },
+    {
+      "account": "Texas Instruments",
+      "ticker": "TXN",
+      "industry": "Technology",
+      "sub_industry": "Semiconductors & Hardware",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 76,
+        "ai_announce": 80,
+        "cloud": 68,
+        "global_reach": 94,
+        "data_centre": 72
+      },
+      "measured_signals": "",
+      "base_score": 58.5,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.5,
+      "adjusted_score": 61.0,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Steady Middle",
+      "lookalikes": [
+        "HP Inc.",
+        "Intel",
+        "Applied Materials",
+        "Micron",
+        "Corning"
+      ]
+    },
+    {
+      "account": "Micron",
+      "ticker": "MU",
+      "industry": "Technology",
+      "sub_industry": "Semiconductors & Hardware",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 84,
+        "ai_announce": 88,
+        "cloud": 72,
+        "global_reach": 94,
+        "data_centre": 76
+      },
+      "measured_signals": "",
+      "base_score": 68.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 73.4,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Steady Middle",
+      "lookalikes": [
+        "Applied Materials",
+        "Intel",
+        "Broadcom",
+        "Hewlett Packard Enterprise",
+        "Marvell"
+      ]
+    },
+    {
+      "account": "Dell Technologies",
+      "ticker": "DELL",
+      "industry": "Technology",
+      "sub_industry": "Semiconductors & Hardware",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 90,
+        "ai_announce": 96,
+        "cloud": 76,
+        "global_reach": 94,
+        "data_centre": 84
+      },
+      "measured_signals": "",
+      "base_score": 79.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 84.0,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Steady Middle",
+      "lookalikes": [
+        "AMD",
+        "Broadcom",
+        "Hewlett Packard Enterprise",
+        "Qualcomm",
+        "Marvell"
+      ]
+    },
+    {
+      "account": "HP Inc.",
+      "ticker": "HPQ",
+      "industry": "Technology",
+      "sub_industry": "Semiconductors & Hardware",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 76,
+        "ai_announce": 80,
+        "cloud": 68,
+        "global_reach": 94,
+        "data_centre": 72
+      },
+      "measured_signals": "",
+      "base_score": 58.5,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 63.5,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Steady Middle",
+      "lookalikes": [
+        "Texas Instruments",
+        "Intel",
+        "Applied Materials",
+        "Micron",
+        "Corning"
+      ]
+    },
+    {
+      "account": "Hewlett Packard Enterprise",
+      "ticker": "HPE",
+      "industry": "Technology",
+      "sub_industry": "Semiconductors & Hardware",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 90,
+        "ai_announce": 96,
+        "cloud": 76,
+        "global_reach": 94,
+        "data_centre": 84
+      },
+      "measured_signals": "",
+      "base_score": 79.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 84.0,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Steady Middle",
+      "lookalikes": [
+        "Dell Technologies",
+        "AMD",
+        "Broadcom",
+        "Qualcomm",
+        "Marvell"
+      ]
+    },
+    {
+      "account": "Applied Materials",
+      "ticker": "AMAT",
+      "industry": "Technology",
+      "sub_industry": "Semiconductors & Hardware",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 84,
+        "ai_announce": 88,
+        "cloud": 72,
+        "global_reach": 94,
+        "data_centre": 76
+      },
+      "measured_signals": "",
+      "base_score": 68.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 73.4,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Steady Middle",
+      "lookalikes": [
+        "Intel",
+        "Micron",
+        "Broadcom",
+        "Hewlett Packard Enterprise",
+        "Marvell"
+      ]
+    },
+    {
+      "account": "Marvell",
+      "ticker": "MRVL",
+      "industry": "Technology",
+      "sub_industry": "Semiconductors & Hardware",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 90,
+        "ai_announce": 96,
+        "cloud": 76,
+        "global_reach": 94,
+        "data_centre": 84
+      },
+      "measured_signals": "",
+      "base_score": 79.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 84.0,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Steady Middle",
+      "lookalikes": [
+        "Dell Technologies",
+        "AMD",
+        "Broadcom",
+        "Hewlett Packard Enterprise",
+        "Qualcomm"
+      ]
+    },
+    {
+      "account": "JPMorgan Chase",
+      "ticker": "JPM",
+      "industry": "Financial Services",
+      "sub_industry": "Banks",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 88,
+        "ai_announce": 84,
+        "cloud": 82,
+        "global_reach": 84,
+        "data_centre": 54
+      },
+      "measured_signals": "",
+      "base_score": 67.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 72.7,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Goldman Sachs",
+        "Bank of America",
+        "Morgan Stanley",
+        "Moderna",
+        "Eli Lilly"
+      ]
+    },
+    {
+      "account": "Bank of America",
+      "ticker": "BAC",
+      "industry": "Financial Services",
+      "sub_industry": "Banks",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 88,
+        "ai_announce": 84,
+        "cloud": 82,
+        "global_reach": 84,
+        "data_centre": 54
+      },
+      "measured_signals": "",
+      "base_score": 67.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 72.7,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "JPMorgan Chase",
+        "Goldman Sachs",
+        "Morgan Stanley",
+        "Moderna",
+        "Eli Lilly"
+      ]
+    },
+    {
+      "account": "Wells Fargo",
+      "ticker": "WFC",
+      "industry": "Financial Services",
+      "sub_industry": "Banks",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 82,
+        "ai_announce": 76,
+        "cloud": 78,
+        "global_reach": 72,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 49.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 4.6,
+      "adjusted_score": 54.300000000000004,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Charles Schwab",
+        "TD Bank Group",
+        "Citigroup",
+        "Honeywell",
+        "Vertex Pharmaceuticals"
+      ]
+    },
+    {
+      "account": "Citigroup",
+      "ticker": "C",
+      "industry": "Financial Services",
+      "sub_industry": "Banks",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 82,
+        "ai_announce": 76,
+        "cloud": 78,
+        "global_reach": 84,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 54.1,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.7,
+      "adjusted_score": 56.800000000000004,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "TD Bank Group",
+        "General Motors",
+        "Ford Motor",
+        "Toyota (Americas)",
+        "Honeywell"
+      ]
+    },
+    {
+      "account": "Goldman Sachs",
+      "ticker": "GS",
+      "industry": "Financial Services",
+      "sub_industry": "Banks",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 88,
+        "ai_announce": 84,
+        "cloud": 82,
+        "global_reach": 84,
+        "data_centre": 54
+      },
+      "measured_signals": "",
+      "base_score": 67.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 72.7,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "JPMorgan Chase",
+        "Bank of America",
+        "Morgan Stanley",
+        "Moderna",
+        "Eli Lilly"
+      ]
+    },
+    {
+      "account": "Morgan Stanley",
+      "ticker": "MS",
+      "industry": "Financial Services",
+      "sub_industry": "Banks",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 88,
+        "ai_announce": 84,
+        "cloud": 82,
+        "global_reach": 84,
+        "data_centre": 54
+      },
+      "measured_signals": "",
+      "base_score": 67.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 72.7,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "JPMorgan Chase",
+        "Goldman Sachs",
+        "Bank of America",
+        "Moderna",
+        "Eli Lilly"
+      ]
+    },
+    {
+      "account": "U.S. Bancorp",
+      "ticker": "USB",
+      "industry": "Financial Services",
+      "sub_industry": "Banks",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 74,
+        "ai_announce": 68,
+        "cloud": 74,
+        "global_reach": 72,
+        "data_centre": 42
+      },
+      "measured_signals": "",
+      "base_score": 31.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.5,
+      "adjusted_score": 32.1,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "PNC Financial",
+        "RTX",
+        "Northrop Grumman",
+        "Lockheed Martin",
+        "GE Aerospace"
+      ]
+    },
+    {
+      "account": "PNC Financial",
+      "ticker": "PNC",
+      "industry": "Financial Services",
+      "sub_industry": "Banks",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 74,
+        "ai_announce": 68,
+        "cloud": 74,
+        "global_reach": 72,
+        "data_centre": 42
+      },
+      "measured_signals": "",
+      "base_score": 31.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 31.6,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "U.S. Bancorp",
+        "RTX",
+        "Northrop Grumman",
+        "Lockheed Martin",
+        "GE Aerospace"
+      ]
+    },
+    {
+      "account": "Truist",
+      "ticker": "TFC",
+      "industry": "Financial Services",
+      "sub_industry": "Banks",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 74,
+        "ai_announce": 68,
+        "cloud": 74,
+        "global_reach": 47,
+        "data_centre": 42
+      },
+      "measured_signals": "",
+      "base_score": 28.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 33.4,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "The Home Depot",
+        "Progressive",
+        "NextEra Energy",
+        "Fox Corporation",
+        "Allstate"
+      ]
+    },
+    {
+      "account": "Capital One",
+      "ticker": "COF",
+      "industry": "Financial Services",
+      "sub_industry": "Banks",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 88,
+        "ai_announce": 84,
+        "cloud": 82,
+        "global_reach": 47,
+        "data_centre": 54
+      },
+      "measured_signals": "",
+      "base_score": 60.1,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.9,
+      "adjusted_score": 62.0,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "UnitedHealth Group",
+        "Intuitive Surgical",
+        "Rivian",
+        "Walmart",
+        "Charles Schwab"
+      ]
+    },
+    {
+      "account": "Charles Schwab",
+      "ticker": "SCHW",
+      "industry": "Financial Services",
+      "sub_industry": "Banks",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 82,
+        "ai_announce": 76,
+        "cloud": 78,
+        "global_reach": 72,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 49.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.9,
+      "adjusted_score": 50.6,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Wells Fargo",
+        "TD Bank Group",
+        "Citigroup",
+        "Honeywell",
+        "Vertex Pharmaceuticals"
+      ]
+    },
+    {
+      "account": "TD Bank Group",
+      "ticker": "TD",
+      "industry": "Financial Services",
+      "sub_industry": "Banks",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 82,
+        "ai_announce": 76,
+        "cloud": 78,
+        "global_reach": 84,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 54.1,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 3.4,
+      "adjusted_score": 57.5,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Citigroup",
+        "General Motors",
+        "Ford Motor",
+        "Toyota (Americas)",
+        "Honeywell"
+      ]
+    },
+    {
+      "account": "Visa",
+      "ticker": "V",
+      "industry": "Financial Services",
+      "sub_industry": "Payments & Fintech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 92,
+        "ai_announce": 86,
+        "cloud": 92,
+        "global_reach": 92,
+        "data_centre": 56
+      },
+      "measured_signals": "",
+      "base_score": 79.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 84.7,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Mastercard",
+        "Atlassian",
+        "Shopify",
+        "S&P Global",
+        "Accenture"
+      ]
+    },
+    {
+      "account": "Mastercard",
+      "ticker": "MA",
+      "industry": "Financial Services",
+      "sub_industry": "Payments & Fintech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 92,
+        "ai_announce": 86,
+        "cloud": 92,
+        "global_reach": 92,
+        "data_centre": 56
+      },
+      "measured_signals": "",
+      "base_score": 79.7,
+      "note_adj": -2.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 82.7,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Visa",
+        "Atlassian",
+        "Shopify",
+        "S&P Global",
+        "Accenture"
+      ]
+    },
+    {
+      "account": "American Express",
+      "ticker": "AXP",
+      "industry": "Financial Services",
+      "sub_industry": "Payments & Fintech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 86,
+        "ai_announce": 78,
+        "cloud": 88,
+        "global_reach": 92,
+        "data_centre": 48
+      },
+      "measured_signals": "",
+      "base_score": 68.3,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.1,
+      "adjusted_score": 68.39999999999999,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "PayPal",
+        "Block",
+        "Netflix",
+        "Spotify",
+        "Infosys (Americas)"
+      ]
+    },
+    {
+      "account": "PayPal",
+      "ticker": "PYPL",
+      "industry": "Financial Services",
+      "sub_industry": "Payments & Fintech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 86,
+        "ai_announce": 78,
+        "cloud": 88,
+        "global_reach": 92,
+        "data_centre": 48
+      },
+      "measured_signals": "",
+      "base_score": 68.3,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 3.6,
+      "adjusted_score": 71.89999999999999,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "American Express",
+        "Block",
+        "Netflix",
+        "Spotify",
+        "Infosys (Americas)"
+      ]
+    },
+    {
+      "account": "Block",
+      "ticker": "SQ",
+      "industry": "Financial Services",
+      "sub_industry": "Payments & Fintech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 86,
+        "ai_announce": 78,
+        "cloud": 88,
+        "global_reach": 80,
+        "data_centre": 48
+      },
+      "measured_signals": "",
+      "base_score": 59.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 64.2,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Spotify",
+        "Netflix",
+        "American Express",
+        "PayPal",
+        "The Walt Disney Company"
+      ]
+    },
+    {
+      "account": "Fiserv",
+      "ticker": "FI",
+      "industry": "Financial Services",
+      "sub_industry": "Payments & Fintech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 78,
+        "ai_announce": 70,
+        "cloud": 84,
+        "global_reach": 80,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 47.5,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.2,
+      "adjusted_score": 48.7,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Global Payments",
+        "Comcast (NBCUniversal)",
+        "The Walt Disney Company",
+        "Electronic Arts",
+        "Paramount"
+      ]
+    },
+    {
+      "account": "Global Payments",
+      "ticker": "GPN",
+      "industry": "Financial Services",
+      "sub_industry": "Payments & Fintech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 78,
+        "ai_announce": 70,
+        "cloud": 84,
+        "global_reach": 80,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 47.5,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 52.5,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Fiserv",
+        "Comcast (NBCUniversal)",
+        "The Walt Disney Company",
+        "Electronic Arts",
+        "Paramount"
+      ]
+    },
+    {
+      "account": "BlackRock",
+      "ticker": "BLK",
+      "industry": "Financial Services",
+      "sub_industry": "Asset Mgmt & Insurance",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 80,
+        "ai_announce": 78,
+        "cloud": 82,
+        "global_reach": 88,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 60.1,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 65.1,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Booz Allen Hamilton",
+        "Cognizant",
+        "Gartner",
+        "Infosys (Americas)",
+        "TD Bank Group"
+      ]
+    },
+    {
+      "account": "Berkshire Hathaway",
+      "ticker": "BRK.B",
+      "industry": "Financial Services",
+      "sub_industry": "Asset Mgmt & Insurance",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 62,
+        "cloud": 74,
+        "global_reach": 88,
+        "data_centre": 34
+      },
+      "measured_signals": "",
+      "base_score": 27.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 32.9,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "MetLife",
+        "Chubb",
+        "AIG",
+        "Prudential Financial",
+        "United Airlines"
+      ]
+    },
+    {
+      "account": "Prudential Financial",
+      "ticker": "PRU",
+      "industry": "Financial Services",
+      "sub_industry": "Asset Mgmt & Insurance",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 62,
+        "cloud": 74,
+        "global_reach": 88,
+        "data_centre": 34
+      },
+      "measured_signals": "",
+      "base_score": 27.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.2,
+      "adjusted_score": 29.099999999999998,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "MetLife",
+        "Chubb",
+        "AIG",
+        "Berkshire Hathaway",
+        "United Airlines"
+      ]
+    },
+    {
+      "account": "MetLife",
+      "ticker": "MET",
+      "industry": "Financial Services",
+      "sub_industry": "Asset Mgmt & Insurance",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 62,
+        "cloud": 74,
+        "global_reach": 88,
+        "data_centre": 34
+      },
+      "measured_signals": "",
+      "base_score": 27.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 27.9,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Chubb",
+        "AIG",
+        "Berkshire Hathaway",
+        "Prudential Financial",
+        "United Airlines"
+      ]
+    },
+    {
+      "account": "Chubb",
+      "ticker": "CB",
+      "industry": "Financial Services",
+      "sub_industry": "Asset Mgmt & Insurance",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 62,
+        "cloud": 74,
+        "global_reach": 88,
+        "data_centre": 34
+      },
+      "measured_signals": "",
+      "base_score": 27.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.2,
+      "adjusted_score": 29.099999999999998,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "MetLife",
+        "AIG",
+        "Berkshire Hathaway",
+        "Prudential Financial",
+        "United Airlines"
+      ]
+    },
+    {
+      "account": "Progressive",
+      "ticker": "PGR",
+      "industry": "Financial Services",
+      "sub_industry": "Asset Mgmt & Insurance",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 74,
+        "ai_announce": 70,
+        "cloud": 78,
+        "global_reach": 51,
+        "data_centre": 38
+      },
+      "measured_signals": "",
+      "base_score": 32.1,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 37.1,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Truist",
+        "Fox Corporation",
+        "The Home Depot",
+        "Abbott Laboratories",
+        "Medtronic"
+      ]
+    },
+    {
+      "account": "Allstate",
+      "ticker": "ALL",
+      "industry": "Financial Services",
+      "sub_industry": "Asset Mgmt & Insurance",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 62,
+        "cloud": 74,
+        "global_reach": 51,
+        "data_centre": 34
+      },
+      "measured_signals": "",
+      "base_score": 16.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 16.6,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Union Pacific",
+        "Old Dominion",
+        "Costco Wholesale",
+        "TJX Companies",
+        "Walgreens Boots Alliance"
+      ]
+    },
+    {
+      "account": "AIG",
+      "ticker": "AIG",
+      "industry": "Financial Services",
+      "sub_industry": "Asset Mgmt & Insurance",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 62,
+        "cloud": 74,
+        "global_reach": 88,
+        "data_centre": 34
+      },
+      "measured_signals": "",
+      "base_score": 27.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.0,
+      "adjusted_score": 29.9,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "MetLife",
+        "Chubb",
+        "Berkshire Hathaway",
+        "Prudential Financial",
+        "United Airlines"
+      ]
+    },
+    {
+      "account": "Marsh McLennan",
+      "ticker": "MMC",
+      "industry": "Financial Services",
+      "sub_industry": "Asset Mgmt & Insurance",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 74,
+        "ai_announce": 70,
+        "cloud": 78,
+        "global_reach": 88,
+        "data_centre": 38
+      },
+      "measured_signals": "",
+      "base_score": 43.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.3,
+      "adjusted_score": 43.699999999999996,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Aon",
+        "FedEx",
+        "UPS",
+        "Paramount",
+        "Warner Bros. Discovery"
+      ]
+    },
+    {
+      "account": "Aon",
+      "ticker": "AON",
+      "industry": "Financial Services",
+      "sub_industry": "Asset Mgmt & Insurance",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 74,
+        "ai_announce": 70,
+        "cloud": 78,
+        "global_reach": 88,
+        "data_centre": 38
+      },
+      "measured_signals": "",
+      "base_score": 43.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 48.4,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Marsh McLennan",
+        "FedEx",
+        "UPS",
+        "Paramount",
+        "Warner Bros. Discovery"
+      ]
+    },
+    {
+      "account": "Eli Lilly",
+      "ticker": "LLY",
+      "industry": "Healthcare",
+      "sub_industry": "Pharma & Biotech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 84,
+        "ai_announce": 90,
+        "cloud": 82,
+        "global_reach": 94,
+        "data_centre": 58
+      },
+      "measured_signals": "",
+      "base_score": 77.7,
+      "note_adj": 2.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.8,
+      "adjusted_score": 82.5,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Moderna",
+        "Goldman Sachs",
+        "Morgan Stanley",
+        "Bank of America",
+        "JPMorgan Chase"
+      ]
+    },
+    {
+      "account": "Pfizer",
+      "ticker": "PFE",
+      "industry": "Healthcare",
+      "sub_industry": "Pharma & Biotech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 78,
+        "ai_announce": 82,
+        "cloud": 78,
+        "global_reach": 94,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 66.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.9,
+      "adjusted_score": 68.7,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Amgen",
+        "Merck",
+        "Johnson & Johnson",
+        "Thermo Fisher Scientific",
+        "Corning"
+      ]
+    },
+    {
+      "account": "Johnson & Johnson",
+      "ticker": "JNJ",
+      "industry": "Healthcare",
+      "sub_industry": "Pharma & Biotech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 78,
+        "ai_announce": 82,
+        "cloud": 78,
+        "global_reach": 94,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 66.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.4,
+      "adjusted_score": 68.2,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Amgen",
+        "Pfizer",
+        "Merck",
+        "Thermo Fisher Scientific",
+        "Corning"
+      ]
+    },
+    {
+      "account": "Merck",
+      "ticker": "MRK",
+      "industry": "Healthcare",
+      "sub_industry": "Pharma & Biotech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 78,
+        "ai_announce": 82,
+        "cloud": 78,
+        "global_reach": 94,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 66.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.9,
+      "adjusted_score": 69.7,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Amgen",
+        "Pfizer",
+        "Johnson & Johnson",
+        "Thermo Fisher Scientific",
+        "Corning"
+      ]
+    },
+    {
+      "account": "AbbVie",
+      "ticker": "ABBV",
+      "industry": "Healthcare",
+      "sub_industry": "Pharma & Biotech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 70,
+        "ai_announce": 74,
+        "cloud": 74,
+        "global_reach": 94,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 49.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.1,
+      "adjusted_score": 50.800000000000004,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Bristol Myers Squibb",
+        "Gilead Sciences",
+        "Emerson Electric",
+        "Cummins",
+        "Stellantis"
+      ]
+    },
+    {
+      "account": "Bristol Myers Squibb",
+      "ticker": "BMY",
+      "industry": "Healthcare",
+      "sub_industry": "Pharma & Biotech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 70,
+        "ai_announce": 74,
+        "cloud": 74,
+        "global_reach": 94,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 49.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.9,
+      "adjusted_score": 50.6,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "AbbVie",
+        "Gilead Sciences",
+        "Emerson Electric",
+        "Cummins",
+        "Stellantis"
+      ]
+    },
+    {
+      "account": "Amgen",
+      "ticker": "AMGN",
+      "industry": "Healthcare",
+      "sub_industry": "Pharma & Biotech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 78,
+        "ai_announce": 82,
+        "cloud": 78,
+        "global_reach": 94,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 66.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.5,
+      "adjusted_score": 68.3,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Pfizer",
+        "Merck",
+        "Johnson & Johnson",
+        "Thermo Fisher Scientific",
+        "Corning"
+      ]
+    },
+    {
+      "account": "Gilead Sciences",
+      "ticker": "GILD",
+      "industry": "Healthcare",
+      "sub_industry": "Pharma & Biotech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 70,
+        "ai_announce": 74,
+        "cloud": 74,
+        "global_reach": 94,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 49.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.4,
+      "adjusted_score": 50.1,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Bristol Myers Squibb",
+        "AbbVie",
+        "Emerson Electric",
+        "Cummins",
+        "Stellantis"
+      ]
+    },
+    {
+      "account": "Moderna",
+      "ticker": "MRNA",
+      "industry": "Healthcare",
+      "sub_industry": "Pharma & Biotech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 84,
+        "ai_announce": 90,
+        "cloud": 82,
+        "global_reach": 82,
+        "data_centre": 58
+      },
+      "measured_signals": "",
+      "base_score": 66.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 4.8,
+      "adjusted_score": 71.0,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Eli Lilly",
+        "Morgan Stanley",
+        "Goldman Sachs",
+        "JPMorgan Chase",
+        "Bank of America"
+      ]
+    },
+    {
+      "account": "Regeneron",
+      "ticker": "REGN",
+      "industry": "Healthcare",
+      "sub_industry": "Pharma & Biotech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 78,
+        "ai_announce": 82,
+        "cloud": 78,
+        "global_reach": 82,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 55.3,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.4,
+      "adjusted_score": 55.699999999999996,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Vertex Pharmaceuticals",
+        "Honeywell",
+        "Ford Motor",
+        "Toyota (Americas)",
+        "General Motors"
+      ]
+    },
+    {
+      "account": "Vertex Pharmaceuticals",
+      "ticker": "VRTX",
+      "industry": "Healthcare",
+      "sub_industry": "Pharma & Biotech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 78,
+        "ai_announce": 82,
+        "cloud": 78,
+        "global_reach": 82,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 55.3,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 55.3,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Regeneron",
+        "Honeywell",
+        "Ford Motor",
+        "Toyota (Americas)",
+        "General Motors"
+      ]
+    },
+    {
+      "account": "Thermo Fisher Scientific",
+      "ticker": "TMO",
+      "industry": "Healthcare",
+      "sub_industry": "Pharma & Biotech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 78,
+        "ai_announce": 82,
+        "cloud": 78,
+        "global_reach": 94,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 66.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.8,
+      "adjusted_score": 67.6,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Amgen",
+        "Pfizer",
+        "Merck",
+        "Johnson & Johnson",
+        "Corning"
+      ]
+    },
+    {
+      "account": "UnitedHealth Group",
+      "ticker": "UNH",
+      "industry": "Healthcare",
+      "sub_industry": "Payers, Providers & MedTech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 82,
+        "ai_announce": 80,
+        "cloud": 80,
+        "global_reach": 52,
+        "data_centre": 58
+      },
+      "measured_signals": "",
+      "base_score": 56.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.8,
+      "adjusted_score": 57.199999999999996,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Intuitive Surgical",
+        "Walmart",
+        "Rivian",
+        "Capital One",
+        "Medtronic"
+      ]
+    },
+    {
+      "account": "Elevance Health",
+      "ticker": "ELV",
+      "industry": "Healthcare",
+      "sub_industry": "Payers, Providers & MedTech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 68,
+        "ai_announce": 64,
+        "cloud": 72,
+        "global_reach": 27,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 23.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.4,
+      "adjusted_score": 24.0,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Humana",
+        "HCA Healthcare",
+        "Cigna",
+        "Dollar General",
+        "Best Buy"
+      ]
+    },
+    {
+      "account": "Cigna",
+      "ticker": "CI",
+      "industry": "Healthcare",
+      "sub_industry": "Payers, Providers & MedTech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 68,
+        "ai_announce": 64,
+        "cloud": 72,
+        "global_reach": 27,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 23.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 23.6,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Humana",
+        "Elevance Health",
+        "HCA Healthcare",
+        "Dollar General",
+        "Best Buy"
+      ]
+    },
+    {
+      "account": "CVS Health",
+      "ticker": "CVS",
+      "industry": "Healthcare",
+      "sub_industry": "Payers, Providers & MedTech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 76,
+        "ai_announce": 72,
+        "cloud": 76,
+        "global_reach": 27,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 40.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 4.6,
+      "adjusted_score": 44.800000000000004,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Target",
+        "The Home Depot",
+        "HCA Healthcare",
+        "Elevance Health",
+        "Humana"
+      ]
+    },
+    {
+      "account": "HCA Healthcare",
+      "ticker": "HCA",
+      "industry": "Healthcare",
+      "sub_industry": "Payers, Providers & MedTech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 68,
+        "ai_announce": 64,
+        "cloud": 72,
+        "global_reach": 27,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 23.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.2,
+      "adjusted_score": 24.8,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Humana",
+        "Elevance Health",
+        "Cigna",
+        "Dollar General",
+        "Best Buy"
+      ]
+    },
+    {
+      "account": "Humana",
+      "ticker": "HUM",
+      "industry": "Healthcare",
+      "sub_industry": "Payers, Providers & MedTech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 68,
+        "ai_announce": 64,
+        "cloud": 72,
+        "global_reach": 27,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 23.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.8,
+      "adjusted_score": 24.400000000000002,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Elevance Health",
+        "HCA Healthcare",
+        "Cigna",
+        "Dollar General",
+        "Best Buy"
+      ]
+    },
+    {
+      "account": "Medtronic",
+      "ticker": "MDT",
+      "industry": "Healthcare",
+      "sub_industry": "Payers, Providers & MedTech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 76,
+        "ai_announce": 72,
+        "cloud": 76,
+        "global_reach": 64,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 43.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.4,
+      "adjusted_score": 46.1,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Abbott Laboratories",
+        "Stryker",
+        "PNC Financial",
+        "U.S. Bancorp",
+        "Charles Schwab"
+      ]
+    },
+    {
+      "account": "Abbott Laboratories",
+      "ticker": "ABT",
+      "industry": "Healthcare",
+      "sub_industry": "Payers, Providers & MedTech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 76,
+        "ai_announce": 72,
+        "cloud": 76,
+        "global_reach": 64,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 43.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.3,
+      "adjusted_score": 44.0,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Stryker",
+        "Medtronic",
+        "PNC Financial",
+        "U.S. Bancorp",
+        "Charles Schwab"
+      ]
+    },
+    {
+      "account": "Intuitive Surgical",
+      "ticker": "ISRG",
+      "industry": "Healthcare",
+      "sub_industry": "Payers, Providers & MedTech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 82,
+        "ai_announce": 80,
+        "cloud": 80,
+        "global_reach": 64,
+        "data_centre": 58
+      },
+      "measured_signals": "",
+      "base_score": 58.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.7,
+      "adjusted_score": 58.7,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "UnitedHealth Group",
+        "Walmart",
+        "Charles Schwab",
+        "Wells Fargo",
+        "Rivian"
+      ]
+    },
+    {
+      "account": "Stryker",
+      "ticker": "SYK",
+      "industry": "Healthcare",
+      "sub_industry": "Payers, Providers & MedTech",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 76,
+        "ai_announce": 72,
+        "cloud": 76,
+        "global_reach": 64,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 43.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.5,
+      "adjusted_score": 44.2,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Abbott Laboratories",
+        "Medtronic",
+        "PNC Financial",
+        "U.S. Bancorp",
+        "Charles Schwab"
+      ]
+    },
+    {
+      "account": "Tesla",
+      "ticker": "TSLA",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Automotive",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 92,
+        "ai_announce": 92,
+        "cloud": 72,
+        "global_reach": 80,
+        "data_centre": 88
+      },
+      "measured_signals": "",
+      "base_score": 61.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 66.8,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Steady Middle",
+      "lookalikes": [
+        "AMD",
+        "Dell Technologies",
+        "Hewlett Packard Enterprise",
+        "Marvell",
+        "Broadcom"
+      ]
+    },
+    {
+      "account": "Ford Motor",
+      "ticker": "F",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Automotive",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 80,
+        "ai_announce": 78,
+        "cloud": 76,
+        "global_reach": 88,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 57.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.8,
+      "adjusted_score": 60.4,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "General Motors",
+        "Toyota (Americas)",
+        "Honeywell",
+        "Citigroup",
+        "TD Bank Group"
+      ]
+    },
+    {
+      "account": "General Motors",
+      "ticker": "GM",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Automotive",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 80,
+        "ai_announce": 78,
+        "cloud": 76,
+        "global_reach": 88,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 57.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 57.6,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Toyota (Americas)",
+        "Ford Motor",
+        "Honeywell",
+        "Citigroup",
+        "TD Bank Group"
+      ]
+    },
+    {
+      "account": "Rivian",
+      "ticker": "RIVN",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Automotive",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 80,
+        "ai_announce": 78,
+        "cloud": 76,
+        "global_reach": 51,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 46.3,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.5,
+      "adjusted_score": 46.8,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "UnitedHealth Group",
+        "Walmart",
+        "Stryker",
+        "Medtronic",
+        "Abbott Laboratories"
+      ]
+    },
+    {
+      "account": "Toyota (Americas)",
+      "ticker": "TM",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Automotive",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 80,
+        "ai_announce": 78,
+        "cloud": 76,
+        "global_reach": 88,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 57.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.8,
+      "adjusted_score": 59.4,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "General Motors",
+        "Ford Motor",
+        "Honeywell",
+        "Citigroup",
+        "TD Bank Group"
+      ]
+    },
+    {
+      "account": "Stellantis",
+      "ticker": "STLA",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Automotive",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 72,
+        "ai_announce": 70,
+        "cloud": 72,
+        "global_reach": 88,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 40.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.7,
+      "adjusted_score": 41.5,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Cummins",
+        "Northrop Grumman",
+        "RTX",
+        "Lockheed Martin",
+        "GE Aerospace"
+      ]
+    },
+    {
+      "account": "Cummins",
+      "ticker": "CMI",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Automotive",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 72,
+        "ai_announce": 70,
+        "cloud": 72,
+        "global_reach": 88,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 40.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 4.1,
+      "adjusted_score": 44.9,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Stellantis",
+        "Northrop Grumman",
+        "RTX",
+        "Lockheed Martin",
+        "GE Aerospace"
+      ]
+    },
+    {
+      "account": "Boeing",
+      "ticker": "BA",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Aerospace & Defense",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 62,
+        "cloud": 68,
+        "global_reach": 84,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 21.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 3.1,
+      "adjusted_score": 24.3,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "General Dynamics",
+        "American Airlines",
+        "C.H. Robinson",
+        "Delta Air Lines",
+        "United Airlines"
+      ]
+    },
+    {
+      "account": "Lockheed Martin",
+      "ticker": "LMT",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Aerospace & Defense",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 74,
+        "ai_announce": 70,
+        "cloud": 72,
+        "global_reach": 84,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 35.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 3.6,
+      "adjusted_score": 39.5,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "RTX",
+        "Northrop Grumman",
+        "GE Aerospace",
+        "Cummins",
+        "Stellantis"
+      ]
+    },
+    {
+      "account": "RTX",
+      "ticker": "RTX",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Aerospace & Defense",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 74,
+        "ai_announce": 70,
+        "cloud": 72,
+        "global_reach": 84,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 35.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 40.9,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Lockheed Martin",
+        "Northrop Grumman",
+        "GE Aerospace",
+        "Cummins",
+        "Stellantis"
+      ]
+    },
+    {
+      "account": "General Dynamics",
+      "ticker": "GD",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Aerospace & Defense",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 62,
+        "cloud": 68,
+        "global_reach": 84,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 21.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 21.2,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Boeing",
+        "American Airlines",
+        "C.H. Robinson",
+        "Delta Air Lines",
+        "United Airlines"
+      ]
+    },
+    {
+      "account": "Northrop Grumman",
+      "ticker": "NOC",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Aerospace & Defense",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 74,
+        "ai_announce": 70,
+        "cloud": 72,
+        "global_reach": 84,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 35.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 35.9,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "RTX",
+        "Lockheed Martin",
+        "GE Aerospace",
+        "Cummins",
+        "Stellantis"
+      ]
+    },
+    {
+      "account": "Honeywell",
+      "ticker": "HON",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Aerospace & Defense",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 80,
+        "ai_announce": 78,
+        "cloud": 76,
+        "global_reach": 84,
+        "data_centre": 52
+      },
+      "measured_signals": "",
+      "base_score": 54.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.3,
+      "adjusted_score": 55.199999999999996,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Ford Motor",
+        "Toyota (Americas)",
+        "General Motors",
+        "Vertex Pharmaceuticals",
+        "Regeneron"
+      ]
+    },
+    {
+      "account": "GE Aerospace",
+      "ticker": "GE",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Aerospace & Defense",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 74,
+        "ai_announce": 70,
+        "cloud": 72,
+        "global_reach": 84,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 35.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.8,
+      "adjusted_score": 38.699999999999996,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "RTX",
+        "Lockheed Martin",
+        "Northrop Grumman",
+        "Cummins",
+        "Stellantis"
+      ]
+    },
+    {
+      "account": "Caterpillar",
+      "ticker": "CAT",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Industrial & Materials",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 62,
+        "ai_announce": 64,
+        "cloud": 68,
+        "global_reach": 96,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 32.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 37.2,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Parker Hannifin",
+        "Dow",
+        "Illinois Tool Works",
+        "Phillips 66",
+        "Chevron"
+      ]
+    },
+    {
+      "account": "Deere & Company",
+      "ticker": "DE",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Industrial & Materials",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 76,
+        "ai_announce": 80,
+        "cloud": 76,
+        "global_reach": 96,
+        "data_centre": 52
+      },
+      "measured_signals": "",
+      "base_score": 66.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.3,
+      "adjusted_score": 67.3,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Rockwell Automation",
+        "Siemens (Americas)",
+        "Corning",
+        "Schneider Electric",
+        "Eaton"
+      ]
+    },
+    {
+      "account": "Emerson Electric",
+      "ticker": "EMR",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Industrial & Materials",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 70,
+        "ai_announce": 72,
+        "cloud": 72,
+        "global_reach": 96,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 46.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.0,
+      "adjusted_score": 47.8,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Bristol Myers Squibb",
+        "AbbVie",
+        "Gilead Sciences",
+        "Cummins",
+        "Stellantis"
+      ]
+    },
+    {
+      "account": "Illinois Tool Works",
+      "ticker": "ITW",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Industrial & Materials",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 62,
+        "ai_announce": 64,
+        "cloud": 68,
+        "global_reach": 96,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 32.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 32.2,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Parker Hannifin",
+        "Caterpillar",
+        "Dow",
+        "Phillips 66",
+        "Chevron"
+      ]
+    },
+    {
+      "account": "Parker Hannifin",
+      "ticker": "PH",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Industrial & Materials",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 62,
+        "ai_announce": 64,
+        "cloud": 68,
+        "global_reach": 96,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 32.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 32.2,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Caterpillar",
+        "Dow",
+        "Illinois Tool Works",
+        "Phillips 66",
+        "Chevron"
+      ]
+    },
+    {
+      "account": "Eaton",
+      "ticker": "ETN",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Industrial & Materials",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 76,
+        "ai_announce": 80,
+        "cloud": 76,
+        "global_reach": 96,
+        "data_centre": 52
+      },
+      "measured_signals": "",
+      "base_score": 66.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 71.0,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Deere & Company",
+        "Rockwell Automation",
+        "Siemens (Americas)",
+        "Corning",
+        "Schneider Electric"
+      ]
+    },
+    {
+      "account": "Rockwell Automation",
+      "ticker": "ROK",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Industrial & Materials",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 76,
+        "ai_announce": 80,
+        "cloud": 76,
+        "global_reach": 96,
+        "data_centre": 52
+      },
+      "measured_signals": "",
+      "base_score": 66.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 3.1,
+      "adjusted_score": 69.1,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Deere & Company",
+        "Siemens (Americas)",
+        "Corning",
+        "Schneider Electric",
+        "Eaton"
+      ]
+    },
+    {
+      "account": "Siemens (Americas)",
+      "ticker": "SIEGY",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Industrial & Materials",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 76,
+        "ai_announce": 80,
+        "cloud": 76,
+        "global_reach": 96,
+        "data_centre": 52
+      },
+      "measured_signals": "",
+      "base_score": 66.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 71.0,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Deere & Company",
+        "Rockwell Automation",
+        "Corning",
+        "Schneider Electric",
+        "Eaton"
+      ]
+    },
+    {
+      "account": "Schneider Electric",
+      "ticker": "SBGSY",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Industrial & Materials",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 76,
+        "ai_announce": 80,
+        "cloud": 76,
+        "global_reach": 96,
+        "data_centre": 52
+      },
+      "measured_signals": "",
+      "base_score": 66.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 71.0,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Deere & Company",
+        "Rockwell Automation",
+        "Siemens (Americas)",
+        "Corning",
+        "Eaton"
+      ]
+    },
+    {
+      "account": "Corning",
+      "ticker": "GLW",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Industrial & Materials",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 76,
+        "ai_announce": 80,
+        "cloud": 76,
+        "global_reach": 96,
+        "data_centre": 52
+      },
+      "measured_signals": "",
+      "base_score": 66.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 71.0,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Deere & Company",
+        "Rockwell Automation",
+        "Siemens (Americas)",
+        "Schneider Electric",
+        "Eaton"
+      ]
+    },
+    {
+      "account": "Dow",
+      "ticker": "DOW",
+      "industry": "Manufacturing & Industrial",
+      "sub_industry": "Industrial & Materials",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 62,
+        "ai_announce": 64,
+        "cloud": 68,
+        "global_reach": 96,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 32.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 37.2,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Parker Hannifin",
+        "Caterpillar",
+        "Illinois Tool Works",
+        "Phillips 66",
+        "Chevron"
+      ]
+    },
+    {
+      "account": "Walmart",
+      "ticker": "WMT",
+      "industry": "Retail & Consumer",
+      "sub_industry": "Retail",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 80,
+        "ai_announce": 74,
+        "cloud": 82,
+        "global_reach": 58,
+        "data_centre": 54
+      },
+      "measured_signals": "",
+      "base_score": 53.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 58.8,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Intuitive Surgical",
+        "UnitedHealth Group",
+        "Rivian",
+        "Stryker",
+        "Medtronic"
+      ]
+    },
+    {
+      "account": "Costco Wholesale",
+      "ticker": "COST",
+      "industry": "Retail & Consumer",
+      "sub_industry": "Retail",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 58,
+        "cloud": 74,
+        "global_reach": 58,
+        "data_centre": 42
+      },
+      "measured_signals": "",
+      "base_score": 21.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.1,
+      "adjusted_score": 21.3,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "TJX Companies",
+        "Walgreens Boots Alliance",
+        "Union Pacific",
+        "Old Dominion",
+        "Allstate"
+      ]
+    },
+    {
+      "account": "The Home Depot",
+      "ticker": "HD",
+      "industry": "Retail & Consumer",
+      "sub_industry": "Retail",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 74,
+        "ai_announce": 66,
+        "cloud": 78,
+        "global_reach": 46,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 36.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 4.0,
+      "adjusted_score": 40.9,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Truist",
+        "Fox Corporation",
+        "Progressive",
+        "Abbott Laboratories",
+        "Medtronic"
+      ]
+    },
+    {
+      "account": "Lowe's",
+      "ticker": "LOW",
+      "industry": "Retail & Consumer",
+      "sub_industry": "Retail",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 58,
+        "cloud": 74,
+        "global_reach": 21,
+        "data_centre": 42
+      },
+      "measured_signals": "",
+      "base_score": 17.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.7,
+      "adjusted_score": 19.3,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Dollar General",
+        "Best Buy",
+        "Kroger",
+        "HCA Healthcare",
+        "Elevance Health"
+      ]
+    },
+    {
+      "account": "Target",
+      "ticker": "TGT",
+      "industry": "Retail & Consumer",
+      "sub_industry": "Retail",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 74,
+        "ai_announce": 66,
+        "cloud": 78,
+        "global_reach": 21,
+        "data_centre": 46
+      },
+      "measured_signals": "",
+      "base_score": 35.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 40.6,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "CVS Health",
+        "HCA Healthcare",
+        "Humana",
+        "Elevance Health",
+        "Cigna"
+      ]
+    },
+    {
+      "account": "TJX Companies",
+      "ticker": "TJX",
+      "industry": "Retail & Consumer",
+      "sub_industry": "Retail",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 58,
+        "cloud": 74,
+        "global_reach": 58,
+        "data_centre": 42
+      },
+      "measured_signals": "",
+      "base_score": 21.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.3,
+      "adjusted_score": 21.5,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Costco Wholesale",
+        "Walgreens Boots Alliance",
+        "Union Pacific",
+        "Old Dominion",
+        "Allstate"
+      ]
+    },
+    {
+      "account": "Best Buy",
+      "ticker": "BBY",
+      "industry": "Retail & Consumer",
+      "sub_industry": "Retail",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 58,
+        "cloud": 74,
+        "global_reach": 21,
+        "data_centre": 42
+      },
+      "measured_signals": "",
+      "base_score": 17.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 22.6,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Lowe's",
+        "Dollar General",
+        "Kroger",
+        "HCA Healthcare",
+        "Elevance Health"
+      ]
+    },
+    {
+      "account": "Kroger",
+      "ticker": "KR",
+      "industry": "Retail & Consumer",
+      "sub_industry": "Retail",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 58,
+        "cloud": 74,
+        "global_reach": 21,
+        "data_centre": 42
+      },
+      "measured_signals": "",
+      "base_score": 17.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.3,
+      "adjusted_score": 17.900000000000002,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Lowe's",
+        "Dollar General",
+        "Best Buy",
+        "HCA Healthcare",
+        "Elevance Health"
+      ]
+    },
+    {
+      "account": "Walgreens Boots Alliance",
+      "ticker": "WBA",
+      "industry": "Retail & Consumer",
+      "sub_industry": "Retail",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 58,
+        "cloud": 74,
+        "global_reach": 58,
+        "data_centre": 42
+      },
+      "measured_signals": "",
+      "base_score": 21.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 21.2,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Costco Wholesale",
+        "TJX Companies",
+        "Union Pacific",
+        "Old Dominion",
+        "Allstate"
+      ]
+    },
+    {
+      "account": "Dollar General",
+      "ticker": "DG",
+      "industry": "Retail & Consumer",
+      "sub_industry": "Retail",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 66,
+        "ai_announce": 58,
+        "cloud": 74,
+        "global_reach": 21,
+        "data_centre": 42
+      },
+      "measured_signals": "",
+      "base_score": 17.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 3.9,
+      "adjusted_score": 21.5,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Lowe's",
+        "Best Buy",
+        "Kroger",
+        "HCA Healthcare",
+        "Elevance Health"
+      ]
+    },
+    {
+      "account": "Procter & Gamble",
+      "ticker": "PG",
+      "industry": "Retail & Consumer",
+      "sub_industry": "CPG & Food/Beverage",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 72,
+        "ai_announce": 72,
+        "cloud": 76,
+        "global_reach": 100,
+        "data_centre": 36
+      },
+      "measured_signals": "",
+      "base_score": 49.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.0,
+      "adjusted_score": 50.6,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Starbucks",
+        "McDonald's",
+        "PepsiCo",
+        "Nike",
+        "Unilever (Americas)"
+      ]
+    },
+    {
+      "account": "Coca-Cola",
+      "ticker": "KO",
+      "industry": "Retail & Consumer",
+      "sub_industry": "CPG & Food/Beverage",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 72,
+        "ai_announce": 72,
+        "cloud": 76,
+        "global_reach": 100,
+        "data_centre": 36
+      },
+      "measured_signals": "",
+      "base_score": 49.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 4.0,
+      "adjusted_score": 53.6,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Starbucks",
+        "McDonald's",
+        "PepsiCo",
+        "Procter & Gamble",
+        "Nike"
+      ]
+    },
+    {
+      "account": "PepsiCo",
+      "ticker": "PEP",
+      "industry": "Retail & Consumer",
+      "sub_industry": "CPG & Food/Beverage",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 72,
+        "ai_announce": 72,
+        "cloud": 76,
+        "global_reach": 100,
+        "data_centre": 36
+      },
+      "measured_signals": "",
+      "base_score": 49.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.7,
+      "adjusted_score": 52.300000000000004,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Starbucks",
+        "McDonald's",
+        "Procter & Gamble",
+        "Nike",
+        "Unilever (Americas)"
+      ]
+    },
+    {
+      "account": "Nike",
+      "ticker": "NKE",
+      "industry": "Retail & Consumer",
+      "sub_industry": "CPG & Food/Beverage",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 72,
+        "ai_announce": 72,
+        "cloud": 76,
+        "global_reach": 100,
+        "data_centre": 36
+      },
+      "measured_signals": "",
+      "base_score": 49.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.9,
+      "adjusted_score": 52.5,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Starbucks",
+        "McDonald's",
+        "PepsiCo",
+        "Procter & Gamble",
+        "Unilever (Americas)"
+      ]
+    },
+    {
+      "account": "McDonald's",
+      "ticker": "MCD",
+      "industry": "Retail & Consumer",
+      "sub_industry": "CPG & Food/Beverage",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 72,
+        "ai_announce": 72,
+        "cloud": 76,
+        "global_reach": 100,
+        "data_centre": 36
+      },
+      "measured_signals": "",
+      "base_score": 49.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.1,
+      "adjusted_score": 50.7,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Starbucks",
+        "PepsiCo",
+        "Procter & Gamble",
+        "Nike",
+        "Unilever (Americas)"
+      ]
+    },
+    {
+      "account": "Starbucks",
+      "ticker": "SBUX",
+      "industry": "Retail & Consumer",
+      "sub_industry": "CPG & Food/Beverage",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 72,
+        "ai_announce": 72,
+        "cloud": 76,
+        "global_reach": 100,
+        "data_centre": 36
+      },
+      "measured_signals": "",
+      "base_score": 49.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.7,
+      "adjusted_score": 50.300000000000004,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "McDonald's",
+        "PepsiCo",
+        "Procter & Gamble",
+        "Nike",
+        "Unilever (Americas)"
+      ]
+    },
+    {
+      "account": "Mondelez",
+      "ticker": "MDLZ",
+      "industry": "Retail & Consumer",
+      "sub_industry": "CPG & Food/Beverage",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 64,
+        "ai_announce": 64,
+        "cloud": 72,
+        "global_reach": 100,
+        "data_centre": 32
+      },
+      "measured_signals": "",
+      "base_score": 34.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 34.0,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Estee Lauder",
+        "Colgate-Palmolive",
+        "Kraft Heinz",
+        "General Mills",
+        "Berkshire Hathaway"
+      ]
+    },
+    {
+      "account": "Colgate-Palmolive",
+      "ticker": "CL",
+      "industry": "Retail & Consumer",
+      "sub_industry": "CPG & Food/Beverage",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 64,
+        "ai_announce": 64,
+        "cloud": 72,
+        "global_reach": 100,
+        "data_centre": 32
+      },
+      "measured_signals": "",
+      "base_score": 34.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.3,
+      "adjusted_score": 36.3,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Estee Lauder",
+        "Kraft Heinz",
+        "General Mills",
+        "Mondelez",
+        "Berkshire Hathaway"
+      ]
+    },
+    {
+      "account": "Unilever (Americas)",
+      "ticker": "UL",
+      "industry": "Retail & Consumer",
+      "sub_industry": "CPG & Food/Beverage",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 72,
+        "ai_announce": 72,
+        "cloud": 76,
+        "global_reach": 100,
+        "data_centre": 36
+      },
+      "measured_signals": "",
+      "base_score": 49.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.9,
+      "adjusted_score": 51.5,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Starbucks",
+        "McDonald's",
+        "PepsiCo",
+        "Procter & Gamble",
+        "Nike"
+      ]
+    },
+    {
+      "account": "Kraft Heinz",
+      "ticker": "KHC",
+      "industry": "Retail & Consumer",
+      "sub_industry": "CPG & Food/Beverage",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 64,
+        "ai_announce": 64,
+        "cloud": 72,
+        "global_reach": 100,
+        "data_centre": 32
+      },
+      "measured_signals": "",
+      "base_score": 34.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.5,
+      "adjusted_score": 34.5,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Estee Lauder",
+        "Colgate-Palmolive",
+        "General Mills",
+        "Mondelez",
+        "Berkshire Hathaway"
+      ]
+    },
+    {
+      "account": "Estee Lauder",
+      "ticker": "EL",
+      "industry": "Retail & Consumer",
+      "sub_industry": "CPG & Food/Beverage",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 64,
+        "ai_announce": 64,
+        "cloud": 72,
+        "global_reach": 100,
+        "data_centre": 32
+      },
+      "measured_signals": "",
+      "base_score": 34.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.8,
+      "adjusted_score": 34.8,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Colgate-Palmolive",
+        "Kraft Heinz",
+        "General Mills",
+        "Mondelez",
+        "Berkshire Hathaway"
+      ]
+    },
+    {
+      "account": "General Mills",
+      "ticker": "GIS",
+      "industry": "Retail & Consumer",
+      "sub_industry": "CPG & Food/Beverage",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 64,
+        "ai_announce": 64,
+        "cloud": 72,
+        "global_reach": 100,
+        "data_centre": 32
+      },
+      "measured_signals": "",
+      "base_score": 34.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 34.0,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Estee Lauder",
+        "Colgate-Palmolive",
+        "Kraft Heinz",
+        "Mondelez",
+        "Berkshire Hathaway"
+      ]
+    },
+    {
+      "account": "Netflix",
+      "ticker": "NFLX",
+      "industry": "Media & Entertainment",
+      "sub_industry": "Media & Entertainment",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 86,
+        "ai_announce": 82,
+        "cloud": 90,
+        "global_reach": 84,
+        "data_centre": 52
+      },
+      "measured_signals": "",
+      "base_score": 67.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 72.9,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Spotify",
+        "Block",
+        "PayPal",
+        "American Express",
+        "S&P Global"
+      ]
+    },
+    {
+      "account": "The Walt Disney Company",
+      "ticker": "DIS",
+      "industry": "Media & Entertainment",
+      "sub_industry": "Media & Entertainment",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 80,
+        "ai_announce": 74,
+        "cloud": 86,
+        "global_reach": 84,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 54.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.3,
+      "adjusted_score": 56.5,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Comcast (NBCUniversal)",
+        "Electronic Arts",
+        "Fiserv",
+        "Global Payments",
+        "BlackRock"
+      ]
+    },
+    {
+      "account": "Comcast (NBCUniversal)",
+      "ticker": "CMCSA",
+      "industry": "Media & Entertainment",
+      "sub_industry": "Media & Entertainment",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 80,
+        "ai_announce": 74,
+        "cloud": 86,
+        "global_reach": 84,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 54.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.5,
+      "adjusted_score": 56.7,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "The Walt Disney Company",
+        "Electronic Arts",
+        "Fiserv",
+        "Global Payments",
+        "BlackRock"
+      ]
+    },
+    {
+      "account": "Warner Bros. Discovery",
+      "ticker": "WBD",
+      "industry": "Media & Entertainment",
+      "sub_industry": "Media & Entertainment",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 72,
+        "ai_announce": 66,
+        "cloud": 82,
+        "global_reach": 84,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 39.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.0,
+      "adjusted_score": 41.6,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Paramount",
+        "Aon",
+        "Marsh McLennan",
+        "UPS",
+        "FedEx"
+      ]
+    },
+    {
+      "account": "Paramount",
+      "ticker": "PARA",
+      "industry": "Media & Entertainment",
+      "sub_industry": "Media & Entertainment",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 72,
+        "ai_announce": 66,
+        "cloud": 82,
+        "global_reach": 84,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 39.6,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 4.5,
+      "adjusted_score": 44.1,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Warner Bros. Discovery",
+        "Aon",
+        "Marsh McLennan",
+        "UPS",
+        "FedEx"
+      ]
+    },
+    {
+      "account": "Fox Corporation",
+      "ticker": "FOXA",
+      "industry": "Media & Entertainment",
+      "sub_industry": "Media & Entertainment",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 72,
+        "ai_announce": 66,
+        "cloud": 82,
+        "global_reach": 47,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 32.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.5,
+      "adjusted_score": 32.5,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "The Home Depot",
+        "Progressive",
+        "Truist",
+        "Allstate",
+        "TJX Companies"
+      ]
+    },
+    {
+      "account": "Electronic Arts",
+      "ticker": "EA",
+      "industry": "Media & Entertainment",
+      "sub_industry": "Media & Entertainment",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 80,
+        "ai_announce": 74,
+        "cloud": 86,
+        "global_reach": 84,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 54.2,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.8,
+      "adjusted_score": 55.0,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Comcast (NBCUniversal)",
+        "The Walt Disney Company",
+        "Fiserv",
+        "Global Payments",
+        "BlackRock"
+      ]
+    },
+    {
+      "account": "Spotify",
+      "ticker": "SPOT",
+      "industry": "Media & Entertainment",
+      "sub_industry": "Media & Entertainment",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 86,
+        "ai_announce": 82,
+        "cloud": 90,
+        "global_reach": 84,
+        "data_centre": 52
+      },
+      "measured_signals": "",
+      "base_score": 67.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 72.9,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Netflix",
+        "Block",
+        "PayPal",
+        "American Express",
+        "S&P Global"
+      ]
+    },
+    {
+      "account": "ExxonMobil",
+      "ticker": "XOM",
+      "industry": "Energy & Utilities",
+      "sub_industry": "Energy & Utilities",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 60,
+        "ai_announce": 60,
+        "cloud": 66,
+        "global_reach": 92,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 23.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.5,
+      "adjusted_score": 25.5,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Phillips 66",
+        "Chevron",
+        "ConocoPhillips",
+        "Dow",
+        "Illinois Tool Works"
+      ]
+    },
+    {
+      "account": "Chevron",
+      "ticker": "CVX",
+      "industry": "Energy & Utilities",
+      "sub_industry": "Energy & Utilities",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 60,
+        "ai_announce": 60,
+        "cloud": 66,
+        "global_reach": 92,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 23.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 3.6,
+      "adjusted_score": 26.6,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Phillips 66",
+        "ExxonMobil",
+        "ConocoPhillips",
+        "Dow",
+        "Illinois Tool Works"
+      ]
+    },
+    {
+      "account": "ConocoPhillips",
+      "ticker": "COP",
+      "industry": "Energy & Utilities",
+      "sub_industry": "Energy & Utilities",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 60,
+        "ai_announce": 60,
+        "cloud": 66,
+        "global_reach": 92,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 23.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.3,
+      "adjusted_score": 23.3,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Phillips 66",
+        "ExxonMobil",
+        "Chevron",
+        "Dow",
+        "Illinois Tool Works"
+      ]
+    },
+    {
+      "account": "Schlumberger",
+      "ticker": "SLB",
+      "industry": "Energy & Utilities",
+      "sub_industry": "Energy & Utilities",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 68,
+        "ai_announce": 68,
+        "cloud": 70,
+        "global_reach": 92,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 36.5,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.8,
+      "adjusted_score": 38.3,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Shell (Americas)",
+        "Emerson Electric",
+        "Cummins",
+        "Stellantis",
+        "Gilead Sciences"
+      ]
+    },
+    {
+      "account": "NextEra Energy",
+      "ticker": "NEE",
+      "industry": "Energy & Utilities",
+      "sub_industry": "Energy & Utilities",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 68,
+        "ai_announce": 68,
+        "cloud": 70,
+        "global_reach": 55,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 23.9,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 3.1,
+      "adjusted_score": 27.0,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Truist",
+        "Allstate",
+        "TJX Companies",
+        "Walgreens Boots Alliance",
+        "Costco Wholesale"
+      ]
+    },
+    {
+      "account": "Duke Energy",
+      "ticker": "DUK",
+      "industry": "Energy & Utilities",
+      "sub_industry": "Energy & Utilities",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 60,
+        "ai_announce": 60,
+        "cloud": 66,
+        "global_reach": 55,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 10.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 3.1,
+      "adjusted_score": 13.5,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Dominion Energy",
+        "Southern Company",
+        "Union Pacific",
+        "Old Dominion",
+        "Costco Wholesale"
+      ]
+    },
+    {
+      "account": "Southern Company",
+      "ticker": "SO",
+      "industry": "Energy & Utilities",
+      "sub_industry": "Energy & Utilities",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 60,
+        "ai_announce": 60,
+        "cloud": 66,
+        "global_reach": 55,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 10.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.8,
+      "adjusted_score": 12.200000000000001,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Duke Energy",
+        "Dominion Energy",
+        "Union Pacific",
+        "Old Dominion",
+        "Costco Wholesale"
+      ]
+    },
+    {
+      "account": "Dominion Energy",
+      "ticker": "D",
+      "industry": "Energy & Utilities",
+      "sub_industry": "Energy & Utilities",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 60,
+        "ai_announce": 60,
+        "cloud": 66,
+        "global_reach": 55,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 10.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.4,
+      "adjusted_score": 12.8,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Duke Energy",
+        "Southern Company",
+        "Union Pacific",
+        "Old Dominion",
+        "Costco Wholesale"
+      ]
+    },
+    {
+      "account": "Shell (Americas)",
+      "ticker": "SHEL",
+      "industry": "Energy & Utilities",
+      "sub_industry": "Energy & Utilities",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 68,
+        "ai_announce": 68,
+        "cloud": 70,
+        "global_reach": 92,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 36.5,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.7,
+      "adjusted_score": 39.2,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Schlumberger",
+        "Emerson Electric",
+        "Cummins",
+        "Stellantis",
+        "Gilead Sciences"
+      ]
+    },
+    {
+      "account": "Phillips 66",
+      "ticker": "PSX",
+      "industry": "Energy & Utilities",
+      "sub_industry": "Energy & Utilities",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 60,
+        "ai_announce": 60,
+        "cloud": 66,
+        "global_reach": 92,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 23.0,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 23.0,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "ExxonMobil",
+        "Chevron",
+        "ConocoPhillips",
+        "Dow",
+        "Illinois Tool Works"
+      ]
+    },
+    {
+      "account": "UPS",
+      "ticker": "UPS",
+      "industry": "Logistics & Transportation",
+      "sub_industry": "Logistics & Transportation",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 72,
+        "ai_announce": 66,
+        "cloud": 76,
+        "global_reach": 84,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 38.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 43.7,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "FedEx",
+        "RTX",
+        "Northrop Grumman",
+        "Lockheed Martin",
+        "GE Aerospace"
+      ]
+    },
+    {
+      "account": "FedEx",
+      "ticker": "FDX",
+      "industry": "Logistics & Transportation",
+      "sub_industry": "Logistics & Transportation",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 72,
+        "ai_announce": 66,
+        "cloud": 76,
+        "global_reach": 84,
+        "data_centre": 44
+      },
+      "measured_signals": "",
+      "base_score": 38.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.0,
+      "adjusted_score": 40.7,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "UPS",
+        "RTX",
+        "Northrop Grumman",
+        "Lockheed Martin",
+        "GE Aerospace"
+      ]
+    },
+    {
+      "account": "Union Pacific",
+      "ticker": "UNP",
+      "industry": "Logistics & Transportation",
+      "sub_industry": "Logistics & Transportation",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 64,
+        "ai_announce": 58,
+        "cloud": 72,
+        "global_reach": 47,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 12.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 12.8,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Old Dominion",
+        "Allstate",
+        "Costco Wholesale",
+        "Walgreens Boots Alliance",
+        "TJX Companies"
+      ]
+    },
+    {
+      "account": "Delta Air Lines",
+      "ticker": "DAL",
+      "industry": "Logistics & Transportation",
+      "sub_industry": "Logistics & Transportation",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 64,
+        "ai_announce": 58,
+        "cloud": 72,
+        "global_reach": 84,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 20.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 3.4,
+      "adjusted_score": 23.799999999999997,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "C.H. Robinson",
+        "United Airlines",
+        "American Airlines",
+        "Boeing",
+        "General Dynamics"
+      ]
+    },
+    {
+      "account": "American Airlines",
+      "ticker": "AAL",
+      "industry": "Logistics & Transportation",
+      "sub_industry": "Logistics & Transportation",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 64,
+        "ai_announce": 58,
+        "cloud": 72,
+        "global_reach": 84,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 20.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.6,
+      "adjusted_score": 23.0,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "C.H. Robinson",
+        "Delta Air Lines",
+        "United Airlines",
+        "Boeing",
+        "General Dynamics"
+      ]
+    },
+    {
+      "account": "United Airlines",
+      "ticker": "UAL",
+      "industry": "Logistics & Transportation",
+      "sub_industry": "Logistics & Transportation",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 64,
+        "ai_announce": 58,
+        "cloud": 72,
+        "global_reach": 84,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 20.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 2.4,
+      "adjusted_score": 22.799999999999997,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "C.H. Robinson",
+        "Delta Air Lines",
+        "American Airlines",
+        "Boeing",
+        "General Dynamics"
+      ]
+    },
+    {
+      "account": "C.H. Robinson",
+      "ticker": "CHRW",
+      "industry": "Logistics & Transportation",
+      "sub_industry": "Logistics & Transportation",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 64,
+        "ai_announce": 58,
+        "cloud": 72,
+        "global_reach": 84,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 20.4,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 1.5,
+      "adjusted_score": 21.9,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Watch List",
+      "lookalikes": [
+        "Delta Air Lines",
+        "United Airlines",
+        "American Airlines",
+        "Boeing",
+        "General Dynamics"
+      ]
+    },
+    {
+      "account": "Old Dominion",
+      "ticker": "ODFL",
+      "industry": "Logistics & Transportation",
+      "sub_industry": "Logistics & Transportation",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 64,
+        "ai_announce": 58,
+        "cloud": 72,
+        "global_reach": 47,
+        "data_centre": 40
+      },
+      "measured_signals": "",
+      "base_score": 12.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 0.0,
+      "adjusted_score": 12.8,
+      "tier": "Tier 3",
+      "tier_action": "Monitor",
+      "segment": "Early Stage",
+      "lookalikes": [
+        "Union Pacific",
+        "Allstate",
+        "Costco Wholesale",
+        "Walgreens Boots Alliance",
+        "TJX Companies"
+      ]
+    },
+    {
+      "account": "Accenture",
+      "ticker": "ACN",
+      "industry": "Professional Services",
+      "sub_industry": "Professional Services",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 88,
+        "ai_announce": 88,
+        "cloud": 88,
+        "global_reach": 94,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 77.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 82.7,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "S&P Global",
+        "Visa",
+        "Mastercard",
+        "Netflix",
+        "Spotify"
+      ]
+    },
+    {
+      "account": "Cognizant",
+      "ticker": "CTSH",
+      "industry": "Professional Services",
+      "sub_industry": "Professional Services",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 82,
+        "ai_announce": 80,
+        "cloud": 84,
+        "global_reach": 94,
+        "data_centre": 42
+      },
+      "measured_signals": "",
+      "base_score": 64.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 69.8,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Booz Allen Hamilton",
+        "Gartner",
+        "Infosys (Americas)",
+        "BlackRock",
+        "PayPal"
+      ]
+    },
+    {
+      "account": "Infosys (Americas)",
+      "ticker": "INFY",
+      "industry": "Professional Services",
+      "sub_industry": "Professional Services",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 82,
+        "ai_announce": 80,
+        "cloud": 84,
+        "global_reach": 94,
+        "data_centre": 42
+      },
+      "measured_signals": "",
+      "base_score": 64.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 69.8,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Booz Allen Hamilton",
+        "Cognizant",
+        "Gartner",
+        "BlackRock",
+        "PayPal"
+      ]
+    },
+    {
+      "account": "Booz Allen Hamilton",
+      "ticker": "BAH",
+      "industry": "Professional Services",
+      "sub_industry": "Professional Services",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 82,
+        "ai_announce": 80,
+        "cloud": 84,
+        "global_reach": 94,
+        "data_centre": 42
+      },
+      "measured_signals": "",
+      "base_score": 64.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 4.0,
+      "adjusted_score": 68.8,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Cognizant",
+        "Gartner",
+        "Infosys (Americas)",
+        "BlackRock",
+        "PayPal"
+      ]
+    },
+    {
+      "account": "Gartner",
+      "ticker": "IT",
+      "industry": "Professional Services",
+      "sub_industry": "Professional Services",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 82,
+        "ai_announce": 80,
+        "cloud": 84,
+        "global_reach": 94,
+        "data_centre": 42
+      },
+      "measured_signals": "",
+      "base_score": 64.8,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 69.8,
+      "tier": "Tier 2",
+      "tier_action": "Nurture",
+      "segment": "Late Starters",
+      "lookalikes": [
+        "Booz Allen Hamilton",
+        "Cognizant",
+        "Infosys (Americas)",
+        "BlackRock",
+        "PayPal"
+      ]
+    },
+    {
+      "account": "S&P Global",
+      "ticker": "SPGI",
+      "industry": "Professional Services",
+      "sub_industry": "Professional Services",
+      "source": "baseline",
+      "signals": {
+        "ai_hiring": 88,
+        "ai_announce": 88,
+        "cloud": 88,
+        "global_reach": 94,
+        "data_centre": 50
+      },
+      "measured_signals": "",
+      "base_score": 77.7,
+      "note_adj": 0.0,
+      "kb_adj": 0.0,
+      "news_adj": 5.0,
+      "adjusted_score": 82.7,
+      "tier": "Tier 1",
+      "tier_action": "Engage now",
+      "segment": "Strong Adopters",
+      "lookalikes": [
+        "Accenture",
+        "Visa",
+        "Mastercard",
+        "Netflix",
+        "Spotify"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "project": "Signal Desk",
+  "description": "Versioned snapshots of the scored account universe. Each snapshot is self-describing and reproducible from the repository at its source_commit.",
+  "updated_at": "2026-09-11T05:01:49+00:00",
+  "latest": "2026-09",
+  "count": 1,
+  "snapshots": [
+    {
+      "id": "2026-09",
+      "generated_at": "2026-09-11T05:01:49+00:00",
+      "accounts": 160,
+      "tier_counts": {
+        "Tier 3": 79,
+        "Tier 2": 56,
+        "Tier 1": 25
+      },
+      "path": "snapshots/2026-09.json"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal Desk · Published Results</title>
+<meta name="description" content="Versioned, self-describing snapshots of the Signal Desk scored account universe. Open JSON, no credentials required.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0F17; --panel:#111823; --line:#22304A;
+    --ink:#E8EEF6; --muted:#7C8FA8; --dim:#4A5668;
+    --amber:#F0A63C; --blue:#4EA8DE;
+    --sans:"IBM Plex Sans",Segoe UI,system-ui,sans-serif;
+    --mono:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+       font-size:15px;line-height:1.6}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px 80px}
+  header{padding:56px 0 32px;border-bottom:1px solid var(--line);margin-bottom:36px}
+  .mark{font-weight:600;font-size:1rem;letter-spacing:-.01em}
+  .mark span{color:var(--amber)}
+  .eyebrow{font-family:var(--mono);font-size:.63rem;text-transform:uppercase;
+           letter-spacing:.14em;color:var(--dim);margin-top:2px}
+  h1{font-size:2rem;font-weight:600;letter-spacing:-.025em;margin:28px 0 10px}
+  h2{font-size:1.15rem;font-weight:600;margin:40px 0 12px}
+  p{color:#C3CFDD;margin:0 0 14px}
+  .lede{font-size:1.05rem}
+  a{color:var(--blue)}
+  code,.mono{font-family:var(--mono);font-size:.85em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+        gap:12px;margin:24px 0 8px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:8px;
+        padding:14px 16px}
+  .stat.hero{border-color:var(--amber);
+             background:linear-gradient(180deg,#201906 0%,var(--panel) 70%)}
+  .stat .k{font-family:var(--mono);font-size:.64rem;text-transform:uppercase;
+           letter-spacing:.09em;color:var(--muted)}
+  .stat.hero .k{color:var(--amber)}
+  .stat .v{font-family:var(--mono);font-size:1.7rem;font-weight:500;
+           letter-spacing:-.02em;margin-top:4px}
+  .stat.hero .v{color:#F7C67E}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+  th{text-align:left;font-family:var(--mono);font-size:.66rem;text-transform:uppercase;
+     letter-spacing:.08em;color:var(--muted);font-weight:500;
+     border-bottom:1px solid var(--line);padding:6px 10px 6px 0}
+  td{padding:8px 10px 8px 0;border-bottom:1px solid #18202e}
+  td.num{font-family:var(--mono);text-align:right;padding-right:18px}
+  pre{background:var(--panel);border:1px solid var(--line);border-radius:8px;
+      padding:14px 16px;overflow-x:auto;font-family:var(--mono);font-size:.82rem;
+      color:#C3CFDD}
+  .note{color:var(--muted);font-size:.88rem}
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+         color:var(--dim);font-size:.85rem}
+  .tier1{color:var(--amber)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="mark">Signal Desk<span>.</span></div>
+  <div class="eyebrow">published results</div>
+  <h1>The scored account universe, kept readable</h1>
+  <p class="lede">Versioned snapshots of what this project produced: 160
+    enterprises scored on AI-driven network demand, with the model that scored
+    them. Plain JSON over HTTPS. No account, no key, no running server.</p>
+</header>
+
+<div id="live"><p class="note">Loading the latest snapshot…</p></div>
+
+<h2>Why this exists</h2>
+<p>The app that produces these numbers is a live service, and live services
+  change, move and eventually stop. These files do not. Each snapshot records
+  the scored universe <em>and</em> the exact model configuration behind it —
+  weights, tier boundaries, adjustment caps — so the numbers stay interpretable
+  long after anyone remembers how the scoring worked.</p>
+<p>Each file also names the commit it was generated from. Check that commit out,
+  run <code>python scripts/publish_snapshot.py</code>, and you get the same
+  snapshot back. The archive is reproducible from the repository alone; it does
+  not depend on the database or the deployed app.</p>
+
+<h2>Endpoints</h2>
+<table>
+  <thead><tr><th>File</th><th>What it holds</th></tr></thead>
+  <tbody>
+    <tr><td><a href="data/index.json"><code>data/index.json</code></a></td>
+        <td>Every snapshot, newest last. Start here — Pages has no directory listing.</td></tr>
+    <tr><td><a href="data/latest.json"><code>data/latest.json</code></a></td>
+        <td>The most recent snapshot, in full.</td></tr>
+    <tr><td><code>data/snapshots/&lt;id&gt;.json</code></td>
+        <td>One point-in-time snapshot, e.g. <code>2026-09.json</code>.</td></tr>
+  </tbody>
+</table>
+
+<pre>curl -s https://akhilhnairprojects.github.io/signal-desk/data/latest.json \
+  | jq '.summary.tier_counts'
+
+# every Tier 1 account, highest first
+curl -s https://akhilhnairprojects.github.io/signal-desk/data/latest.json \
+  | jq -r '.accounts[] | select(.tier=="Tier 1")
+           | [.adjusted_score, .account] | @tsv' | sort -rn</pre>
+
+<h2>Reading a score</h2>
+<p>A score is a <strong>position within the universe in that snapshot</strong>,
+  not an absolute rating. Each signal is percentile-ranked across all accounts
+  before it is weighted, so an account at 76 sits at roughly the 76th percentile
+  of the accounts tracked at that time. It is not "76% ready", and it is not
+  comparable to a score from a different snapshot with a different universe.</p>
+<p>Tiers are quantiles of the live distribution — Tier 1 is the top 15% — so
+  the shortlist stays a usable size as scores move. Every snapshot carries its
+  own <code>model.tier_quantiles</code> and the resulting
+  <code>summary.tier_cutoffs</code>.</p>
+<p>The full derivation — correlation structure, PCA, the variance decomposition
+  behind the weights, and what the rank transform does and does not fix — is in
+  <a href="https://github.com/akhilhnairprojects/signal-desk/blob/main/docs/scoring-model.md">docs/scoring-model.md</a>.</p>
+
+<footer>
+  <a href="https://github.com/akhilhnairprojects/signal-desk">Source</a> ·
+  <a href="https://signal-desk-project.streamlit.app/">Live app</a> ·
+  Starter signal values are illustrative estimates from sub-industry baselines;
+  field notes shipped in the repository are synthetic samples.
+</footer>
+
+</div>
+
+<script>
+const fmt = n => n === null || n === undefined ? "—" : n;
+
+fetch("data/latest.json")
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(d => {
+    const s = d.summary, t = s.tier_counts || {};
+    const el = document.getElementById("live");
+    const rows = Object.entries(s.accounts_by_industry || {})
+      .map(([k, v]) => `<tr><td>${k}</td><td class="num">${v}</td></tr>`).join("");
+    el.innerHTML = `
+      <div class="grid">
+        <div class="stat hero"><div class="k">Tier 1 · engage now</div>
+          <div class="v">${fmt(t["Tier 1"])}</div></div>
+        <div class="stat"><div class="k">Accounts</div>
+          <div class="v">${fmt(s.accounts)}</div></div>
+        <div class="stat"><div class="k">Industries</div>
+          <div class="v">${fmt(s.industries)}</div></div>
+        <div class="stat"><div class="k">Tier 1 floor</div>
+          <div class="v">${fmt(s.tier_cutoffs && s.tier_cutoffs["Tier 1"])}</div></div>
+      </div>
+      <p class="note">Snapshot <span class="mono">${d.snapshot_id}</span>,
+        generated ${(d.generated_at || "").replace("T", " ").replace("+00:00", " UTC")}
+        · weights <span class="mono">${d.model.weights_source}</span>
+        · <span class="tier1">Tier 1 ${fmt(t["Tier 1"])}</span> ·
+        Tier 2 ${fmt(t["Tier 2"])} · Tier 3 ${fmt(t["Tier 3"])}</p>
+      <table>
+        <thead><tr><th>Industry</th><th class="num">Accounts</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+  })
+  .catch(err => {
+    document.getElementById("live").innerHTML =
+      `<p class="note">Could not load <code>data/latest.json</code> (${err.message}).
+       The files are still browsable directly via the links below.</p>`;
+  });
+</script>
+</body>
+</html>

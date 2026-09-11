@@ -11,7 +11,13 @@ then rebuilt as a portfolio project: employer branding removed, seeded field
 notes replaced with synthetic samples, and the scoring model re-derived from
 the data rather than inherited from the source spreadsheet.
 
-**Live app:** _add your Streamlit Cloud URL here_
+**Live app:** https://signal-desk-project.streamlit.app/
+
+**Published results:** https://akhilhnairprojects.github.io/signal-desk/ —
+versioned, self-describing JSON snapshots of the scored universe. No account, no
+key, no running server. Each snapshot carries the model configuration that
+produced it and the commit it came from, so the numbers stay interpretable and
+reproducible after the app itself has moved on.
 
 ---
 
@@ -134,10 +140,11 @@ guide.
 streamlit_app.py     entry point, navigation, branding
 views/               the 8 app pages (not pages/ - see streamlit_app.py)
 src/                 pipeline: ingest, scoring, segment, news, transcript, store
-scripts/             CLI: run_pipeline, collectors, train_weights, digest
+scripts/             CLI: run_pipeline, collectors, train_weights, publish_snapshot
 tests/               scoring and tier-assignment tests
-docs/                scoring-model.md, deployment.md
-setup/               Supabase schema
+docs/                scoring-model.md, deployment.md, and the published site
+docs/data/           versioned result snapshots (index.json, latest.json)
+setup/               Supabase schema and RLS policies
 data/raw/            the source workbook (required)
 ```
 
