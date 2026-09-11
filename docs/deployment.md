@@ -86,21 +86,19 @@ filesystem and are lost when it restarts — Step 3 fixes that.
 > server-side, but the blast radius of a leak is the whole database, and there
 > is no reason to take it — `anon` plus the policies below is enough.
 
-4. Enable RLS on every table and add policies. Public read, insert and update
-   suit a live demo; keep delete restricted:
+4. **SQL Editor** → run `setup/rls_policies.sql`.
 
-```sql
-alter table notes enable row level security;
+   This is not optional. Supabase grants the `anon` role access to public
+   tables, and `create table` leaves RLS off — so without this step the anon
+   key has unrestricted read, write and delete on everything, with no policy
+   anywhere saying so. The script enables RLS on all 10 tables and adds
+   explicit policies, then prints a verification table: each row should show
+   `rls_enabled = true` and `policies = 4`.
 
-create policy "public read"   on notes for select using (true);
-create policy "public insert" on notes for insert with check (true);
-create policy "public update" on notes for update using (true);
--- deliberately no delete policy
-```
-
-Repeat for `kb_articles`, `custom_accounts`, `outcomes`,
-`transcript_feedback`, `learned_keywords`, `news_signals`, `headlines`,
-`measured_signals`, `competitor_headlines`.
+   It grants full CRUD, including delete, because the app needs it — the
+   inline notes editor, the KB upsert and the nightly news refresh are all
+   delete-then-insert. The header of that file explains how to lock the demo
+   down to read-mostly if you would rather.
 
 5. In Streamlit Cloud: **⋮ → Settings → Secrets**, paste, and save:
 

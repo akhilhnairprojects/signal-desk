@@ -1,8 +1,13 @@
 """App entry point: identity, favicon, and navigation.
 
-The sidebar page names live here (st.navigation supersedes the automatic
-pages/ listing). The app's display name is config.APP_NAME - one constant,
-used for both the landing entry and the browser tab.
+The page files live in views/, not pages/, and the name matters. Streamlit
+auto-discovers any directory literally called pages/ and serves those files
+as routes of their own - which bypasses this file entirely, so a deep link
+would render with no set_page_config, no navigation and no styling. Naming
+the directory views/ makes st.navigation below the only router.
+
+The app's display name is config.APP_NAME - one constant, used for both the
+sidebar wordmark and the browser tab.
 """
 
 import streamlit as st
@@ -19,21 +24,21 @@ st.set_page_config(
 )
 
 pg = st.navigation([
-    st.Page("pages/0_Overview.py", title="Overview",
+    st.Page("views/0_Overview.py", title="Overview",
             icon=":material/dashboard:", default=True),
-    st.Page("pages/1_Account_Explorer.py", title="Account Explorer",
+    st.Page("views/1_Account_Explorer.py", title="Account Explorer",
             icon=":material/search:"),
-    st.Page("pages/2_Segments.py", title="Segments",
+    st.Page("views/2_Segments.py", title="Segments",
             icon=":material/scatter_plot:"),
-    st.Page("pages/3_News_Monitor.py", title="News Monitor",
+    st.Page("views/3_News_Monitor.py", title="News Monitor",
             icon=":material/newspaper:"),
-    st.Page("pages/4_Knowledge_Base.py", title="Knowledge Base",
+    st.Page("views/4_Knowledge_Base.py", title="Knowledge Base",
             icon=":material/description:"),
-    st.Page("pages/5_Add_Company.py", title="Add a Company",
+    st.Page("views/5_Add_Company.py", title="Add a Company",
             icon=":material/add_business:"),
-    st.Page("pages/6_Transcript_Analyzer.py", title="Transcript Analyzer",
+    st.Page("views/6_Transcript_Analyzer.py", title="Transcript Analyzer",
             icon=":material/graphic_eq:"),
-    st.Page("pages/7_Competitive_Intel.py", title="Competitive Intel",
+    st.Page("views/7_Competitive_Intel.py", title="Competitive Intel",
             icon=":material/flag:"),
 ])
 

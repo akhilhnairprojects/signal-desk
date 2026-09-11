@@ -29,9 +29,9 @@ websites.
    `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`, answer Y, and
    retry.
 4. Install everything: `pip install -r requirements.txt`
-   > **This install is large (~1 GB) and takes 5–15 minutes** — the
-   > transcript analyzer runs a PyTorch language model. One-time per
-   > machine; if it fails mid-download, run the same command again.
+   > Takes 1–2 minutes. `torch`/`transformers` are deliberately not in
+   > here — transcript sentiment falls back to VADER. See
+   > `docs/deployment.md` if you want the transformer locally.
 5. Build the dataset: `python scripts/run_pipeline.py` — expect
    "Scored 160 accounts across 9 industries."
 6. Launch: `streamlit run streamlit_app.py` — the app opens in your
@@ -44,7 +44,7 @@ websites.
    → choose **public** (Streamlit's free hosting needs it) → sign in to
    GitHub when prompted.
 3. Confirm on github.com that your repo shows `streamlit_app.py`,
-   `requirements.txt`, `src/`, `pages/`, `data/` **at the top level** —
+   `requirements.txt`, `src/`, `views/`, `data/` **at the top level** —
    not nested inside another folder.
 
 Never commit two things: the `.venv` folder and
@@ -93,12 +93,11 @@ keywords permanent.
 1. **share.streamlit.io** → sign in with GitHub → **Create app**.
 2. Repository: `your-username/account-intelligence` · Branch: `main` ·
    Main file: `streamlit_app.py`.
-3. **Advanced settings → Python version → 3.11.** Do not skip this: the
-   platform's newest default Python segfaults under PyTorch. (The
-   matching guard, `fileWatcherType = "none"`, already ships in
-   `.streamlit/config.toml` — leave it.)
-4. **Deploy.** First build takes 5–10 minutes (installing PyTorch); watch
-   the log until "Your app is live".
+3. **Advanced settings → Python version → 3.12.**
+   (`fileWatcherType = "none"` already ships in `.streamlit/config.toml`
+   — leave it.)
+4. **Deploy.** First build takes 3–5 minutes; watch the log until
+   "Your app is live".
 5. Add the Supabase secrets (Part 4.4, place 2). The app reboots itself.
 6. If the app ever shows "Oh no" instead of loading: **Manage app**
    (bottom-right) opens the log — the real error is in the last ~20
@@ -149,7 +148,7 @@ own commits normally keep the clock fresh.
 ## Part 8 — Everyday workflows
 
 **Read the room each morning.** Overview shows the portfolio, the weekly
-digest, any 🔔 tier changes since the last refresh, and whether scores
+digest, any tier changes since the last refresh, and whether scores
 run on configured or learned weights. Click a tier bar to cross-filter
 the page; click again to clear.
 
@@ -193,7 +192,7 @@ stays emphasised across the map and every table until you clear it.
 |---|---|
 | PowerShell: "running scripts is disabled" | `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`, answer Y, reopen terminal. |
 | `pip` or `python` not recognised | Python wasn't added to PATH — reinstall with the checkbox ticked. |
-| Deployed app shows "Oh no" / segfault in the log | Recreate the app with **Python 3.11** (Advanced settings) and keep `fileWatcherType = "none"` in `.streamlit/config.toml`. |
+| Deployed app shows "Oh no" in the log | Open **Manage app** for the real error. Confirm Python 3.12 in Advanced settings and that `fileWatcherType = "none"` is still in `.streamlit/config.toml`. |
 | Home page says "Storage: Local CSV files" after Supabase setup | A secret is missing/typo'd in that environment: local `secrets.toml`, Cloud Settings → Secrets, or Actions secrets. Confirm you used the **`anon`** key and that RLS policies exist for the table being read. |
 | Transcript page says "VADER (lexicon fallback)" | **Expected.** `torch`/`transformers` are deliberately not deployment dependencies — see `docs/deployment.md`. Install them locally to use the transformer instead. |
 | Supabase says project paused | ~7 idle days. Click **Restore**; nothing is lost. |

@@ -123,7 +123,7 @@ guide.
 
 ```
 streamlit_app.py     entry point, navigation, branding
-pages/               the 8 app pages
+views/               the 8 app pages (not pages/ - see streamlit_app.py)
 src/                 pipeline: ingest, scoring, segment, news, transcript, store
 scripts/             CLI: run_pipeline, collectors, train_weights, digest
 tests/               scoring and tier-assignment tests
