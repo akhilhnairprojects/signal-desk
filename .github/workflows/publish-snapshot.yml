@@ -1,11 +1,19 @@
 name: publish-snapshot
 
 # Publishes a versioned, self-describing snapshot of the scored universe to
-# docs/data/, served over GitHub Pages.
+# docs/data/, served over GitHub Pages, plus the segmentation cache the app
+# reuses to skip a ~60s cold start.
 #
-# Deliberately NOT given SUPABASE_URL / SUPABASE_KEY. Without them the pipeline
-# reads the committed CSVs, which makes every snapshot reproducible from the
-# repository alone and guarantees this job cannot touch the live database.
+# Supabase credentials are used READ-ONLY, to mirror the database into the
+# data/ CSVs before building. Without that step the snapshot is built from
+# stale mirrors, its signal matrix differs from production, and the app's
+# segmentation fingerprint never matches - which is exactly what happened on
+# the first run (152 measured_signals rows existed only in the database).
+#
+# Mirroring first keeps both properties: the snapshot matches what the
+# deployed app computes, and the committed CSVs still reproduce it offline.
+# If the secrets are absent the job degrades gracefully and builds from the
+# committed CSVs.
 
 on:
   schedule:
@@ -27,7 +35,10 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
     steps:
       - uses: actions/checkout@v4
 
@@ -38,19 +49,19 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Build the snapshot
+      - name: Mirror the database and build the snapshot
         run: |
           if [ -n "${{ inputs.snapshot_id }}" ]; then
-            python scripts/publish_snapshot.py --id "${{ inputs.snapshot_id }}"
+            python scripts/publish_snapshot.py --mirror --id "${{ inputs.snapshot_id }}"
           else
-            python scripts/publish_snapshot.py
+            python scripts/publish_snapshot.py --mirror
           fi
 
-      - name: Commit if anything changed
+      - name: Commit the mirrors and the snapshot together
         run: |
           git config user.name  "snapshot-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data
+          git add docs/data data
           if git diff --cached --quiet; then
             echo "Snapshot unchanged; nothing to commit."
           else

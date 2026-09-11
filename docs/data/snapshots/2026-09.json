@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "snapshot_id": "2026-09",
-  "generated_at": "2026-09-11T05:16:27+00:00",
-  "source_commit": "2bf471cd5ba5b3f23fc5f02db32ea8a09473dc1f",
+  "generated_at": "2026-09-11T05:32:32+00:00",
+  "source_commit": "738338c94da2473a03e017cca7f5c76a79969b43",
   "reproduce": "git checkout <source_commit> && python scripts/publish_snapshot.py",
   "model": {
     "signal_weights": {

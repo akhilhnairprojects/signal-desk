@@ -125,6 +125,18 @@ A side benefit: the segment map now stays put between visits instead of
 shifting slightly every time the container restarts, since UMAP is deterministic
 within a process but not across them.
 
+**The catch, and how it is handled.** The deployed app scores from Supabase; a
+snapshot built in CI scores from the CSVs in `data/`. Those CSVs are meant to be
+a versioned mirror of the database, but they drift — the first published
+snapshot missed 152 `measured_signals` rows that existed only in the database,
+so the signal matrix differed, the fingerprint missed, and production recomputed
+segmentation every time. The publish workflow therefore mirrors the database
+into `data/` first (read-only), then builds, then commits both together. The
+snapshot matches production, and the committed CSVs still reproduce it offline.
+
+This needs `SUPABASE_URL` and `SUPABASE_KEY` in the repo's Actions secrets. Without
+them the job still runs, builds from the committed CSVs, and says so.
+
 ## Quickstart
 
 ```bash

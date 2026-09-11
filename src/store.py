@@ -170,6 +170,23 @@ def _csv_save(table: str, df: pd.DataFrame) -> None:
     df[TABLES[table]].to_csv(path, index=False)
 
 
+def mirror_to_csv() -> dict[str, int]:
+    """Refresh every CSV mirror from the database. Read-only against Supabase.
+
+    The repo's data/ files are meant to be a versioned mirror of the database
+    (see the architecture diagram in the README). When they drift, anything
+    built from the repo - the published snapshot, and therefore the
+    segmentation cache keyed to it - stops matching what the deployed app
+    computes from the database. Returns row counts per table.
+    """
+    counts = {}
+    for table in TABLES:
+        frame = load(table)
+        _csv_save(table, frame)
+        counts[table] = len(frame)
+    return counts
+
+
 def load(table: str) -> pd.DataFrame:
     client = _get_client()
     if client:

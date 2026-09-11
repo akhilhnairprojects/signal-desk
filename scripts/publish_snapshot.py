@@ -4,15 +4,26 @@ Writes a versioned JSON record of what the platform produced on a given run,
 so the results stay readable by anyone, indefinitely, with no credentials and
 no running app. Outputs land in docs/data/ and are served over GitHub Pages.
 
-Deliberately isolated:
+Read-only against the database. It runs build_dataset() in memory and writes
+only under docs/data/ plus, with --mirror, the data/ CSV mirrors. Every store
+write in this codebase lives in a mutator (append_note, collect_all,
+save_measurement, save_kb_article, delete_kb_article), none of which are on
+the build_dataset path. results/ is never touched.
 
-  - It runs build_dataset() in memory and writes ONLY under docs/data/. It
-    does not touch results/, and every store write in this codebase lives in
-    a mutator (append_note, collect_all, save_measurement, save_kb_article,
-    delete_kb_article), none of which are on the build_dataset path.
-  - CI runs it without Supabase credentials, so the pipeline reads the
-    committed CSVs. That is the point: a snapshot is reproducible from the
-    repository alone. Clone at any commit, run this, get that snapshot back.
+On --mirror, and why it matters:
+
+    The deployed app scores from the database; anything built from the repo
+    scores from the CSVs in data/. Those CSVs are meant to be a versioned
+    mirror of the database, but they drift - the first published snapshot
+    missed 152 measured_signals rows that existed only in Supabase. The
+    signal matrix therefore differed, the segmentation fingerprint did not
+    match, and the deployed app recomputed segmentation on every cold start
+    instead of reusing the published one.
+
+    So CI mirrors the database into data/ first, then builds, then commits
+    both together. That keeps the snapshot matching production AND leaves the
+    repository able to reproduce it: check out the resulting commit, run this
+    script, and the same snapshot comes back.
 
 Each file carries the model configuration that produced it - weights, tier
 quantiles, adjustment caps - so a reader years from now can interpret the
@@ -20,6 +31,7 @@ numbers without reading the source.
 
 Usage:
     python scripts/publish_snapshot.py                 # id defaults to YYYY-MM
+    python scripts/publish_snapshot.py --mirror        # sync CSVs from the DB first
     python scripts/publish_snapshot.py --id 2026-09
     python scripts/publish_snapshot.py --out some/dir
 """
@@ -35,7 +47,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import pandas as pd
 
-from src import build_dataset, config, scoring, segment
+from src import build_dataset, config, scoring, segment, store
 
 SCHEMA_VERSION = 1
 DEFAULT_OUT = config.ROOT / "docs" / "data"
@@ -193,7 +205,20 @@ def main() -> None:
                         help="snapshot id (default: current YYYY-MM)")
     parser.add_argument("--out", default=str(DEFAULT_OUT),
                         help=f"output directory (default: {DEFAULT_OUT})")
+    parser.add_argument("--mirror", action="store_true",
+                        help="refresh the CSV mirrors from the database first "
+                             "(read-only) so the snapshot matches what the "
+                             "deployed app computes")
     args = parser.parse_args()
+
+    if args.mirror:
+        if store.backend() == "supabase":
+            counts = store.mirror_to_csv()
+            filled = {t: n for t, n in counts.items() if n}
+            print(f"Mirrored database -> data/ : {filled or 'all tables empty'}")
+        else:
+            print("No database configured; skipping mirror and building from "
+                  "the committed CSVs.")
 
     out_dir = Path(args.out)
     snapshot, cache = build_snapshot(args.id)
