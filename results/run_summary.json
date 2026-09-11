@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-09-11T04:33:17",
+  "run_at": "2026-09-11T05:23:20",
   "accounts": 160,
   "industries": 9,
   "avg_score": 53.2,
@@ -28,6 +28,7 @@
     "hdbscan_outliers": 10,
     "umap_available": true,
     "storage_backend": "csv",
-    "weights_source": "configured"
+    "weights_source": "configured",
+    "segmentation_source": "published"
   }
 }
