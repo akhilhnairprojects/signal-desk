@@ -1,1 +1,153 @@
 account,signal,value,source,collected_at
+Corning,ai_announce,21,SEC EDGAR: 3 AI-referencing filings (180d),2026-09-05T07:16:37+00:00
+Dow,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:38+00:00
+Walmart,ai_announce,49,SEC EDGAR: 7 AI-referencing filings (180d),2026-09-05T07:16:38+00:00
+Costco Wholesale,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:39+00:00
+The Home Depot,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:16:40+00:00
+Lowe's,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:16:40+00:00
+Target,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:16:42+00:00
+TJX Companies,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:16:42+00:00
+Best Buy,ai_announce,49,SEC EDGAR: 7 AI-referencing filings (180d),2026-09-05T07:16:44+00:00
+Kroger,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:16:45+00:00
+Dollar General,ai_announce,42,SEC EDGAR: 6 AI-referencing filings (180d),2026-09-05T07:16:45+00:00
+Procter & Gamble,ai_announce,49,SEC EDGAR: 7 AI-referencing filings (180d),2026-09-05T07:16:48+00:00
+Coca-Cola,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:49+00:00
+PepsiCo,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:49+00:00
+Nike,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:16:51+00:00
+McDonald's,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:16:52+00:00
+Starbucks,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:16:53+00:00
+The Walt Disney Company,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-08-29T09:37:36+00:00
+Mondelez,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:55+00:00
+Colgate-Palmolive,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:16:57+00:00
+Unilever (Americas),ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:58+00:00
+Kraft Heinz,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:00+00:00
+Estee Lauder,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:17:01+00:00
+General Mills,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:17:02+00:00
+Netflix,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:17:05+00:00
+Comcast (NBCUniversal),ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:06+00:00
+Warner Bros. Discovery,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:07+00:00
+Fox Corporation,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:17:09+00:00
+Electronic Arts,ai_announce,21,SEC EDGAR: 3 AI-referencing filings (180d),2026-09-05T07:17:10+00:00
+Spotify,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:11+00:00
+ExxonMobil,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:13+00:00
+Chevron,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:17:14+00:00
+ConocoPhillips,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:15+00:00
+Schlumberger,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:15+00:00
+NextEra Energy,ai_announce,35,SEC EDGAR: 5 AI-referencing filings (180d),2026-09-05T07:17:19+00:00
+Duke Energy,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:17:21+00:00
+Southern Company,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:21+00:00
+Dominion Energy,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:17:22+00:00
+Shell (Americas),ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:23+00:00
+Phillips 66,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:23+00:00
+UPS,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:24+00:00
+FedEx,ai_announce,70,SEC EDGAR: 10 AI-referencing filings (180d),2026-09-05T07:17:24+00:00
+Union Pacific,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:25+00:00
+Delta Air Lines,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:25+00:00
+American Airlines,ai_announce,49,SEC EDGAR: 7 AI-referencing filings (180d),2026-09-05T07:17:26+00:00
+United Airlines,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:26+00:00
+C.H. Robinson,ai_announce,42,SEC EDGAR: 6 AI-referencing filings (180d),2026-09-05T07:17:27+00:00
+Old Dominion,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:28+00:00
+Accenture,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:28+00:00
+Cognizant,ai_announce,21,SEC EDGAR: 3 AI-referencing filings (180d),2026-09-05T07:17:29+00:00
+Infosys (Americas),ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:17:29+00:00
+Booz Allen Hamilton,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:17:30+00:00
+Gartner,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:17:31+00:00
+S&P Global,ai_announce,91,SEC EDGAR: 13 AI-referencing filings (180d),2026-09-05T07:17:31+00:00
+Microsoft,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:15:19+00:00
+Alphabet (Google),ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:15:19+00:00
+Amazon,ai_announce,35,SEC EDGAR: 5 AI-referencing filings (180d),2026-09-05T07:15:20+00:00
+Meta Platforms,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:15:20+00:00
+Apple,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:15:21+00:00
+Oracle,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:15:22+00:00
+Salesforce,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:15:22+00:00
+Adobe,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:15:23+00:00
+ServiceNow,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:15:23+00:00
+SAP,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:15:24+00:00
+Workday,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:15:25+00:00
+Snowflake,ai_announce,35,SEC EDGAR: 5 AI-referencing filings (180d),2026-09-05T07:15:25+00:00
+Datadog,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:15:26+00:00
+Palantir,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:15:26+00:00
+Atlassian,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:15:27+00:00
+Intuit,ai_announce,35,SEC EDGAR: 5 AI-referencing filings (180d),2026-09-05T07:15:28+00:00
+Shopify,ai_announce,35,SEC EDGAR: 5 AI-referencing filings (180d),2026-09-05T07:15:28+00:00
+Uber,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:15:29+00:00
+NVIDIA,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:15:29+00:00
+AMD,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:15:30+00:00
+Intel,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:15:31+00:00
+Broadcom,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:15:31+00:00
+Qualcomm,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:15:33+00:00
+Texas Instruments,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:15:34+00:00
+Micron,ai_announce,70,SEC EDGAR: 10 AI-referencing filings (180d),2026-09-05T07:15:35+00:00
+Dell Technologies,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:15:37+00:00
+HP Inc.,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:15:37+00:00
+Hewlett Packard Enterprise,ai_announce,63,SEC EDGAR: 9 AI-referencing filings (180d),2026-09-05T07:15:38+00:00
+Applied Materials,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:15:39+00:00
+Marvell,ai_announce,35,SEC EDGAR: 5 AI-referencing filings (180d),2026-09-05T07:15:41+00:00
+JPMorgan Chase,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:15:42+00:00
+Bank of America,ai_announce,42,SEC EDGAR: 6 AI-referencing filings (180d),2026-09-05T07:15:44+00:00
+Wells Fargo,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:15:44+00:00
+Citigroup,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:15:46+00:00
+Goldman Sachs,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:15:47+00:00
+Morgan Stanley,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:15:48+00:00
+U.S. Bancorp,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:15:49+00:00
+PNC Financial,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:15:51+00:00
+Truist,ai_announce,21,SEC EDGAR: 3 AI-referencing filings (180d),2026-09-05T07:15:52+00:00
+Capital One,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:15:52+00:00
+Charles Schwab,ai_announce,21,SEC EDGAR: 3 AI-referencing filings (180d),2026-09-05T07:15:55+00:00
+TD Bank Group,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:15:56+00:00
+Visa,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:15:57+00:00
+Mastercard,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:15:58+00:00
+American Express,ai_announce,42,SEC EDGAR: 6 AI-referencing filings (180d),2026-09-05T07:16:00+00:00
+PayPal,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:16:00+00:00
+Global Payments,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:04+00:00
+BlackRock,ai_announce,42,SEC EDGAR: 6 AI-referencing filings (180d),2026-09-05T07:16:05+00:00
+Prudential Financial,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:06+00:00
+MetLife,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:16:08+00:00
+Chubb,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:09+00:00
+Progressive,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:10+00:00
+Allstate,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:10+00:00
+AIG,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:16:11+00:00
+Aon,ai_announce,35,SEC EDGAR: 5 AI-referencing filings (180d),2026-09-05T07:16:11+00:00
+Eli Lilly,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:16:12+00:00
+Pfizer,ai_announce,35,SEC EDGAR: 5 AI-referencing filings (180d),2026-09-05T07:16:13+00:00
+Johnson & Johnson,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:13+00:00
+Merck,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:14+00:00
+AbbVie,ai_announce,21,SEC EDGAR: 3 AI-referencing filings (180d),2026-09-05T07:16:14+00:00
+Bristol Myers Squibb,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:16:15+00:00
+Amgen,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:16:15+00:00
+Gilead Sciences,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:16:16+00:00
+Moderna,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:16:17+00:00
+Regeneron,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:16:17+00:00
+Vertex Pharmaceuticals,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:18+00:00
+Thermo Fisher Scientific,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:19+00:00
+UnitedHealth Group,ai_announce,42,SEC EDGAR: 6 AI-referencing filings (180d),2026-09-05T07:16:19+00:00
+Elevance Health,ai_announce,49,SEC EDGAR: 7 AI-referencing filings (180d),2026-09-05T07:16:20+00:00
+Cigna,ai_announce,35,SEC EDGAR: 5 AI-referencing filings (180d),2026-09-05T07:16:20+00:00
+CVS Health,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:16:21+00:00
+HCA Healthcare,ai_announce,35,SEC EDGAR: 5 AI-referencing filings (180d),2026-09-05T07:16:22+00:00
+Humana,ai_announce,42,SEC EDGAR: 6 AI-referencing filings (180d),2026-09-05T07:16:22+00:00
+Medtronic,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:16:23+00:00
+Abbott Laboratories,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:23+00:00
+Intuitive Surgical,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:16:24+00:00
+Stryker,ai_announce,21,SEC EDGAR: 3 AI-referencing filings (180d),2026-09-05T07:16:24+00:00
+Tesla,ai_announce,35,SEC EDGAR: 5 AI-referencing filings (180d),2026-09-05T07:16:25+00:00
+Ford Motor,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:16:26+00:00
+General Motors,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:26+00:00
+Rivian,ai_announce,70,SEC EDGAR: 10 AI-referencing filings (180d),2026-09-05T07:16:27+00:00
+Toyota (Americas),ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:27+00:00
+Stellantis,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:28+00:00
+Cummins,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:16:28+00:00
+Boeing,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:29+00:00
+Lockheed Martin,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:30+00:00
+RTX,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:30+00:00
+General Dynamics,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:31+00:00
+Northrop Grumman,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:31+00:00
+Honeywell,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:16:32+00:00
+GE Aerospace,ai_announce,35,SEC EDGAR: 5 AI-referencing filings (180d),2026-09-05T07:16:33+00:00
+Caterpillar,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:16:33+00:00
+Deere & Company,ai_announce,42,SEC EDGAR: 6 AI-referencing filings (180d),2026-09-05T07:16:34+00:00
+Emerson Electric,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:35+00:00
+Illinois Tool Works,ai_announce,0,SEC EDGAR: 0 AI-referencing filings (180d),2026-09-05T07:16:35+00:00
+Parker Hannifin,ai_announce,7,SEC EDGAR: 1 AI-referencing filings (180d),2026-09-05T07:16:36+00:00
+Eaton,ai_announce,28,SEC EDGAR: 4 AI-referencing filings (180d),2026-09-05T07:16:36+00:00
+Rockwell Automation,ai_announce,14,SEC EDGAR: 2 AI-referencing filings (180d),2026-09-05T07:16:37+00:00
