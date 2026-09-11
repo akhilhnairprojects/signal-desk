@@ -37,23 +37,32 @@ the data rather than inherited from the source spreadsheet.
 The base score is a weighted composite of five demand signals, **percentile-ranked
 across the universe before weighting**. Tiers are quantiles: Tier 1 is the top 15%.
 
-Both of those are changes from the original spreadsheet model, and both came
-out of measuring it:
+Version 1 deliberately mirrored the weighting the sales team already used
+(.25/.25/.20/.20/.10 on raw values, fixed tier cutoffs at 80/60). That was the
+right call for adoption — a scoring tool only gets used if the people it is for
+recognise its answers — and it produced the first consistently scored universe,
+which is what made the following analysis possible:
 
-- PCA said the five signals express **two** factors (68% + 19% of variance).
-- AI Hiring and AI Announcements correlate at **r = 0.94** — one construct
-  counted twice, for half the model's weight.
-- Weighting *raw* values meant the stated weights were not the effective ones:
-  Cloud Presence was set at 20% but drove 13% of score variance, while Global
-  Footprint was also 20% and drove 31%.
-- Fixed 80/60 cutoffs put **29% of accounts in "engage now"** — not a
-  prioritisation.
+- PCA puts **87% of the variance in two factors** (68% + 19%): a general
+  AI-intensity factor that four signals load onto, and global footprint almost
+  alone on the second.
+- AI Hiring and AI Announcements correlate at **r = 0.94** — effectively two
+  measurements of one behaviour.
+- An exact variance decomposition showed spread, not weight, was driving
+  influence: Cloud Presence sat at a nominal 20% and contributed **12.2%**,
+  while Global Footprint was also 20% and contributed **24.9%**.
+- Fixed cutoffs put **29% of accounts in "engage now"** (47 of 160), because
+  scores only ever spanned 54–100.
 
-After the change, Tier 1 holds 25 accounts instead of 47, and every one of
-those 25 was already Tier 1 under the old model. Rank correlation between old
-and new is **Spearman 0.977** — the model was sharpened, not replaced.
+The refinement ranks each signal before weighting, gives the correlated AI pair
+one shared allocation, and sets tier boundaries by quantile. Tier 1 tightened to
+25 accounts, **all 25 already Tier 1 under version 1**, with the two rankings
+agreeing at **Spearman 0.977** — sharper, without contradicting the commercial
+judgement already built in.
 
-Full working: **[docs/scoring-model.md](docs/scoring-model.md)**.
+Full working — correlation matrix, PCA loadings, the decomposition derivation,
+what ranking does and does not fix, and runnable snippets:
+**[docs/scoring-model.md](docs/scoring-model.md)**.
 
 ### What it is and is not
 

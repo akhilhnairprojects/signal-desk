@@ -188,17 +188,19 @@ with st.expander("About this model"):
 **The score is a percentile, not a rating.** Each of the five demand signals
 is ranked across the universe first, then weighted
 ({", ".join(f"{v:.1%} {config.SIGNAL_LABELS[k]}" for k, v in config.SIGNAL_WEIGHTS.items())}).
-Ranking first is deliberate: the raw signals have very different spreads, so
-weighting raw values meant the configured weights were not the effective
-ones — Cloud Presence was set at 20% but drove only 13% of score variance,
-while Global Footprint was also 20% and drove 31%.
+Ranking first puts every signal on the same distribution, so a weight is a
+statement about how much that signal should matter rather than an artefact of
+its spread — on raw values Cloud Presence sat at a nominal 20% and contributed
+12.2% of score variance, while Global Footprint was also 20% and contributed
+24.9%.
 
 AI Hiring and AI Announcements correlate at **r = 0.94** across this universe,
 so they split one 35% AI allocation rather than counting as two independent
 signals.
 
-**Tiers are quantiles** — Tier 1 is the top 15% — because fixed 80/60 cutoffs
-put 29% of accounts in "engage now", which is not a prioritisation.
+**Tiers are quantiles** — Tier 1 is the top 15% — so the shortlist stays a
+callable size as scores drift. Fixed cutoffs had put 29% of the universe in
+"engage now".
 
 Segments come from K-Means on the standardised signals
 (k = {meta['k']}, silhouette = {meta['silhouette']}). Field notes adjust

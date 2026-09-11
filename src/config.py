@@ -24,8 +24,9 @@ DATA_URL = ""
 # ---------------------------------------------------------------------------
 # Scoring model
 # ---------------------------------------------------------------------------
-# Applied to percentile-ranked signals (see scoring.rank_signals), so these
-# are the effective weights, not just the nominal ones.
+# Applied to percentile-ranked signals (see scoring.rank_signals), so each
+# weight multiplies a signal on the same uniform 0-100 distribution rather
+# than one whose raw spread decides its influence.
 #
 # AI hiring and AI announcements correlate at r = 0.94 across the universe -
 # they measure one underlying construct. Rather than merge the columns (which

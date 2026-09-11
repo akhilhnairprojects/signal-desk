@@ -4,12 +4,14 @@ Two deliberate choices here, both of which changed after measuring the
 model against the scored universe (see docs/scoring-model.md):
 
 1. Signals are percentile-ranked within the universe before they are
-   weighted. Raw signal spreads differ by more than 2x - global reach has a
-   standard deviation of 20.1 while cloud presence has 8.5 - so weighting
-   raw values meant the configured weights were not the effective ones.
-   Cloud was set at 0.20 but drove only 13% of score variance; global reach
-   was also 0.20 but drove 31%. Ranking first makes the stated weights the
-   real ones.
+   weighted. Raw spreads differ by more than 2x - global reach has a
+   standard deviation of 20.1 against cloud presence's 8.5 - and a weight
+   cannot move a signal that barely varies. On raw values, cloud sat at a
+   nominal 0.20 and contributed 12.2% of score variance while global reach
+   was also 0.20 and contributed 24.9%. Ranking puts every signal on the
+   same uniform distribution, so a weight multiplies a comparable quantity.
+   It does not equalise variance contribution - correlation structure still
+   drives that. See docs/scoring-model.md section 6.
 
 2. Tiers are quantiles, not fixed cutoffs. Absolute 80/60 thresholds put
    29% of the universe in "engage now", which is not a prioritisation.
