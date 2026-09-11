@@ -1,47 +1,4 @@
 {
-  "generated_at": "2026-09-11T03:29:34+00:00",
-  "changes": [
-    {
-      "account": "AbbVie",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 50.8
-    },
-    {
-      "account": "Bristol Myers Squibb",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 50.6
-    },
-    {
-      "account": "Gilead Sciences",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 50.1
-    },
-    {
-      "account": "Charles Schwab",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 50.6
-    },
-    {
-      "account": "Nike",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 52.5
-    },
-    {
-      "account": "Coca-Cola",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 53.6
-    },
-    {
-      "account": "Global Payments",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 52.5
-    }
-  ]
+  "generated_at": "2026-09-11T03:35:08+00:00",
+  "changes": []
 }
