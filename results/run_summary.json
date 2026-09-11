@@ -1,0 +1,33 @@
+{
+  "run_at": "2026-09-10T23:16:54",
+  "accounts": 160,
+  "industries": 9,
+  "avg_score": 50.3,
+  "tier_counts": {
+    "Tier 3": 78,
+    "Tier 2": 57,
+    "Tier 1": 25
+  },
+  "enrichment_notes": 3,
+  "custom_accounts": 0,
+  "storage_backend": "csv",
+  "weights_source": "configured",
+  "tier_changes": 0,
+  "news": {
+    "accounts_with_coverage": 0,
+    "last_collected": null
+  },
+  "segmentation": {
+    "k": 6,
+    "silhouette": 0.435,
+    "explained_variance": [
+      0.681,
+      0.189
+    ],
+    "hdbscan_clusters": 3,
+    "hdbscan_outliers": 10,
+    "umap_available": true,
+    "storage_backend": "csv",
+    "weights_source": "configured"
+  }
+}

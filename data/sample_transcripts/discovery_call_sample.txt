@@ -1,0 +1,34 @@
+Discovery call - Meridian Retail Group (fictional sample for demo purposes)
+Attendees: VP Infrastructure (customer), Head of Cloud Platforms (customer), Account Executive, Solutions Engineer
+
+Account Executive: Thanks for making the time today. Last quarter you mentioned the network refresh was becoming urgent. Where do things stand?
+
+VP Infrastructure: Honestly, costs are the first problem. We are overpaying on regional circuits and every renewal comes in higher than the last. Finance has asked us to cut network spend by fifteen percent while we somehow support more traffic.
+
+Solutions Engineer: Is the traffic growth mostly from the e-commerce side?
+
+Head of Cloud Platforms: Partly. The bigger driver is our cloud migration. We are moving the merchandising and supply chain workloads to Azure this year, and some analytics workloads already run on AWS. The hybrid setup is creating real headaches.
+
+VP Infrastructure: The latency between our distribution centres and the cloud regions is the thing keeping me up at night. During the holiday peak we had two outages on the east coast links and the stores felt it immediately. Downtime during peak season is simply not acceptable to the board.
+
+Account Executive: Understood. How are you handling security across that hybrid estate?
+
+Head of Cloud Platforms: That is the other pressure. Our compliance team is pushing zero trust hard after the audit findings, and honestly our current firewall estate was not designed for this. We have too many vendors involved - one for circuits, one for security, two for cloud connectivity. The sprawl itself is a risk.
+
+VP Infrastructure: If we could consolidate to fewer providers with one throat to choke, that alone would be a win.
+
+Solutions Engineer: You mentioned analytics on AWS. Is there an AI initiative behind that?
+
+Head of Cloud Platforms: Yes, there is a genuine push. We are piloting demand-forecasting models and the data platform team wants GPU capacity closer to the data. Right now moving training data between regions is slow and expensive, so the machine learning team is frustrated.
+
+Account Executive: That is a pattern we see a lot - AI ambitions blocked by data movement. What would a good outcome look like for you six months from now?
+
+VP Infrastructure: Predictable costs, no more peak-season outages, a clear path for the Azure migration, and fewer vendors to manage. If the AI pilots can actually scale on top of that, even better.
+
+Account Executive: That is very doable. As a next step I would suggest a joint architecture review with our network and security specialists - we can map your expansion plans for the new markets against our coverage and model the total cost of ownership against your current contracts.
+
+Head of Cloud Platforms: The new markets point matters - we are expanding into Mexico and Brazil next year, so capacity planning for those regions should be part of it.
+
+VP Infrastructure: Agreed. Send over the proposed agenda and we will get our architects in the room. The support model matters too - our current provider takes days to respond to tickets and the SLA penalties do not compensate for lost sales.
+
+Account Executive: We will include our service model in the review. Thank you both - this has been genuinely useful.

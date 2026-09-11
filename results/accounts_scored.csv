@@ -1,0 +1,161 @@
+account,ticker,industry,sub_industry,source,measured_signals,ai_hiring,ai_announce,cloud,global_reach,data_centre,base_score,note_count,kb_count,note_adj,kb_adj,news_adj,adjusted_score,tier,tier_action,segment,lookalikes
+Microsoft,MSFT,Technology,Software & Internet,baseline,,100,100,100,100,100,98.4,0,0,0.0,0.0,0.0,98.4,Tier 1,Engage now,AI Front-Runners,Amazon; Alphabet (Google); Oracle; Meta Platforms; Palantir
+Alphabet (Google),GOOGL,Technology,Software & Internet,baseline,,100,100,98,100,98,97.4,0,0,0.0,0.0,0.0,97.4,Tier 1,Engage now,AI Front-Runners,Microsoft; Amazon; Oracle; Meta Platforms; Palantir
+Amazon,AMZN,Technology,Software & Internet,baseline,,100,100,100,98,100,97.2,0,0,0.0,0.0,0.0,97.2,Tier 1,Engage now,AI Front-Runners,Microsoft; Alphabet (Google); Oracle; Meta Platforms; Palantir
+Meta Platforms,META,Technology,Software & Internet,baseline,,98,98,88,92,100,87.0,0,0,0.0,0.0,0.0,87.0,Tier 1,Engage now,AI Front-Runners,NVIDIA; Oracle; Alphabet (Google); Amazon; Microsoft
+Oracle,ORCL,Technology,Software & Internet,baseline,,90,96,96,88,98,83.9,0,0,0.0,0.0,0.0,83.9,Tier 1,Engage now,AI Front-Runners,Alphabet (Google); Amazon; Meta Platforms; Microsoft; Palantir
+Apple,AAPL,Technology,Software & Internet,baseline,,92,96,98,87,67,81.4,0,0,0.0,0.0,0.0,81.4,Tier 1,Engage now,Strong Adopters,Uber; Adobe; Salesforce; SAP; ServiceNow
+Salesforce,CRM,Technology,Software & Internet,baseline,,92,96,98,87,67,81.4,0,0,0.0,0.0,0.0,81.4,Tier 1,Engage now,Strong Adopters,Uber; Adobe; SAP; Apple; ServiceNow
+Adobe,ADBE,Technology,Software & Internet,baseline,,92,96,98,87,67,81.4,0,0,0.0,0.0,0.0,81.4,Tier 1,Engage now,Strong Adopters,Uber; Salesforce; SAP; Apple; ServiceNow
+SAP,SAP,Technology,Software & Internet,baseline,,92,96,98,87,67,81.4,0,0,0.0,0.0,0.0,81.4,Tier 1,Engage now,Strong Adopters,Uber; Adobe; Salesforce; Apple; ServiceNow
+Uber,UBER,Technology,Software & Internet,baseline,,92,96,98,87,67,81.4,0,0,0.0,0.0,0.0,81.4,Tier 1,Engage now,Strong Adopters,Adobe; Salesforce; SAP; Apple; ServiceNow
+NVIDIA,NVDA,Technology,Semiconductors & Hardware,baseline,,96,100,82,86,95,80.2,0,0,0.0,0.0,0.0,80.2,Tier 1,Engage now,AI Front-Runners,Meta Platforms; Dell Technologies; Hewlett Packard Enterprise; Qualcomm; Marvell
+Palantir,PLTR,Technology,Software & Internet,baseline,,100,100,100,75,85,79.8,0,0,0.0,0.0,0.0,79.8,Tier 1,Engage now,AI Front-Runners,Snowflake; ServiceNow; Amazon; Alphabet (Google); Oracle
+Eli Lilly,LLY,Healthcare,Pharma & Biotech,baseline,,84,90,82,94,58,77.7,1,0,2.0,0.0,0.0,79.7,Tier 1,Engage now,Late Starters,Moderna; Goldman Sachs; Morgan Stanley; Bank of America; JPMorgan Chase
+Visa,V,Financial Services,Payments & Fintech,baseline,,92,86,92,92,56,79.7,0,0,0.0,0.0,0.0,79.7,Tier 1,Engage now,Strong Adopters,Mastercard; Atlassian; Shopify; S&P Global; Accenture
+Broadcom,AVGO,Technology,Semiconductors & Hardware,baseline,,90,96,76,94,84,79.0,0,0,0.0,0.0,0.0,79.0,Tier 1,Engage now,Steady Middle,Dell Technologies; AMD; Hewlett Packard Enterprise; Qualcomm; Marvell
+AMD,AMD,Technology,Semiconductors & Hardware,baseline,,90,96,76,94,84,79.0,0,0,0.0,0.0,0.0,79.0,Tier 1,Engage now,Steady Middle,Dell Technologies; Broadcom; Hewlett Packard Enterprise; Qualcomm; Marvell
+Hewlett Packard Enterprise,HPE,Technology,Semiconductors & Hardware,baseline,,90,96,76,94,84,79.0,0,0,0.0,0.0,0.0,79.0,Tier 1,Engage now,Steady Middle,Dell Technologies; AMD; Broadcom; Qualcomm; Marvell
+Dell Technologies,DELL,Technology,Semiconductors & Hardware,baseline,,90,96,76,94,84,79.0,0,0,0.0,0.0,0.0,79.0,Tier 1,Engage now,Steady Middle,AMD; Broadcom; Hewlett Packard Enterprise; Qualcomm; Marvell
+Marvell,MRVL,Technology,Semiconductors & Hardware,baseline,,90,96,76,94,84,79.0,0,0,0.0,0.0,0.0,79.0,Tier 1,Engage now,Steady Middle,Dell Technologies; AMD; Broadcom; Hewlett Packard Enterprise; Qualcomm
+Qualcomm,QCOM,Technology,Semiconductors & Hardware,baseline,,90,96,76,94,84,79.0,0,0,0.0,0.0,0.0,79.0,Tier 1,Engage now,Steady Middle,Dell Technologies; AMD; Broadcom; Hewlett Packard Enterprise; Marvell
+S&P Global,SPGI,Professional Services,Professional Services,baseline,,88,88,88,94,50,77.7,0,0,0.0,0.0,0.0,77.7,Tier 1,Engage now,Strong Adopters,Accenture; Visa; Mastercard; Netflix; Spotify
+Mastercard,MA,Financial Services,Payments & Fintech,baseline,,92,86,92,92,56,79.7,1,0,-2.0,0.0,0.0,77.7,Tier 1,Engage now,Strong Adopters,Visa; Atlassian; Shopify; S&P Global; Accenture
+Accenture,ACN,Professional Services,Professional Services,baseline,,88,88,88,94,50,77.7,0,0,0.0,0.0,0.0,77.7,Tier 1,Engage now,Strong Adopters,S&P Global; Visa; Mastercard; Netflix; Spotify
+Shopify,SHOP,Technology,Software & Internet,baseline,,86,88,94,87,59,75.5,0,0,0.0,0.0,0.0,75.5,Tier 1,Engage now,Strong Adopters,Atlassian; Intuit; Datadog; Workday; Visa
+Atlassian,TEAM,Technology,Software & Internet,baseline,,86,88,94,87,59,75.5,0,0,0.0,0.0,0.0,75.5,Tier 1,Engage now,Strong Adopters,Shopify; Intuit; Datadog; Workday; Visa
+ServiceNow,NOW,Technology,Software & Internet,baseline,,92,96,98,75,67,75.1,0,0,0.0,0.0,0.0,75.1,Tier 2,Nurture,Strong Adopters,Snowflake; Uber; Adobe; SAP; Salesforce
+Snowflake,SNOW,Technology,Software & Internet,baseline,,92,96,98,75,67,75.1,0,0,0.0,0.0,0.0,75.1,Tier 2,Nurture,Strong Adopters,ServiceNow; Uber; Adobe; SAP; Salesforce
+Workday,WDAY,Technology,Software & Internet,baseline,,86,88,94,75,59,69.1,0,0,0.0,0.0,0.0,69.1,Tier 2,Nurture,Strong Adopters,Intuit; Datadog; Shopify; Atlassian; Spotify
+Intuit,INTU,Technology,Software & Internet,baseline,,86,88,94,75,59,69.1,0,0,0.0,0.0,0.0,69.1,Tier 2,Nurture,Strong Adopters,Workday; Datadog; Shopify; Atlassian; Spotify
+Datadog,DDOG,Technology,Software & Internet,baseline,,86,88,94,75,59,69.1,0,0,0.0,0.0,0.0,69.1,Tier 2,Nurture,Strong Adopters,Intuit; Workday; Shopify; Atlassian; Spotify
+Applied Materials,AMAT,Technology,Semiconductors & Hardware,baseline,,84,88,72,94,76,68.4,0,0,0.0,0.0,0.0,68.4,Tier 2,Nurture,Steady Middle,Intel; Micron; Broadcom; Hewlett Packard Enterprise; Marvell
+Intel,INTC,Technology,Semiconductors & Hardware,baseline,,84,88,72,94,76,68.4,0,0,0.0,0.0,0.0,68.4,Tier 2,Nurture,Steady Middle,Applied Materials; Micron; Broadcom; Hewlett Packard Enterprise; Marvell
+Micron,MU,Technology,Semiconductors & Hardware,baseline,,84,88,72,94,76,68.4,0,0,0.0,0.0,0.0,68.4,Tier 2,Nurture,Steady Middle,Applied Materials; Intel; Broadcom; Hewlett Packard Enterprise; Marvell
+American Express,AXP,Financial Services,Payments & Fintech,baseline,,86,78,88,92,48,68.3,0,0,0.0,0.0,0.0,68.3,Tier 2,Nurture,Late Starters,PayPal; Block; Netflix; Spotify; Infosys (Americas)
+PayPal,PYPL,Financial Services,Payments & Fintech,baseline,,86,78,88,92,48,68.3,0,0,0.0,0.0,0.0,68.3,Tier 2,Nurture,Late Starters,American Express; Block; Netflix; Spotify; Infosys (Americas)
+Spotify,SPOT,Media & Entertainment,Media & Entertainment,baseline,,86,82,90,84,52,67.9,0,0,0.0,0.0,0.0,67.9,Tier 2,Nurture,Strong Adopters,Netflix; Block; PayPal; American Express; S&P Global
+Netflix,NFLX,Media & Entertainment,Media & Entertainment,baseline,,86,82,90,84,52,67.9,1,0,0.0,0.0,0.0,67.9,Tier 2,Nurture,Strong Adopters,Spotify; Block; PayPal; American Express; S&P Global
+Morgan Stanley,MS,Financial Services,Banks,baseline,,88,84,82,84,54,67.7,0,0,0.0,0.0,0.0,67.7,Tier 2,Nurture,Late Starters,JPMorgan Chase; Goldman Sachs; Bank of America; Moderna; Eli Lilly
+JPMorgan Chase,JPM,Financial Services,Banks,baseline,,88,84,82,84,54,67.7,0,0,0.0,0.0,0.0,67.7,Tier 2,Nurture,Late Starters,Goldman Sachs; Bank of America; Morgan Stanley; Moderna; Eli Lilly
+Bank of America,BAC,Financial Services,Banks,baseline,,88,84,82,84,54,67.7,0,0,0.0,0.0,0.0,67.7,Tier 2,Nurture,Late Starters,JPMorgan Chase; Goldman Sachs; Morgan Stanley; Moderna; Eli Lilly
+Goldman Sachs,GS,Financial Services,Banks,baseline,,88,84,82,84,54,67.7,0,0,0.0,0.0,0.0,67.7,Tier 2,Nurture,Late Starters,JPMorgan Chase; Bank of America; Morgan Stanley; Moderna; Eli Lilly
+Merck,MRK,Healthcare,Pharma & Biotech,baseline,,78,82,78,94,50,66.8,0,0,0.0,0.0,0.0,66.8,Tier 2,Nurture,Late Starters,Amgen; Pfizer; Johnson & Johnson; Thermo Fisher Scientific; Corning
+Johnson & Johnson,JNJ,Healthcare,Pharma & Biotech,baseline,,78,82,78,94,50,66.8,0,0,0.0,0.0,0.0,66.8,Tier 2,Nurture,Late Starters,Amgen; Pfizer; Merck; Thermo Fisher Scientific; Corning
+Amgen,AMGN,Healthcare,Pharma & Biotech,baseline,,78,82,78,94,50,66.8,0,0,0.0,0.0,0.0,66.8,Tier 2,Nurture,Late Starters,Pfizer; Merck; Johnson & Johnson; Thermo Fisher Scientific; Corning
+Thermo Fisher Scientific,TMO,Healthcare,Pharma & Biotech,baseline,,78,82,78,94,50,66.8,0,0,0.0,0.0,0.0,66.8,Tier 2,Nurture,Late Starters,Amgen; Pfizer; Merck; Johnson & Johnson; Corning
+Pfizer,PFE,Healthcare,Pharma & Biotech,baseline,,78,82,78,94,50,66.8,0,0,0.0,0.0,0.0,66.8,Tier 2,Nurture,Late Starters,Amgen; Merck; Johnson & Johnson; Thermo Fisher Scientific; Corning
+Moderna,MRNA,Healthcare,Pharma & Biotech,baseline,,84,90,82,82,58,66.2,0,0,0.0,0.0,0.0,66.2,Tier 2,Nurture,Late Starters,Eli Lilly; Morgan Stanley; Goldman Sachs; JPMorgan Chase; Bank of America
+Rockwell Automation,ROK,Manufacturing & Industrial,Industrial & Materials,baseline,,76,80,76,96,52,66.0,0,0,0.0,0.0,0.0,66.0,Tier 2,Nurture,Late Starters,Deere & Company; Siemens (Americas); Corning; Schneider Electric; Eaton
+Eaton,ETN,Manufacturing & Industrial,Industrial & Materials,baseline,,76,80,76,96,52,66.0,0,0,0.0,0.0,0.0,66.0,Tier 2,Nurture,Late Starters,Deere & Company; Rockwell Automation; Siemens (Americas); Corning; Schneider Electric
+Schneider Electric,SBGSY,Manufacturing & Industrial,Industrial & Materials,baseline,,76,80,76,96,52,66.0,0,0,0.0,0.0,0.0,66.0,Tier 2,Nurture,Late Starters,Deere & Company; Rockwell Automation; Siemens (Americas); Corning; Eaton
+Siemens (Americas),SIEGY,Manufacturing & Industrial,Industrial & Materials,baseline,,76,80,76,96,52,66.0,0,0,0.0,0.0,0.0,66.0,Tier 2,Nurture,Late Starters,Deere & Company; Rockwell Automation; Corning; Schneider Electric; Eaton
+Deere & Company,DE,Manufacturing & Industrial,Industrial & Materials,baseline,,76,80,76,96,52,66.0,0,0,0.0,0.0,0.0,66.0,Tier 2,Nurture,Late Starters,Rockwell Automation; Siemens (Americas); Corning; Schneider Electric; Eaton
+Corning,GLW,Manufacturing & Industrial,Industrial & Materials,baseline,,76,80,76,96,52,66.0,0,0,0.0,0.0,0.0,66.0,Tier 2,Nurture,Late Starters,Deere & Company; Rockwell Automation; Siemens (Americas); Schneider Electric; Eaton
+Gartner,IT,Professional Services,Professional Services,baseline,,82,80,84,94,42,64.8,0,0,0.0,0.0,0.0,64.8,Tier 2,Nurture,Late Starters,Booz Allen Hamilton; Cognizant; Infosys (Americas); BlackRock; PayPal
+Infosys (Americas),INFY,Professional Services,Professional Services,baseline,,82,80,84,94,42,64.8,0,0,0.0,0.0,0.0,64.8,Tier 2,Nurture,Late Starters,Booz Allen Hamilton; Cognizant; Gartner; BlackRock; PayPal
+Cognizant,CTSH,Professional Services,Professional Services,baseline,,82,80,84,94,42,64.8,0,0,0.0,0.0,0.0,64.8,Tier 2,Nurture,Late Starters,Booz Allen Hamilton; Gartner; Infosys (Americas); BlackRock; PayPal
+Booz Allen Hamilton,BAH,Professional Services,Professional Services,baseline,,82,80,84,94,42,64.8,0,0,0.0,0.0,0.0,64.8,Tier 2,Nurture,Late Starters,Cognizant; Gartner; Infosys (Americas); BlackRock; PayPal
+Tesla,TSLA,Manufacturing & Industrial,Automotive,baseline,,92,92,72,80,88,61.8,0,0,0.0,0.0,0.0,61.8,Tier 2,Nurture,Steady Middle,AMD; Dell Technologies; Hewlett Packard Enterprise; Marvell; Broadcom
+Capital One,COF,Financial Services,Banks,baseline,,88,84,82,47,54,60.1,0,0,0.0,0.0,0.0,60.1,Tier 2,Nurture,Late Starters,UnitedHealth Group; Intuitive Surgical; Rivian; Walmart; Charles Schwab
+BlackRock,BLK,Financial Services,Asset Mgmt & Insurance,baseline,,80,78,82,88,46,60.1,0,0,0.0,0.0,0.0,60.1,Tier 2,Nurture,Late Starters,Booz Allen Hamilton; Cognizant; Gartner; Infosys (Americas); TD Bank Group
+Block,SQ,Financial Services,Payments & Fintech,baseline,,86,78,88,80,48,59.2,0,0,0.0,0.0,0.0,59.2,Tier 2,Nurture,Late Starters,Spotify; Netflix; American Express; PayPal; The Walt Disney Company
+Texas Instruments,TXN,Technology,Semiconductors & Hardware,baseline,,76,80,68,94,72,58.5,0,0,0.0,0.0,0.0,58.5,Tier 2,Nurture,Steady Middle,HP Inc.; Intel; Applied Materials; Micron; Corning
+HP Inc.,HPQ,Technology,Semiconductors & Hardware,baseline,,76,80,68,94,72,58.5,0,0,0.0,0.0,0.0,58.5,Tier 2,Nurture,Steady Middle,Texas Instruments; Intel; Applied Materials; Micron; Corning
+Intuitive Surgical,ISRG,Healthcare,"Payers, Providers & MedTech",baseline,,82,80,80,64,58,58.0,0,0,0.0,0.0,0.0,58.0,Tier 2,Nurture,Late Starters,UnitedHealth Group; Walmart; Charles Schwab; Wells Fargo; Rivian
+General Motors,GM,Manufacturing & Industrial,Automotive,baseline,,80,78,76,88,50,57.6,0,0,0.0,0.0,0.0,57.6,Tier 2,Nurture,Late Starters,Toyota (Americas); Ford Motor; Honeywell; Citigroup; TD Bank Group
+Ford Motor,F,Manufacturing & Industrial,Automotive,baseline,,80,78,76,88,50,57.6,0,0,0.0,0.0,0.0,57.6,Tier 2,Nurture,Late Starters,General Motors; Toyota (Americas); Honeywell; Citigroup; TD Bank Group
+Toyota (Americas),TM,Manufacturing & Industrial,Automotive,baseline,,80,78,76,88,50,57.6,0,0,0.0,0.0,0.0,57.6,Tier 2,Nurture,Late Starters,General Motors; Ford Motor; Honeywell; Citigroup; TD Bank Group
+UnitedHealth Group,UNH,Healthcare,"Payers, Providers & MedTech",baseline,,82,80,80,52,58,56.4,0,0,0.0,0.0,0.0,56.4,Tier 2,Nurture,Late Starters,Intuitive Surgical; Walmart; Rivian; Capital One; Medtronic
+Vertex Pharmaceuticals,VRTX,Healthcare,Pharma & Biotech,baseline,,78,82,78,82,50,55.3,0,0,0.0,0.0,0.0,55.3,Tier 2,Nurture,Late Starters,Regeneron; Honeywell; Ford Motor; Toyota (Americas); General Motors
+Regeneron,REGN,Healthcare,Pharma & Biotech,baseline,,78,82,78,82,50,55.3,0,0,0.0,0.0,0.0,55.3,Tier 2,Nurture,Late Starters,Vertex Pharmaceuticals; Honeywell; Ford Motor; Toyota (Americas); General Motors
+Honeywell,HON,Manufacturing & Industrial,Aerospace & Defense,baseline,,80,78,76,84,52,54.9,0,0,0.0,0.0,0.0,54.9,Tier 2,Nurture,Late Starters,Ford Motor; Toyota (Americas); General Motors; Vertex Pharmaceuticals; Regeneron
+The Walt Disney Company,DIS,Media & Entertainment,Media & Entertainment,baseline,,80,74,86,84,44,54.2,0,0,0.0,0.0,0.0,54.2,Tier 2,Nurture,Late Starters,Comcast (NBCUniversal); Electronic Arts; Fiserv; Global Payments; BlackRock
+Electronic Arts,EA,Media & Entertainment,Media & Entertainment,baseline,,80,74,86,84,44,54.2,0,0,0.0,0.0,0.0,54.2,Tier 2,Nurture,Late Starters,Comcast (NBCUniversal); The Walt Disney Company; Fiserv; Global Payments; BlackRock
+Comcast (NBCUniversal),CMCSA,Media & Entertainment,Media & Entertainment,baseline,,80,74,86,84,44,54.2,0,0,0.0,0.0,0.0,54.2,Tier 2,Nurture,Late Starters,The Walt Disney Company; Electronic Arts; Fiserv; Global Payments; BlackRock
+TD Bank Group,TD,Financial Services,Banks,baseline,,82,76,78,84,46,54.1,0,0,0.0,0.0,0.0,54.1,Tier 2,Nurture,Late Starters,Citigroup; General Motors; Ford Motor; Toyota (Americas); Honeywell
+Citigroup,C,Financial Services,Banks,baseline,,82,76,78,84,46,54.1,0,0,0.0,0.0,0.0,54.1,Tier 2,Nurture,Late Starters,TD Bank Group; General Motors; Ford Motor; Toyota (Americas); Honeywell
+Walmart,WMT,Retail & Consumer,Retail,baseline,,80,74,82,58,54,53.8,0,0,0.0,0.0,0.0,53.8,Tier 2,Nurture,Late Starters,Intuitive Surgical; UnitedHealth Group; Rivian; Stryker; Medtronic
+AbbVie,ABBV,Healthcare,Pharma & Biotech,baseline,,70,74,74,94,46,49.7,0,0,0.0,0.0,0.0,49.7,Tier 2,Nurture,Watch List,Bristol Myers Squibb; Gilead Sciences; Emerson Electric; Cummins; Stellantis
+Wells Fargo,WFC,Financial Services,Banks,baseline,,82,76,78,72,46,49.7,0,0,0.0,0.0,0.0,49.7,Tier 2,Nurture,Late Starters,Charles Schwab; TD Bank Group; Citigroup; Honeywell; Vertex Pharmaceuticals
+Bristol Myers Squibb,BMY,Healthcare,Pharma & Biotech,baseline,,70,74,74,94,46,49.7,0,0,0.0,0.0,0.0,49.7,Tier 2,Nurture,Watch List,AbbVie; Gilead Sciences; Emerson Electric; Cummins; Stellantis
+Gilead Sciences,GILD,Healthcare,Pharma & Biotech,baseline,,70,74,74,94,46,49.7,0,0,0.0,0.0,0.0,49.7,Tier 2,Nurture,Watch List,Bristol Myers Squibb; AbbVie; Emerson Electric; Cummins; Stellantis
+Charles Schwab,SCHW,Financial Services,Banks,baseline,,82,76,78,72,46,49.7,0,0,0.0,0.0,0.0,49.7,Tier 2,Nurture,Late Starters,Wells Fargo; TD Bank Group; Citigroup; Honeywell; Vertex Pharmaceuticals
+Nike,NKE,Retail & Consumer,CPG & Food/Beverage,baseline,,72,72,76,100,36,49.6,0,0,0.0,0.0,0.0,49.6,Tier 3,Monitor,Watch List,Starbucks; McDonald's; PepsiCo; Procter & Gamble; Unilever (Americas)
+Unilever (Americas),UL,Retail & Consumer,CPG & Food/Beverage,baseline,,72,72,76,100,36,49.6,0,0,0.0,0.0,0.0,49.6,Tier 3,Monitor,Watch List,Starbucks; McDonald's; PepsiCo; Procter & Gamble; Nike
+Starbucks,SBUX,Retail & Consumer,CPG & Food/Beverage,baseline,,72,72,76,100,36,49.6,0,0,0.0,0.0,0.0,49.6,Tier 3,Monitor,Watch List,McDonald's; PepsiCo; Procter & Gamble; Nike; Unilever (Americas)
+Procter & Gamble,PG,Retail & Consumer,CPG & Food/Beverage,baseline,,72,72,76,100,36,49.6,0,0,0.0,0.0,0.0,49.6,Tier 3,Monitor,Watch List,Starbucks; McDonald's; PepsiCo; Nike; Unilever (Americas)
+McDonald's,MCD,Retail & Consumer,CPG & Food/Beverage,baseline,,72,72,76,100,36,49.6,0,0,0.0,0.0,0.0,49.6,Tier 3,Monitor,Watch List,Starbucks; PepsiCo; Procter & Gamble; Nike; Unilever (Americas)
+PepsiCo,PEP,Retail & Consumer,CPG & Food/Beverage,baseline,,72,72,76,100,36,49.6,0,0,0.0,0.0,0.0,49.6,Tier 3,Monitor,Watch List,Starbucks; McDonald's; Procter & Gamble; Nike; Unilever (Americas)
+Coca-Cola,KO,Retail & Consumer,CPG & Food/Beverage,baseline,,72,72,76,100,36,49.6,0,0,0.0,0.0,0.0,49.6,Tier 3,Monitor,Watch List,Starbucks; McDonald's; PepsiCo; Procter & Gamble; Nike
+Fiserv,FI,Financial Services,Payments & Fintech,baseline,,78,70,84,80,44,47.5,0,0,0.0,0.0,0.0,47.5,Tier 3,Monitor,Late Starters,Global Payments; Comcast (NBCUniversal); The Walt Disney Company; Electronic Arts; Paramount
+Global Payments,GPN,Financial Services,Payments & Fintech,baseline,,78,70,84,80,44,47.5,0,0,0.0,0.0,0.0,47.5,Tier 3,Monitor,Late Starters,Fiserv; Comcast (NBCUniversal); The Walt Disney Company; Electronic Arts; Paramount
+Emerson Electric,EMR,Manufacturing & Industrial,Industrial & Materials,baseline,,70,72,72,96,44,46.8,0,0,0.0,0.0,0.0,46.8,Tier 3,Monitor,Watch List,Bristol Myers Squibb; AbbVie; Gilead Sciences; Cummins; Stellantis
+Rivian,RIVN,Manufacturing & Industrial,Automotive,baseline,,80,78,76,51,50,46.3,0,0,0.0,0.0,0.0,46.3,Tier 3,Monitor,Late Starters,UnitedHealth Group; Walmart; Stryker; Medtronic; Abbott Laboratories
+Abbott Laboratories,ABT,Healthcare,"Payers, Providers & MedTech",baseline,,76,72,76,64,50,43.7,0,0,0.0,0.0,0.0,43.7,Tier 3,Monitor,Late Starters,Stryker; Medtronic; PNC Financial; U.S. Bancorp; Charles Schwab
+Stryker,SYK,Healthcare,"Payers, Providers & MedTech",baseline,,76,72,76,64,50,43.7,0,0,0.0,0.0,0.0,43.7,Tier 3,Monitor,Late Starters,Abbott Laboratories; Medtronic; PNC Financial; U.S. Bancorp; Charles Schwab
+Medtronic,MDT,Healthcare,"Payers, Providers & MedTech",baseline,,76,72,76,64,50,43.7,0,0,0.0,0.0,0.0,43.7,Tier 3,Monitor,Late Starters,Abbott Laboratories; Stryker; PNC Financial; U.S. Bancorp; Charles Schwab
+Aon,AON,Financial Services,Asset Mgmt & Insurance,baseline,,74,70,78,88,38,43.4,0,0,0.0,0.0,0.0,43.4,Tier 3,Monitor,Watch List,Marsh McLennan; FedEx; UPS; Paramount; Warner Bros. Discovery
+Marsh McLennan,MMC,Financial Services,Asset Mgmt & Insurance,baseline,,74,70,78,88,38,43.4,0,0,0.0,0.0,0.0,43.4,Tier 3,Monitor,Watch List,Aon; FedEx; UPS; Paramount; Warner Bros. Discovery
+Stellantis,STLA,Manufacturing & Industrial,Automotive,baseline,,72,70,72,88,46,40.8,0,0,0.0,0.0,0.0,40.8,Tier 3,Monitor,Watch List,Cummins; Northrop Grumman; RTX; Lockheed Martin; GE Aerospace
+Cummins,CMI,Manufacturing & Industrial,Automotive,baseline,,72,70,72,88,46,40.8,0,0,0.0,0.0,0.0,40.8,Tier 3,Monitor,Watch List,Stellantis; Northrop Grumman; RTX; Lockheed Martin; GE Aerospace
+CVS Health,CVS,Healthcare,"Payers, Providers & MedTech",baseline,,76,72,76,27,50,40.2,0,0,0.0,0.0,0.0,40.2,Tier 3,Monitor,Early Stage,Target; The Home Depot; HCA Healthcare; Elevance Health; Humana
+Warner Bros. Discovery,WBD,Media & Entertainment,Media & Entertainment,baseline,,72,66,82,84,40,39.6,0,0,0.0,0.0,0.0,39.6,Tier 3,Monitor,Watch List,Paramount; Aon; Marsh McLennan; UPS; FedEx
+Paramount,PARA,Media & Entertainment,Media & Entertainment,baseline,,72,66,82,84,40,39.6,0,0,0.0,0.0,0.0,39.6,Tier 3,Monitor,Watch List,Warner Bros. Discovery; Aon; Marsh McLennan; UPS; FedEx
+FedEx,FDX,Logistics & Transportation,Logistics & Transportation,baseline,,72,66,76,84,44,38.7,0,0,0.0,0.0,0.0,38.7,Tier 3,Monitor,Watch List,UPS; RTX; Northrop Grumman; Lockheed Martin; GE Aerospace
+UPS,UPS,Logistics & Transportation,Logistics & Transportation,baseline,,72,66,76,84,44,38.7,0,0,0.0,0.0,0.0,38.7,Tier 3,Monitor,Watch List,FedEx; RTX; Northrop Grumman; Lockheed Martin; GE Aerospace
+The Home Depot,HD,Retail & Consumer,Retail,baseline,,74,66,78,46,46,36.9,0,0,0.0,0.0,0.0,36.9,Tier 3,Monitor,Early Stage,Truist; Fox Corporation; Progressive; Abbott Laboratories; Medtronic
+Shell (Americas),SHEL,Energy & Utilities,Energy & Utilities,baseline,,68,68,70,92,44,36.5,0,0,0.0,0.0,0.0,36.5,Tier 3,Monitor,Watch List,Schlumberger; Emerson Electric; Cummins; Stellantis; Gilead Sciences
+Schlumberger,SLB,Energy & Utilities,Energy & Utilities,baseline,,68,68,70,92,44,36.5,0,0,0.0,0.0,0.0,36.5,Tier 3,Monitor,Watch List,Shell (Americas); Emerson Electric; Cummins; Stellantis; Gilead Sciences
+Lockheed Martin,LMT,Manufacturing & Industrial,Aerospace & Defense,baseline,,74,70,72,84,44,35.9,0,0,0.0,0.0,0.0,35.9,Tier 3,Monitor,Watch List,RTX; Northrop Grumman; GE Aerospace; Cummins; Stellantis
+Northrop Grumman,NOC,Manufacturing & Industrial,Aerospace & Defense,baseline,,74,70,72,84,44,35.9,0,0,0.0,0.0,0.0,35.9,Tier 3,Monitor,Watch List,RTX; Lockheed Martin; GE Aerospace; Cummins; Stellantis
+RTX,RTX,Manufacturing & Industrial,Aerospace & Defense,baseline,,74,70,72,84,44,35.9,0,0,0.0,0.0,0.0,35.9,Tier 3,Monitor,Watch List,Lockheed Martin; Northrop Grumman; GE Aerospace; Cummins; Stellantis
+GE Aerospace,GE,Manufacturing & Industrial,Aerospace & Defense,baseline,,74,70,72,84,44,35.9,0,0,0.0,0.0,0.0,35.9,Tier 3,Monitor,Watch List,RTX; Lockheed Martin; Northrop Grumman; Cummins; Stellantis
+Target,TGT,Retail & Consumer,Retail,baseline,,74,66,78,21,46,35.6,0,0,0.0,0.0,0.0,35.6,Tier 3,Monitor,Early Stage,CVS Health; HCA Healthcare; Humana; Elevance Health; Cigna
+General Mills,GIS,Retail & Consumer,CPG & Food/Beverage,baseline,,64,64,72,100,32,34.0,0,0,0.0,0.0,0.0,34.0,Tier 3,Monitor,Watch List,Estee Lauder; Colgate-Palmolive; Kraft Heinz; Mondelez; Berkshire Hathaway
+Mondelez,MDLZ,Retail & Consumer,CPG & Food/Beverage,baseline,,64,64,72,100,32,34.0,0,0,0.0,0.0,0.0,34.0,Tier 3,Monitor,Watch List,Estee Lauder; Colgate-Palmolive; Kraft Heinz; General Mills; Berkshire Hathaway
+Colgate-Palmolive,CL,Retail & Consumer,CPG & Food/Beverage,baseline,,64,64,72,100,32,34.0,0,0,0.0,0.0,0.0,34.0,Tier 3,Monitor,Watch List,Estee Lauder; Kraft Heinz; General Mills; Mondelez; Berkshire Hathaway
+Kraft Heinz,KHC,Retail & Consumer,CPG & Food/Beverage,baseline,,64,64,72,100,32,34.0,0,0,0.0,0.0,0.0,34.0,Tier 3,Monitor,Watch List,Estee Lauder; Colgate-Palmolive; General Mills; Mondelez; Berkshire Hathaway
+Estee Lauder,EL,Retail & Consumer,CPG & Food/Beverage,baseline,,64,64,72,100,32,34.0,0,0,0.0,0.0,0.0,34.0,Tier 3,Monitor,Watch List,Colgate-Palmolive; Kraft Heinz; General Mills; Mondelez; Berkshire Hathaway
+Caterpillar,CAT,Manufacturing & Industrial,Industrial & Materials,baseline,,62,64,68,96,40,32.2,0,0,0.0,0.0,0.0,32.2,Tier 3,Monitor,Watch List,Parker Hannifin; Dow; Illinois Tool Works; Phillips 66; Chevron
+Parker Hannifin,PH,Manufacturing & Industrial,Industrial & Materials,baseline,,62,64,68,96,40,32.2,0,0,0.0,0.0,0.0,32.2,Tier 3,Monitor,Watch List,Caterpillar; Dow; Illinois Tool Works; Phillips 66; Chevron
+Illinois Tool Works,ITW,Manufacturing & Industrial,Industrial & Materials,baseline,,62,64,68,96,40,32.2,0,0,0.0,0.0,0.0,32.2,Tier 3,Monitor,Watch List,Parker Hannifin; Caterpillar; Dow; Phillips 66; Chevron
+Dow,DOW,Manufacturing & Industrial,Industrial & Materials,baseline,,62,64,68,96,40,32.2,0,0,0.0,0.0,0.0,32.2,Tier 3,Monitor,Watch List,Parker Hannifin; Caterpillar; Illinois Tool Works; Phillips 66; Chevron
+Progressive,PGR,Financial Services,Asset Mgmt & Insurance,baseline,,74,70,78,51,38,32.1,0,0,0.0,0.0,0.0,32.1,Tier 3,Monitor,Early Stage,Truist; Fox Corporation; The Home Depot; Abbott Laboratories; Medtronic
+Fox Corporation,FOXA,Media & Entertainment,Media & Entertainment,baseline,,72,66,82,47,40,32.0,0,0,0.0,0.0,0.0,32.0,Tier 3,Monitor,Early Stage,The Home Depot; Progressive; Truist; Allstate; TJX Companies
+U.S. Bancorp,USB,Financial Services,Banks,baseline,,74,68,74,72,42,31.6,0,0,0.0,0.0,0.0,31.6,Tier 3,Monitor,Watch List,PNC Financial; RTX; Northrop Grumman; Lockheed Martin; GE Aerospace
+PNC Financial,PNC,Financial Services,Banks,baseline,,74,68,74,72,42,31.6,0,0,0.0,0.0,0.0,31.6,Tier 3,Monitor,Watch List,U.S. Bancorp; RTX; Northrop Grumman; Lockheed Martin; GE Aerospace
+Truist,TFC,Financial Services,Banks,baseline,,74,68,74,47,42,28.4,0,0,0.0,0.0,0.0,28.4,Tier 3,Monitor,Early Stage,The Home Depot; Progressive; NextEra Energy; Fox Corporation; Allstate
+Prudential Financial,PRU,Financial Services,Asset Mgmt & Insurance,baseline,,66,62,74,88,34,27.9,0,0,0.0,0.0,0.0,27.9,Tier 3,Monitor,Watch List,MetLife; Chubb; AIG; Berkshire Hathaway; United Airlines
+MetLife,MET,Financial Services,Asset Mgmt & Insurance,baseline,,66,62,74,88,34,27.9,0,0,0.0,0.0,0.0,27.9,Tier 3,Monitor,Watch List,Chubb; AIG; Berkshire Hathaway; Prudential Financial; United Airlines
+Chubb,CB,Financial Services,Asset Mgmt & Insurance,baseline,,66,62,74,88,34,27.9,0,0,0.0,0.0,0.0,27.9,Tier 3,Monitor,Watch List,MetLife; AIG; Berkshire Hathaway; Prudential Financial; United Airlines
+Berkshire Hathaway,BRK.B,Financial Services,Asset Mgmt & Insurance,baseline,,66,62,74,88,34,27.9,0,0,0.0,0.0,0.0,27.9,Tier 3,Monitor,Watch List,MetLife; Chubb; AIG; Prudential Financial; United Airlines
+AIG,AIG,Financial Services,Asset Mgmt & Insurance,baseline,,66,62,74,88,34,27.9,0,0,0.0,0.0,0.0,27.9,Tier 3,Monitor,Watch List,MetLife; Chubb; Berkshire Hathaway; Prudential Financial; United Airlines
+NextEra Energy,NEE,Energy & Utilities,Energy & Utilities,baseline,,68,68,70,55,44,23.9,0,0,0.0,0.0,0.0,23.9,Tier 3,Monitor,Early Stage,Truist; Allstate; TJX Companies; Walgreens Boots Alliance; Costco Wholesale
+HCA Healthcare,HCA,Healthcare,"Payers, Providers & MedTech",baseline,,68,64,72,27,46,23.6,0,0,0.0,0.0,0.0,23.6,Tier 3,Monitor,Early Stage,Humana; Elevance Health; Cigna; Dollar General; Best Buy
+Humana,HUM,Healthcare,"Payers, Providers & MedTech",baseline,,68,64,72,27,46,23.6,0,0,0.0,0.0,0.0,23.6,Tier 3,Monitor,Early Stage,Elevance Health; HCA Healthcare; Cigna; Dollar General; Best Buy
+Cigna,CI,Healthcare,"Payers, Providers & MedTech",baseline,,68,64,72,27,46,23.6,0,0,0.0,0.0,0.0,23.6,Tier 3,Monitor,Early Stage,Humana; Elevance Health; HCA Healthcare; Dollar General; Best Buy
+Elevance Health,ELV,Healthcare,"Payers, Providers & MedTech",baseline,,68,64,72,27,46,23.6,0,0,0.0,0.0,0.0,23.6,Tier 3,Monitor,Early Stage,Humana; HCA Healthcare; Cigna; Dollar General; Best Buy
+ExxonMobil,XOM,Energy & Utilities,Energy & Utilities,baseline,,60,60,66,92,40,23.0,0,0,0.0,0.0,0.0,23.0,Tier 3,Monitor,Watch List,Phillips 66; Chevron; ConocoPhillips; Dow; Illinois Tool Works
+ConocoPhillips,COP,Energy & Utilities,Energy & Utilities,baseline,,60,60,66,92,40,23.0,0,0,0.0,0.0,0.0,23.0,Tier 3,Monitor,Watch List,Phillips 66; ExxonMobil; Chevron; Dow; Illinois Tool Works
+Chevron,CVX,Energy & Utilities,Energy & Utilities,baseline,,60,60,66,92,40,23.0,0,0,0.0,0.0,0.0,23.0,Tier 3,Monitor,Watch List,Phillips 66; ExxonMobil; ConocoPhillips; Dow; Illinois Tool Works
+Phillips 66,PSX,Energy & Utilities,Energy & Utilities,baseline,,60,60,66,92,40,23.0,0,0,0.0,0.0,0.0,23.0,Tier 3,Monitor,Watch List,ExxonMobil; Chevron; ConocoPhillips; Dow; Illinois Tool Works
+TJX Companies,TJX,Retail & Consumer,Retail,baseline,,66,58,74,58,42,21.2,0,0,0.0,0.0,0.0,21.2,Tier 3,Monitor,Early Stage,Costco Wholesale; Walgreens Boots Alliance; Union Pacific; Old Dominion; Allstate
+General Dynamics,GD,Manufacturing & Industrial,Aerospace & Defense,baseline,,66,62,68,84,40,21.2,0,0,0.0,0.0,0.0,21.2,Tier 3,Monitor,Watch List,Boeing; American Airlines; C.H. Robinson; Delta Air Lines; United Airlines
+Boeing,BA,Manufacturing & Industrial,Aerospace & Defense,baseline,,66,62,68,84,40,21.2,0,0,0.0,0.0,0.0,21.2,Tier 3,Monitor,Watch List,General Dynamics; American Airlines; C.H. Robinson; Delta Air Lines; United Airlines
+Walgreens Boots Alliance,WBA,Retail & Consumer,Retail,baseline,,66,58,74,58,42,21.2,0,0,0.0,0.0,0.0,21.2,Tier 3,Monitor,Early Stage,Costco Wholesale; TJX Companies; Union Pacific; Old Dominion; Allstate
+Costco Wholesale,COST,Retail & Consumer,Retail,baseline,,66,58,74,58,42,21.2,0,0,0.0,0.0,0.0,21.2,Tier 3,Monitor,Early Stage,TJX Companies; Walgreens Boots Alliance; Union Pacific; Old Dominion; Allstate
+C.H. Robinson,CHRW,Logistics & Transportation,Logistics & Transportation,baseline,,64,58,72,84,40,20.4,0,0,0.0,0.0,0.0,20.4,Tier 3,Monitor,Watch List,Delta Air Lines; United Airlines; American Airlines; Boeing; General Dynamics
+American Airlines,AAL,Logistics & Transportation,Logistics & Transportation,baseline,,64,58,72,84,40,20.4,0,0,0.0,0.0,0.0,20.4,Tier 3,Monitor,Watch List,C.H. Robinson; Delta Air Lines; United Airlines; Boeing; General Dynamics
+Delta Air Lines,DAL,Logistics & Transportation,Logistics & Transportation,baseline,,64,58,72,84,40,20.4,0,0,0.0,0.0,0.0,20.4,Tier 3,Monitor,Watch List,C.H. Robinson; United Airlines; American Airlines; Boeing; General Dynamics
+United Airlines,UAL,Logistics & Transportation,Logistics & Transportation,baseline,,64,58,72,84,40,20.4,0,0,0.0,0.0,0.0,20.4,Tier 3,Monitor,Watch List,C.H. Robinson; Delta Air Lines; American Airlines; Boeing; General Dynamics
+Best Buy,BBY,Retail & Consumer,Retail,baseline,,66,58,74,21,42,17.6,0,0,0.0,0.0,0.0,17.6,Tier 3,Monitor,Early Stage,Lowe's; Dollar General; Kroger; HCA Healthcare; Elevance Health
+Lowe's,LOW,Retail & Consumer,Retail,baseline,,66,58,74,21,42,17.6,0,0,0.0,0.0,0.0,17.6,Tier 3,Monitor,Early Stage,Dollar General; Best Buy; Kroger; HCA Healthcare; Elevance Health
+Kroger,KR,Retail & Consumer,Retail,baseline,,66,58,74,21,42,17.6,0,0,0.0,0.0,0.0,17.6,Tier 3,Monitor,Early Stage,Lowe's; Dollar General; Best Buy; HCA Healthcare; Elevance Health
+Dollar General,DG,Retail & Consumer,Retail,baseline,,66,58,74,21,42,17.6,0,0,0.0,0.0,0.0,17.6,Tier 3,Monitor,Early Stage,Lowe's; Best Buy; Kroger; HCA Healthcare; Elevance Health
+Allstate,ALL,Financial Services,Asset Mgmt & Insurance,baseline,,66,62,74,51,34,16.6,0,0,0.0,0.0,0.0,16.6,Tier 3,Monitor,Early Stage,Union Pacific; Old Dominion; Costco Wholesale; TJX Companies; Walgreens Boots Alliance
+Union Pacific,UNP,Logistics & Transportation,Logistics & Transportation,baseline,,64,58,72,47,40,12.8,0,0,0.0,0.0,0.0,12.8,Tier 3,Monitor,Early Stage,Old Dominion; Allstate; Costco Wholesale; Walgreens Boots Alliance; TJX Companies
+Old Dominion,ODFL,Logistics & Transportation,Logistics & Transportation,baseline,,64,58,72,47,40,12.8,0,0,0.0,0.0,0.0,12.8,Tier 3,Monitor,Early Stage,Union Pacific; Allstate; Costco Wholesale; Walgreens Boots Alliance; TJX Companies
+Dominion Energy,D,Energy & Utilities,Energy & Utilities,baseline,,60,60,66,55,40,10.4,0,0,0.0,0.0,0.0,10.4,Tier 3,Monitor,Early Stage,Duke Energy; Southern Company; Union Pacific; Old Dominion; Costco Wholesale
+Duke Energy,DUK,Energy & Utilities,Energy & Utilities,baseline,,60,60,66,55,40,10.4,0,0,0.0,0.0,0.0,10.4,Tier 3,Monitor,Early Stage,Dominion Energy; Southern Company; Union Pacific; Old Dominion; Costco Wholesale
+Southern Company,SO,Energy & Utilities,Energy & Utilities,baseline,,60,60,66,55,40,10.4,0,0,0.0,0.0,0.0,10.4,Tier 3,Monitor,Early Stage,Duke Energy; Dominion Energy; Union Pacific; Old Dominion; Costco Wholesale

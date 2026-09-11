@@ -1,0 +1,45 @@
+# Weekly home page / explorer sync (Friday nights, per the automation
+# schedule). Collects measured signals (SEC filings, job postings),
+# aggregates the week's user edits, notes, KB changes, and news into the
+# dashboard digest, mirrors all database tables into the repo as a
+# versioned backup, and emails/posts the digest if channels are configured.
+name: Weekly dashboard sync
+
+on:
+  schedule:
+    - cron: "0 3 * * 6"     # Saturday 03:00 UTC = Friday ~10-11 PM US Eastern
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Collect measured signals (SEC filings, job postings)
+        run: python scripts/collect_measured.py
+      - name: Weekly sync and digest
+        run: python scripts/weekly_sync.py
+      - name: Send weekly digest (if channels configured)
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          DIGEST_TO: ${{ secrets.DIGEST_TO }}
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+        run: python scripts/send_digest.py --weekly
+      - name: Commit digest and mirrored data
+        run: |
+          git config user.name "pipeline-bot"
+          git config user.email "actions@github.com"
+          git add data/ results/
+          git diff --cached --quiet || git commit -m "Weekly dashboard sync"
+          git push

@@ -1,0 +1,16 @@
+streamlit>=1.46
+pandas>=2.0
+numpy>=1.26
+scikit-learn>=1.4
+plotly>=5.20
+openpyxl>=3.1
+requests>=2.31
+supabase>=2.4
+umap-learn>=0.5.5
+vaderSentiment>=3.3.2
+
+# Transformer sentiment (torch + transformers, ~800MB) is an optional local
+# upgrade, not a deployment dependency: src/transcript.py imports it lazily
+# and falls back to VADER when it is absent. Install it locally with
+#   pip install torch transformers --extra-index-url https://download.pytorch.org/whl/cpu
+# and set TRANSCRIPT_ENGINE = "transformer" in src/config.py to force it.

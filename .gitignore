@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Local experiments
+scratch/
+
+# Secrets - never commit
+.streamlit/secrets.toml
+
+# Fine-tuned models (large binaries)
+models/
+
+# Local dev-server config (Windows-specific paths)
+.claude/

@@ -1,0 +1,32 @@
+# Optional: re-runs the pipeline whenever the data, notes, or model config
+# change, and commits fresh results back to the repo. Safe to delete if you
+# prefer running the pipeline manually.
+name: Refresh results
+
+on:
+  push:
+    paths:
+      - "data/**"
+      - "src/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - run: python scripts/run_pipeline.py
+      - name: Commit refreshed results
+        run: |
+          git config user.name "pipeline-bot"
+          git config user.email "actions@github.com"
+          git add results/
+          git diff --cached --quiet || git commit -m "Refresh pipeline results"
+          git push
