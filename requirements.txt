@@ -5,7 +5,7 @@ scikit-learn>=1.4
 plotly>=5.20
 openpyxl>=3.1
 requests>=2.31
-supabase>=2.4
+supabase>=2.31
 umap-learn>=0.5.5
 vaderSentiment>=3.3.2
 

@@ -78,13 +78,20 @@ filesystem and are lost when it restarts — Step 3 fixes that.
 
 1. Create a free project at <https://supabase.com>. Save the database password.
 2. **SQL Editor** → run `setup/supabase_schema.sql`, then `setup/upgrade_v23.sql`.
-3. **Project Settings → API** and copy the Project URL and the **`anon` public**
-   key.
+3. **Project Settings → API Keys** and copy the Project URL and the
+   **publishable** key (`sb_publishable_…`).
 
-> **Use the `anon` key, never `service_role`.** The service-role key bypasses
-> row-level security entirely. In a public Streamlit app the secrets are
-> server-side, but the blast radius of a leak is the whole database, and there
-> is no reason to take it — `anon` plus the policies below is enough.
+> **Use the publishable key, never the secret key.** Supabase has deprecated
+> the legacy `anon` / `service_role` JWTs: publishable replaces `anon` and is
+> the client-safe one that still obeys RLS, while `sb_secret_…` replaces
+> `service_role` and bypasses RLS entirely. In a Streamlit app the secrets stay
+> server-side, but the blast radius of a leaked secret key is the whole
+> database and there is no reason to take it — publishable plus the policies
+> below is enough.
+>
+> `create_client()` accepts either format, so an older legacy key still works
+> until Supabase removes it. `requirements.txt` pins `supabase>=2.31`, which is
+> verified against the publishable format.
 
 4. **SQL Editor** → run `setup/rls_policies.sql`.
 

@@ -82,9 +82,11 @@ CSV_PATHS = {
 
 _client = None
 _client_checked = False
+_client_reason = ""
 
 
 def _credentials() -> tuple[str, str] | None:
+    global _client_reason
     url = os.environ.get("SUPABASE_URL", "").strip()
     key = os.environ.get("SUPABASE_KEY", "").strip()
     if not (url and key):
@@ -93,14 +95,25 @@ def _credentials() -> tuple[str, str] | None:
             if "supabase" in st.secrets:
                 url = st.secrets["supabase"].get("url", "").strip()
                 key = st.secrets["supabase"].get("key", "").strip()
-        except Exception:
-            pass
-    return (url, key) if url and key else None
+            else:
+                _client_reason = ("no [supabase] section in secrets "
+                                  f"(found: {', '.join(st.secrets) or 'none'})")
+        except Exception as exc:
+            # No secrets file at all is the normal CLI / fresh-clone case,
+            # not a misconfiguration worth shouting about.
+            if type(exc).__name__ != "StreamlitSecretNotFoundError":
+                _client_reason = f"could not read secrets: {type(exc).__name__}"
+    if url and key:
+        return url, key
+    if not _client_reason and (url or key):
+        _client_reason = (f"incomplete credentials (url {'set' if url else 'missing'}, "
+                          f"key {'set' if key else 'missing'})")
+    return None
 
 
 def _get_client():
     """Create the Supabase client once; None means CSV mode."""
-    global _client, _client_checked
+    global _client, _client_checked, _client_reason
     if _client_checked:
         return _client
     _client_checked = True
@@ -109,8 +122,13 @@ def _get_client():
         try:
             from supabase import create_client
             _client = create_client(*creds)
-        except Exception:
+            _client_reason = ""
+        except Exception as exc:
+            # Falling back to CSV here is correct, but doing it silently is
+            # how a misconfigured deploy looks identical to a working one.
             _client = None
+            _client_reason = f"{type(exc).__name__}: {exc}"
+            log.warning("Supabase client unavailable - %s", _client_reason)
     return _client
 
 
@@ -118,9 +136,19 @@ def backend() -> str:
     return "supabase" if _get_client() else "csv"
 
 
+def client_error() -> str:
+    """Why the Supabase client is unavailable, or '' when it is fine."""
+    _get_client()
+    return _client_reason
+
+
 def backend_label() -> str:
-    return ("Persistent database (Supabase)" if backend() == "supabase"
-            else "Local CSV files (set up Supabase for cloud persistence)")
+    if backend() == "supabase":
+        return "Persistent database (Supabase)"
+    reason = client_error()
+    return ("Local CSV files"
+            + (f" - Supabase unavailable: {reason}" if reason
+               else " (set up Supabase for cloud persistence)"))
 
 
 # ------------------------------------------------------------------ core I/O

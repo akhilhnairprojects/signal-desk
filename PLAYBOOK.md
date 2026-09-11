@@ -66,13 +66,15 @@ keywords permanent.
    learned_keywords, measured_signals, competitor_headlines, outcomes).
    *Already had a Supabase project from an earlier version?* Run only
    `setup/upgrade_v23.sql` instead — it adds the last three.
-3. **Project Settings (gear) → API** → copy the **Project URL** and the
-   **`anon` public key**.
-   ⚠️ Use `anon`, **not** `service_role`. The service-role key bypasses
-   row-level security completely, so a leak exposes the whole database.
-   `anon` plus the RLS policies in `docs/deployment.md` is enough for
-   everything this app does. Either key goes only into the private secret
-   boxes below — never into code, a commit, or a chat window.
+3. **Project Settings (gear) → API Keys** → copy the **Project URL** and the
+   **publishable key** (`sb_publishable_…`).
+   ⚠️ Use the publishable key, **not** the secret one (`sb_secret_…`).
+   Supabase has deprecated the old `anon` / `service_role` JWTs; publishable
+   replaces `anon` and still obeys row-level security, while the secret key
+   bypasses RLS completely, so a leak exposes the whole database. Publishable
+   plus the RLS policies in `setup/rls_policies.sql` is enough for everything
+   this app does. Either key goes only into the private secret boxes below —
+   never into code, a commit, or a chat window.
 4. Put both values in **three places**:
    - **Laptop:** copy `.streamlit/secrets.toml.example` →
      `secrets.toml` (same folder), fill in url and key.
