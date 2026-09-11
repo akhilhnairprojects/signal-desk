@@ -2,9 +2,9 @@
 
 The palette is deliberately lopsided. Everything structural is a cool slate
 neutral; amber is the only saturated colour in the system and it is spent
-exclusively on Tier 1 - the accounts the model says to engage now. That is
-what makes the eye land on the answer instead of wandering a grid of equally
-bright cards.
+only where the model is pointing at something - Tier 1, the selected account,
+a final total. That is what makes the eye land on the answer instead of
+wandering a grid of equally bright cards.
 """
 
 import streamlit as st
@@ -96,12 +96,17 @@ hr {border-color: #22304A;}
 
 
 def apply_branding():
-    """Inject the design system and the sidebar wordmark. Runs on every page
-    via page_header()."""
+    """Inject the design system and the sidebar wordmark.
+
+    Called from streamlit_app.py before pg.run(), so the chrome is styled
+    while a page's data-loading spinner is still running.
+    """
     st.markdown(_CSS, unsafe_allow_html=True)
+    # No account count here - this renders before the pipeline has run, and a
+    # hardcoded number goes stale the moment someone adds a company.
     st.sidebar.markdown(
         f'<div class="wordmark">{config.APP_NAME}<span>.</span></div>'
-        '<div class="wordmark-sub">demand signal · 160 accounts</div>',
+        '<div class="wordmark-sub">enterprise demand signal</div>',
         unsafe_allow_html=True)
 
     for failure in store.pop_write_failures():
