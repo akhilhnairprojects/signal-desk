@@ -1,25 +1,58 @@
 {
-  "generated_at": "2026-07-12T06:41:20+00:00",
+  "generated_at": "2026-09-12T07:27:08+00:00",
   "accounts": 160,
   "notes_last_7d": 0,
   "kb_edits_last_7d": 0,
   "custom_accounts": 0,
-  "news_coverage": 0,
-  "top_news": [],
-  "top_movers": [
+  "news_coverage": 148,
+  "top_news": [
     {
-      "account": "Walmart",
-      "delta": 2.0
+      "account": "Microsoft",
+      "news_score": 100
     },
     {
-      "account": "Target",
-      "delta": -2.0
+      "account": "Alphabet (Google)",
+      "news_score": 100
+    },
+    {
+      "account": "Amazon",
+      "news_score": 100
+    },
+    {
+      "account": "Meta Platforms",
+      "news_score": 100
+    },
+    {
+      "account": "Apple",
+      "news_score": 100
+    }
+  ],
+  "top_movers": [
+    {
+      "account": "Microsoft",
+      "delta": 5.0
+    },
+    {
+      "account": "Alphabet (Google)",
+      "delta": 5.0
+    },
+    {
+      "account": "Amazon",
+      "delta": 5.0
+    },
+    {
+      "account": "Meta Platforms",
+      "delta": 5.0
+    },
+    {
+      "account": "Apple",
+      "delta": 5.0
     }
   ],
   "tier_counts": {
-    "Tier 2": 99,
-    "Tier 1": 47,
-    "Tier 3": 14
+    "Tier 3": 80,
+    "Tier 2": 56,
+    "Tier 1": 24
   },
-  "storage_backend": "csv"
+  "storage_backend": "supabase"
 }
