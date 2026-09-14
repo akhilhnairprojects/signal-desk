@@ -1,29 +1,17 @@
 {
-  "generated_at": "2026-09-13T11:40:14+00:00",
+  "generated_at": "2026-09-14T12:34:13+00:00",
   "changes": [
     {
-      "account": "American Express",
-      "from": "Tier 1",
-      "to": "Tier 2",
-      "score": 73.6
-    },
-    {
-      "account": "Atlassian",
-      "from": "Tier 2",
-      "to": "Tier 1",
-      "score": 75.0
-    },
-    {
-      "account": "Charles Schwab",
+      "account": "Regeneron",
       "from": "Tier 2",
       "to": "Tier 3",
       "score": 51.8
     },
     {
-      "account": "FedEx",
+      "account": "Texas Instruments",
       "from": "Tier 3",
       "to": "Tier 2",
-      "score": 52.6
+      "score": 51.9
     }
   ]
 }
