@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-09-14T12:34:13+00:00",
+  "generated_at": "2026-09-15T11:37:44+00:00",
   "changes": [
     {
-      "account": "Regeneron",
+      "account": "Starbucks",
       "from": "Tier 2",
       "to": "Tier 3",
       "score": 51.8
     },
     {
-      "account": "Texas Instruments",
+      "account": "Charles Schwab",
       "from": "Tier 3",
       "to": "Tier 2",
-      "score": 51.9
+      "score": 56.2
     }
   ]
 }
