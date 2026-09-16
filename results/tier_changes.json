@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-09-15T11:37:44+00:00",
+  "generated_at": "2026-09-16T11:24:12+00:00",
   "changes": [
     {
-      "account": "Starbucks",
+      "account": "Texas Instruments",
       "from": "Tier 2",
       "to": "Tier 3",
-      "score": 51.8
+      "score": 51.9
     },
     {
-      "account": "Charles Schwab",
+      "account": "The Walt Disney Company",
       "from": "Tier 3",
       "to": "Tier 2",
-      "score": 56.2
+      "score": 53.1
     }
   ]
 }
