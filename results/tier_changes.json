@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-18T11:05:14+00:00",
+  "generated_at": "2026-09-19T10:49:05+00:00",
   "changes": [
     {
       "account": "Regeneron",
-      "from": "Tier 3",
-      "to": "Tier 2",
+      "from": "Tier 2",
+      "to": "Tier 3",
       "score": 51.8
     }
   ]
