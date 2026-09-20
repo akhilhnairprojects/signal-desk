@@ -1,11 +1,17 @@
 {
-  "generated_at": "2026-09-19T10:49:05+00:00",
+  "generated_at": "2026-09-20T11:11:54+00:00",
   "changes": [
     {
-      "account": "Regeneron",
+      "account": "AbbVie",
       "from": "Tier 2",
       "to": "Tier 3",
-      "score": 51.8
+      "score": 51.9
+    },
+    {
+      "account": "Toyota (Americas)",
+      "from": "Tier 3",
+      "to": "Tier 2",
+      "score": 52.5
     }
   ]
 }
