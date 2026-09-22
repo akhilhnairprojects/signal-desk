@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-21T12:40:52+00:00",
+  "generated_at": "2026-09-22T11:27:44+00:00",
   "changes": [
     {
-      "account": "AbbVie",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 53.5
+      "account": "Aon",
+      "from": "Tier 2",
+      "to": "Tier 3",
+      "score": 52.5
     }
   ]
 }
