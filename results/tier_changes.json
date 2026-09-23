@@ -1,11 +1,17 @@
 {
-  "generated_at": "2026-09-22T11:27:44+00:00",
+  "generated_at": "2026-09-23T11:23:58+00:00",
   "changes": [
     {
-      "account": "Aon",
+      "account": "Atlassian",
+      "from": "Tier 1",
+      "to": "Tier 2",
+      "score": 75.0
+    },
+    {
+      "account": "PayPal",
       "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 52.5
+      "to": "Tier 1",
+      "score": 75.5
     }
   ]
 }
