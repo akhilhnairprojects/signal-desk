@@ -1,4 +1,17 @@
 {
-  "generated_at": "2026-09-27T11:55:49+00:00",
-  "changes": []
+  "generated_at": "2026-09-28T13:41:20+00:00",
+  "changes": [
+    {
+      "account": "FedEx",
+      "from": "Tier 2",
+      "to": "Tier 3",
+      "score": 52.6
+    },
+    {
+      "account": "Starbucks",
+      "from": "Tier 3",
+      "to": "Tier 2",
+      "score": 53.3
+    }
+  ]
 }
