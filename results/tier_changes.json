@@ -1,4 +1,17 @@
 {
-  "generated_at": "2026-09-29T12:41:47+00:00",
-  "changes": []
+  "generated_at": "2026-09-30T12:26:55+00:00",
+  "changes": [
+    {
+      "account": "Starbucks",
+      "from": "Tier 2",
+      "to": "Tier 3",
+      "score": 52.3
+    },
+    {
+      "account": "Capital One",
+      "from": "Tier 3",
+      "to": "Tier 2",
+      "score": 53.1
+    }
+  ]
 }
