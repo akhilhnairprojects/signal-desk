@@ -1,4 +1,29 @@
 {
-  "generated_at": "2026-10-01T13:01:53+00:00",
-  "changes": []
+  "generated_at": "2026-10-02T12:24:10+00:00",
+  "changes": [
+    {
+      "account": "PayPal",
+      "from": "Tier 1",
+      "to": "Tier 2",
+      "score": 75.5
+    },
+    {
+      "account": "American Express",
+      "from": "Tier 2",
+      "to": "Tier 1",
+      "score": 75.8
+    },
+    {
+      "account": "The Walt Disney Company",
+      "from": "Tier 2",
+      "to": "Tier 3",
+      "score": 53.3
+    },
+    {
+      "account": "Texas Instruments",
+      "from": "Tier 3",
+      "to": "Tier 2",
+      "score": 53.5
+    }
+  ]
 }
