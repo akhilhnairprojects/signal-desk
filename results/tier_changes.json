@@ -1,4 +1,17 @@
 {
-  "generated_at": "2026-10-03T11:34:14+00:00",
-  "changes": []
+  "generated_at": "2026-10-04T12:15:21+00:00",
+  "changes": [
+    {
+      "account": "Capital One",
+      "from": "Tier 2",
+      "to": "Tier 3",
+      "score": 53.2
+    },
+    {
+      "account": "The Walt Disney Company",
+      "from": "Tier 3",
+      "to": "Tier 2",
+      "score": 53.3
+    }
+  ]
 }
