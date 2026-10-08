@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-07T13:12:14+00:00",
+  "generated_at": "2026-10-08T13:19:24+00:00",
   "changes": [
     {
-      "account": "Nike",
+      "account": "The Walt Disney Company",
       "from": "Tier 2",
       "to": "Tier 3",
-      "score": 52.3
+      "score": 53.3
     },
     {
       "account": "Texas Instruments",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 53.0
+      "from": "Tier 2",
+      "to": "Tier 3",
+      "score": 52.8
     },
     {
-      "account": "Gilead Sciences",
+      "account": "Capital One",
       "from": "Tier 3",
       "to": "Tier 2",
-      "score": 53.0
+      "score": 54.1
     }
   ]
 }
