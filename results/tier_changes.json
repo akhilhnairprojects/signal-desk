@@ -1,29 +1,4 @@
 {
-  "generated_at": "2026-10-09T13:06:09+00:00",
-  "changes": [
-    {
-      "account": "Capital One",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 53.5
-    },
-    {
-      "account": "Marsh McLennan",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 53.7
-    },
-    {
-      "account": "FedEx",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 54.3
-    },
-    {
-      "account": "Aon",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 54.3
-    }
-  ]
+  "generated_at": "2026-10-10T12:22:53+00:00",
+  "changes": []
 }
