@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-11T12:39:30+00:00",
+  "generated_at": "2026-10-12T15:12:33+00:00",
   "changes": [
     {
-      "account": "Aon",
+      "account": "Toyota (Americas)",
       "from": "Tier 2",
       "to": "Tier 3",
-      "score": 54.5
+      "score": 53.7
     },
     {
-      "account": "Starbucks",
+      "account": "Texas Instruments",
       "from": "Tier 3",
       "to": "Tier 2",
-      "score": 54.6
+      "score": 53.9
     }
   ]
 }

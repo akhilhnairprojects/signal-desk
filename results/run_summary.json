@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-11T12:39:30",
+  "run_at": "2026-10-12T15:12:33",
   "accounts": 160,
   "industries": 9,
   "avg_score": 53.3,
@@ -14,8 +14,8 @@
   "weights_source": "configured",
   "tier_changes": 2,
   "news": {
-    "accounts_with_coverage": 139,
-    "last_collected": "2026-10-11T12:35:41+00:00"
+    "accounts_with_coverage": 140,
+    "last_collected": "2026-10-12T15:08:31+00:00"
   },
   "segmentation": {
     "k": 6,
