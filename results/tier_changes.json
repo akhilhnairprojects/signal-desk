@@ -1,17 +1,4 @@
 {
-  "generated_at": "2026-10-14T11:42:00+00:00",
-  "changes": [
-    {
-      "account": "Gilead Sciences",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 53.9
-    },
-    {
-      "account": "Aon",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 54.3
-    }
-  ]
+  "generated_at": "2026-10-15T11:20:51+00:00",
+  "changes": []
 }
