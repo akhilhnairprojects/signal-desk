@@ -1,4 +1,17 @@
 {
-  "generated_at": "2026-10-15T11:20:51+00:00",
-  "changes": []
+  "generated_at": "2026-10-16T11:15:17+00:00",
+  "changes": [
+    {
+      "account": "FedEx",
+      "from": "Tier 2",
+      "to": "Tier 3",
+      "score": 54.1
+    },
+    {
+      "account": "Marsh McLennan",
+      "from": "Tier 3",
+      "to": "Tier 2",
+      "score": 54.5
+    }
+  ]
 }
