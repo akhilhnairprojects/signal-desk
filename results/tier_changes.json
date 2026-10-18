@@ -1,17 +1,4 @@
 {
-  "generated_at": "2026-10-17T10:34:13+00:00",
-  "changes": [
-    {
-      "account": "Aon",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 54.3
-    },
-    {
-      "account": "FedEx",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 54.7
-    }
-  ]
+  "generated_at": "2026-10-18T10:54:08+00:00",
+  "changes": []
 }
