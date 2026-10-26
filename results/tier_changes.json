@@ -1,17 +1,4 @@
 {
-  "generated_at": "2026-10-25T11:14:05+00:00",
-  "changes": [
-    {
-      "account": "FedEx",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 53.4
-    },
-    {
-      "account": "Capital One",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 54.0
-    }
-  ]
+  "generated_at": "2026-10-26T12:47:50+00:00",
+  "changes": []
 }
