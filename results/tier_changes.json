@@ -1,29 +1,17 @@
 {
-  "generated_at": "2026-10-30T12:42:36+00:00",
+  "generated_at": "2026-10-31T12:10:14+00:00",
   "changes": [
     {
+      "account": "Capital One",
+      "from": "Tier 2",
+      "to": "Tier 3",
+      "score": 54.3
+    },
+    {
       "account": "Paramount",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 54.0
-    },
-    {
-      "account": "General Motors",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 52.7
-    },
-    {
-      "account": "Aon",
       "from": "Tier 3",
       "to": "Tier 2",
-      "score": 55.9
-    },
-    {
-      "account": "Starbucks",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 55.4
+      "score": 55.2
     }
   ]
 }
