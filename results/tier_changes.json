@@ -1,17 +1,4 @@
 {
-  "generated_at": "2026-11-04T14:20:04+00:00",
-  "changes": [
-    {
-      "account": "Paramount",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 53.9
-    },
-    {
-      "account": "FedEx",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 54.6
-    }
-  ]
+  "generated_at": "2026-11-05T14:32:35+00:00",
+  "changes": []
 }
