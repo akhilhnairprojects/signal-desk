@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-06T14:09:28",
+  "run_at": "2026-11-07T12:53:21",
   "accounts": 160,
   "industries": 9,
   "avg_score": 53.4,
@@ -12,10 +12,10 @@
   "custom_accounts": 0,
   "storage_backend": "supabase",
   "weights_source": "configured",
-  "tier_changes": 0,
+  "tier_changes": 2,
   "news": {
-    "accounts_with_coverage": 144,
-    "last_collected": "2026-11-06T14:05:39+00:00"
+    "accounts_with_coverage": 143,
+    "last_collected": "2026-11-07T12:49:39+00:00"
   },
   "segmentation": {
     "k": 6,

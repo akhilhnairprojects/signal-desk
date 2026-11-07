@@ -1,4 +1,17 @@
 {
-  "generated_at": "2026-11-06T14:09:28+00:00",
-  "changes": []
+  "generated_at": "2026-11-07T12:53:21+00:00",
+  "changes": [
+    {
+      "account": "Texas Instruments",
+      "from": "Tier 2",
+      "to": "Tier 3",
+      "score": 53.6
+    },
+    {
+      "account": "Marsh McLennan",
+      "from": "Tier 3",
+      "to": "Tier 2",
+      "score": 53.7
+    }
+  ]
 }
