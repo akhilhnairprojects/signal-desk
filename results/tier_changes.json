@@ -1,29 +1,4 @@
 {
-  "generated_at": "2026-11-10T14:46:58+00:00",
-  "changes": [
-    {
-      "account": "Bristol Myers Squibb",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 54.0
-    },
-    {
-      "account": "Marsh McLennan",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 53.7
-    },
-    {
-      "account": "Paramount",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 56.2
-    },
-    {
-      "account": "Texas Instruments",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 54.1
-    }
-  ]
+  "generated_at": "2026-11-11T14:02:52+00:00",
+  "changes": []
 }
