@@ -1,4 +1,17 @@
 {
-  "generated_at": "2026-11-12T15:03:40+00:00",
-  "changes": []
+  "generated_at": "2026-11-13T14:29:20+00:00",
+  "changes": [
+    {
+      "account": "Aon",
+      "from": "Tier 2",
+      "to": "Tier 3",
+      "score": 54.1
+    },
+    {
+      "account": "Marsh McLennan",
+      "from": "Tier 3",
+      "to": "Tier 2",
+      "score": 54.2
+    }
+  ]
 }
