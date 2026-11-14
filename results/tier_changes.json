@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-13T14:29:20+00:00",
+  "generated_at": "2026-11-14T13:25:00+00:00",
   "changes": [
     {
-      "account": "Aon",
+      "account": "Toyota (Americas)",
       "from": "Tier 2",
       "to": "Tier 3",
-      "score": 54.1
+      "score": 54.2
     },
     {
-      "account": "Marsh McLennan",
+      "account": "Aon",
       "from": "Tier 3",
       "to": "Tier 2",
-      "score": 54.2
+      "score": 54.3
     }
   ]
 }
