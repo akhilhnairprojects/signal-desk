@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-14T13:25:00+00:00",
+  "generated_at": "2026-11-15T13:52:53+00:00",
   "changes": [
     {
-      "account": "Toyota (Americas)",
+      "account": "Aon",
       "from": "Tier 2",
       "to": "Tier 3",
-      "score": 54.2
+      "score": 53.1
     },
     {
-      "account": "Aon",
+      "account": "Toyota (Americas)",
       "from": "Tier 3",
       "to": "Tier 2",
-      "score": 54.3
+      "score": 53.7
     }
   ]
 }
