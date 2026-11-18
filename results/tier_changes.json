@@ -1,29 +1,17 @@
 {
-  "generated_at": "2026-11-17T15:54:59+00:00",
+  "generated_at": "2026-11-18T15:33:44+00:00",
   "changes": [
     {
-      "account": "Oracle",
+      "account": "PayPal",
       "from": "Tier 1",
       "to": "Tier 2",
-      "score": 74.4
+      "score": 75.2
     },
     {
-      "account": "PayPal",
+      "account": "Oracle",
       "from": "Tier 2",
       "to": "Tier 1",
-      "score": 75.5
-    },
-    {
-      "account": "Paramount",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 53.6
-    },
-    {
-      "account": "Texas Instruments",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 55.0
+      "score": 79.4
     }
   ]
 }
