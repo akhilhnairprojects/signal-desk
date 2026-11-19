@@ -1,8 +1,8 @@
 {
-  "run_at": "2026-11-18T15:33:44",
+  "run_at": "2026-11-19T15:41:28",
   "accounts": 160,
   "industries": 9,
-  "avg_score": 53.4,
+  "avg_score": 53.6,
   "tier_counts": {
     "Tier 3": 80,
     "Tier 2": 56,
@@ -14,8 +14,8 @@
   "weights_source": "configured",
   "tier_changes": 2,
   "news": {
-    "accounts_with_coverage": 139,
-    "last_collected": "2026-11-18T15:29:57+00:00"
+    "accounts_with_coverage": 145,
+    "last_collected": "2026-11-19T15:37:32+00:00"
   },
   "segmentation": {
     "k": 6,

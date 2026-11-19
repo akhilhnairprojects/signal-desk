@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-18T15:33:44+00:00",
+  "generated_at": "2026-11-19T15:41:28+00:00",
   "changes": [
     {
-      "account": "PayPal",
-      "from": "Tier 1",
-      "to": "Tier 2",
-      "score": 75.2
+      "account": "Aon",
+      "from": "Tier 2",
+      "to": "Tier 3",
+      "score": 53.8
     },
     {
-      "account": "Oracle",
-      "from": "Tier 2",
-      "to": "Tier 1",
-      "score": 79.4
+      "account": "Paramount",
+      "from": "Tier 3",
+      "to": "Tier 2",
+      "score": 54.4
     }
   ]
 }
