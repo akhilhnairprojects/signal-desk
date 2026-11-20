@@ -1,17 +1,11 @@
 {
-  "generated_at": "2026-11-19T15:41:28+00:00",
+  "generated_at": "2026-11-20T15:20:31+00:00",
   "changes": [
     {
       "account": "Aon",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 53.8
-    },
-    {
-      "account": "Paramount",
       "from": "Tier 3",
       "to": "Tier 2",
-      "score": 54.4
+      "score": 54.1
     }
   ]
 }
