@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-20T15:20:31+00:00",
+  "generated_at": "2026-11-21T14:34:03+00:00",
   "changes": [
     {
-      "account": "Aon",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 54.1
+      "account": "Texas Instruments",
+      "from": "Tier 2",
+      "to": "Tier 3",
+      "score": 52.5
     }
   ]
 }
