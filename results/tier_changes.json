@@ -1,23 +1,17 @@
 {
-  "generated_at": "2026-11-24T17:30:44+00:00",
+  "generated_at": "2026-11-25T17:06:24+00:00",
   "changes": [
     {
-      "account": "Texas Instruments",
+      "account": "AbbVie",
       "from": "Tier 2",
       "to": "Tier 3",
       "score": 53.9
     },
     {
       "account": "Marsh McLennan",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 54.0
-    },
-    {
-      "account": "AbbVie",
       "from": "Tier 3",
       "to": "Tier 2",
-      "score": 54.1
+      "score": 54.5
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "run_at": "2026-11-24T17:30:44",
+  "run_at": "2026-11-25T17:06:24",
   "accounts": 160,
   "industries": 9,
-  "avg_score": 53.8,
+  "avg_score": 53.7,
   "tier_counts": {
     "Tier 3": 80,
     "Tier 2": 56,
@@ -12,10 +12,10 @@
   "custom_accounts": 0,
   "storage_backend": "supabase",
   "weights_source": "configured",
-  "tier_changes": 3,
+  "tier_changes": 2,
   "news": {
-    "accounts_with_coverage": 150,
-    "last_collected": "2026-11-24T17:26:55+00:00"
+    "accounts_with_coverage": 148,
+    "last_collected": "2026-11-25T17:02:33+00:00"
   },
   "segmentation": {
     "k": 6,
