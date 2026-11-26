@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-25T17:06:24+00:00",
+  "generated_at": "2026-11-26T16:47:48+00:00",
   "changes": [
     {
-      "account": "AbbVie",
-      "from": "Tier 2",
-      "to": "Tier 3",
-      "score": 53.9
+      "account": "American Express",
+      "from": "Tier 1",
+      "to": "Tier 2",
+      "score": 73.3
     },
     {
-      "account": "Marsh McLennan",
-      "from": "Tier 3",
-      "to": "Tier 2",
-      "score": 54.5
+      "account": "PayPal",
+      "from": "Tier 2",
+      "to": "Tier 1",
+      "score": 75.5
     }
   ]
 }
