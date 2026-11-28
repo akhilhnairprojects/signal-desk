@@ -1,13 +1,17 @@
 {
-  "generated_at": "2026-11-21T10:26:55+00:00",
+  "generated_at": "2026-11-28T11:06:13+00:00",
   "accounts": 160,
   "notes_last_7d": 0,
   "kb_edits_last_7d": 0,
   "custom_accounts": 0,
-  "news_coverage": 145,
+  "news_coverage": 142,
   "top_news": [
     {
       "account": "Microsoft",
+      "news_score": 100
+    },
+    {
+      "account": "Alphabet (Google)",
       "news_score": 100
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "account": "Apple",
-      "news_score": 100
-    },
-    {
-      "account": "Salesforce",
       "news_score": 100
     }
   ],
@@ -33,6 +33,10 @@
       "delta": 7.0
     },
     {
+      "account": "Microsoft",
+      "delta": 5.0
+    },
+    {
       "account": "Amazon",
       "delta": 5.0
     },
@@ -43,15 +47,11 @@
     {
       "account": "Apple",
       "delta": 5.0
-    },
-    {
-      "account": "Oracle",
-      "delta": 5.0
     }
   ],
   "tier_counts": {
-    "Tier 3": 79,
-    "Tier 2": 57,
+    "Tier 3": 80,
+    "Tier 2": 56,
     "Tier 1": 24
   },
   "storage_backend": "supabase"
